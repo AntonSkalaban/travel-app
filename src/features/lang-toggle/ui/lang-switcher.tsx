@@ -8,6 +8,7 @@ import { Locale } from "shared/lib/i18n";
 
 import FlagEn from "./flag-en.svg";
 import FlagRu from "./flag-ru.svg";
+import styles from "./styles.module.scss";
 
 export const LangSwitcher: FC = () => {
   const router = useRouter();
@@ -20,7 +21,7 @@ export const LangSwitcher: FC = () => {
   };
 
   return (
-    <button onClick={handleLangClick}>
+    <button className={styles.button} onClick={handleLangClick}>
       {localActive === "en" ? <FlagEn /> : <FlagRu />}
     </button>
   );

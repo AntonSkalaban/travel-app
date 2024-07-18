@@ -1,14 +1,16 @@
 "use client";
 
 import { FC } from "react";
+import { useLocale } from "next-intl";
 
-import { Link, usePathname } from "shared/lib/i18n";
+import { Link, Locale, usePathname } from "shared/lib/i18n";
 
 import { pages } from "./model";
 import styles from "./styles.module.scss";
 
 export const Nav: FC = () => {
   const pathname = usePathname().split("/")[1];
+  const localActive = useLocale() as Locale;
 
   return (
     <nav className={styles.nav}>
@@ -23,7 +25,7 @@ export const Nav: FC = () => {
                 }
                 href={"/" + path}
               >
-                {name}
+                {name[localActive]}
               </Link>
             </li>
           );

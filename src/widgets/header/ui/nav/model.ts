@@ -1,8 +1,15 @@
-export enum pagesNamesEnam {
+export enum pagesNamesEnEnam {
   Home = "Home",
   Room = "Room",
   Toure = "Toure",
   ContacUs = "Contac Us",
+}
+
+export enum pagesNamesRuEnam {
+  Home = "Главная",
+  Room = "Комната",
+  Toure = "Тур",
+  ContacUs = "Связаться",
 }
 
 export enum pagesPathsEnam {
@@ -13,8 +20,20 @@ export enum pagesPathsEnam {
 }
 
 export const pages = [
-  { name: pagesNamesEnam.Home, path: pagesPathsEnam.Home },
-  { name: pagesNamesEnam.Room, path: pagesPathsEnam.Room },
-  { name: pagesNamesEnam.Toure, path: pagesPathsEnam.Toure },
-  { name: pagesNamesEnam.ContacUs, path: pagesPathsEnam.ContacUs },
+  {
+    name: { en: pagesNamesEnEnam.Home, ru: pagesNamesRuEnam.Home },
+    path: pagesPathsEnam.Home,
+  },
+  {
+    name: { en: pagesNamesEnEnam.Room, ru: pagesNamesRuEnam.Room },
+    path: pagesPathsEnam.Room,
+  },
+  {
+    name: { en: pagesNamesEnEnam.Toure, ru: pagesNamesRuEnam.Toure },
+    path: pagesPathsEnam.Toure,
+  },
+  {
+    name: { en: pagesNamesEnEnam.ContacUs, ru: pagesNamesRuEnam.ContacUs },
+    path: pagesPathsEnam.ContacUs,
+  },
 ];
