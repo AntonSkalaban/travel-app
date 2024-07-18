@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import { Wrapper } from "shared/ui/wrapper";
+import { LangSwitcher } from "features/lang-toggle/ui";
 
 import Logo from "./logo/logo.svg";
 import { Nav } from "./nav";
@@ -13,6 +14,7 @@ export const Header: FC = () => {
         <div className={styles.header__container}>
           <Logo />
           <Nav />
+          <LangSwitcher />
         </div>
       </Wrapper>
     </header>

@@ -1,8 +1,8 @@
 "use client";
 
 import { FC } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+
+import { Link, usePathname } from "shared/lib/i18n";
 
 import { pages } from "./model";
 import styles from "./styles.module.scss";
