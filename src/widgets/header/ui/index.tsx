@@ -2,6 +2,7 @@ import { FC } from "react";
 
 import { Wrapper } from "shared/ui/wrapper";
 
+import Logo from "./logo/logo.svg";
 import { Nav } from "./nav";
 import styles from "./styles.module.scss";
 
@@ -10,7 +11,7 @@ export const Header: FC = () => {
     <header className={styles.header}>
       <Wrapper>
         <div className={styles.header__container}>
-          Header
+          <Logo />
           <Nav />
         </div>
       </Wrapper>
