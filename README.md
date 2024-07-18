@@ -55,7 +55,7 @@
 
 ### Пример графического представления:
 
-Ссылка на макет: [Макет "Modsen Travel Agency"](<https://www.figma.com/file/XunNnW33P0nEY8yq5hHbrm/Hotel-website-%2B-mobile-app-(Community)?type=design&node-id=19-10&mode=design&t=wKeFVSJX4nWQ7F0r-0>).
+Ссылка на макет: [Макет "Modsen Travel Agency"](<https://пwww.figma.com/file/XunNnW33P0nEY8yq5hHbrm/Hotel-website-%2B-mobile-app-(Community)?type=design&node-id=19-10&mode=design&t=wKeFVSJX4nWQ7F0r-0>).
 
 
 ### Также проект предполагает:
