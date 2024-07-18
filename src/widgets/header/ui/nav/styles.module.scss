@@ -1,0 +1,30 @@
+@import 'shared/ui/styles';
+
+.nav {
+    &__list {
+        width: 390px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__link {
+        font-family: $font-poppins;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22.5px;
+        color: $color-black-dark;
+        padding: 10px;
+        border-radius: 15px;
+
+        &_active {
+            font-weight: 700;
+            color: $color-brown;
+        }
+
+        &:hover {
+            background-color: $color-grey-normal;
+            transition: .3s ease-in-out;
+        }
+    }
+}

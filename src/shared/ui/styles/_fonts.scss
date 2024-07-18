@@ -3,3 +3,11 @@
     font-weight: 500;
     src: url(../fonts/Poppins/Poppins-medium.ttf) format('ttf');
 }
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 700;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf) format('ttf');
+}
+
+$font-poppins: 'Poppins', sans-serif;
