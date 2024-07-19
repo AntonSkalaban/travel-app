@@ -2,9 +2,9 @@ import { FC } from "react";
 
 import { Wrapper } from "shared/ui/wrapper";
 import { LangSwitcher } from "features/lang-toggle/ui";
+import { Nav } from "features/nav/ui";
 
-import Logo from "./logo/logo.svg";
-import { Nav } from "./nav";
+import Logo from "./images/logo.svg";
 import styles from "./styles.module.scss";
 
 export const Header: FC = () => {

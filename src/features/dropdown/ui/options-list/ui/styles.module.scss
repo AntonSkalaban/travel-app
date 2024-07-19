@@ -1,0 +1,31 @@
+@import 'shared/ui/styles';
+
+.options-list {
+    width: fit-content;
+    min-width: 100px;
+    padding: 5px;
+    max-height: 200px;
+    overflow: scroll;
+    background-color: $color-white;
+
+    &__option {
+        width: 100%;
+        padding: 5px 0;
+
+        font-family: $font-poppins;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        color: $color-grey-dark;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $color-grey-normal;
+        }
+
+        &_active {
+            background-color: $color-grey-normal;
+        }
+    }
+}

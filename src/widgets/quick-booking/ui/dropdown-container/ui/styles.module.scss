@@ -1,0 +1,14 @@
+.dropdown-container {
+    position: relative;
+    padding-left: 45px;
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+   
+    &__title {
+        display: flex;
+    }   
+}

@@ -1,1 +1,12 @@
-{}
+{"home": {
+    "title": "Hotel for every moment rich in emotion",
+    "subtitle": "Every moment feels like the first time in paradise view",
+    "btn": "Take a tour",
+    "quick-booking": {
+        "location": "Location",
+        "person": "Person",
+        "roomType": "Room Type",
+        "btn": "Book now"
+        }
+    }
+}
