@@ -10,3 +10,9 @@ export const formShema: ZodType<FormValues> = z.object({
     .min(1, { message: "Phone number is required" })
     .length(11, { message: "Must be exactly 11 characters long" }),
 });
+
+export const defaultValues = {
+  firstName: "",
+  lastName: "",
+  phone: "",
+};

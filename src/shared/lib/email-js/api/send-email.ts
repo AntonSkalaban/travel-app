@@ -1,11 +1,10 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID; //
-const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY; //8kMKC8cfH1MBKXk0S
+const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 export const useSendEmail = () => {
-  const [isSuccess, setIsSuccess] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -21,7 +20,6 @@ export const useSendEmail = () => {
       await emailjs.send(serviceID, templateID, data, {
         publicKey,
       });
-      setIsSuccess(true);
     } catch (e) {
       setIsError(true);
     } finally {
@@ -29,5 +27,5 @@ export const useSendEmail = () => {
     }
   };
 
-  return { isSuccess, isFetching, isError, sendData: sendData };
+  return { isFetching, isError, sendData: sendData };
 };
