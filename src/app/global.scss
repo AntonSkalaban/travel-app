@@ -1,3 +1,8 @@
+@import 'shared/ui/styles';
+
+body{
+    font-family: $font-raleway;
+}
 button {
     cursor: pointer;
 }

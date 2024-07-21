@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useTranslations } from "next-intl";
 
 import { Wrapper } from "shared/ui/wrapper";
-import { QuickBooking } from "widgets/quick-booking/ui";
+import { FetchingQuickBooking } from "widgets/quick-booking/ui/fetching-quick-booking/ui/fetching-quick-booking";
 
 import Play from "./Play.svg";
 import styles from "./styles.module.scss";
@@ -26,7 +26,7 @@ const HomeHeader: FC = () => {
           </button>
         </div>
 
-        <QuickBooking />
+        <FetchingQuickBooking />
       </section>
     </Wrapper>
   );

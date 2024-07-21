@@ -4,7 +4,7 @@ import { FC } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 
-import { Locale } from "widgets/quick-booking/ui/dropdown-container/ui/location-dropdown-container/lib/i18n";
+import { Locale } from "shared/lib/i18n";
 
 import FlagEn from "./flag-en.svg";
 import FlagRu from "./flag-ru.svg";
@@ -17,6 +17,7 @@ export const LangSwitcher: FC = () => {
 
   const handleLangClick = () => {
     const newLanguage = localActive === "en" ? "ru" : "en";
+    if (!pathname) return;
     router.replace(pathname.replace(localActive, newLanguage));
   };
 

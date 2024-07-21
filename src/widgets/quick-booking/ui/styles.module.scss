@@ -1,5 +1,6 @@
 @import 'shared/ui/styles';
 
+
 .quick-booking {
     width: 100%;
     height: 120px;
@@ -7,6 +8,7 @@
     padding: 0 40px;
     display: flex;
     align-items: center;
+    margin-top: 60px;
 
     &__dropdowns-container {
         height: 65px;
@@ -19,8 +21,6 @@
         width: 180px;
         height: 65px;
        
-        background-color: $color-brown;
-        border-radius: 5px;
-        color: $color-white;
+        @include buttonPrimary($border-radius-default)
     }
 }

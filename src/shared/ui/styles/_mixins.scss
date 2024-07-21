@@ -9,3 +9,17 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@mixin transition-default {
+    transition: all 0.3s ease-in;
+}
+@mixin buttonPrimary($borderRadius:0) {       
+    background-color: $color-brown;
+    border-radius: $borderRadius;
+    color: $color-white;
+
+    &:hover{
+        @include transition-default;
+        opacity: 0.8;
+    }
+}

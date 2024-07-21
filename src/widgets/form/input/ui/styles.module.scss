@@ -1,0 +1,19 @@
+@import 'shared/ui/styles';
+
+.input {
+    width: 360px;
+    height: 50px;
+    gap: 0px;
+    border-radius: $border-radius-default;
+    background-color: $color-white;
+}
+
+.container {
+    position: relative;
+}
+
+.error {
+    position: absolute;
+    top: 55px;
+    color: red;
+}
