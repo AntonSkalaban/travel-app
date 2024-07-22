@@ -1,6 +1,7 @@
 import { FC } from "react";
 
-import { Option, OptionsListProps } from "../model/types";
+import { Option } from "../../model";
+import { OptionsListProps } from "../model/types";
 import styles from "./styles.module.scss";
 
 export const OptionsList: FC<OptionsListProps> = ({

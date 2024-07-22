@@ -1,6 +1,7 @@
 export interface CountryData {
+  ru: string;
+  en: string;
   __typename: string;
-  name: string;
 }
 
 export interface CountryResponce {

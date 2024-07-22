@@ -1,7 +1,4 @@
-export interface Option {
-  name: string;
-  value: number | string;
-}
+import { Option } from "../../model/index";
 
 export interface OptionsListProps {
   options: Option[];
