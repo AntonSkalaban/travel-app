@@ -1,0 +1,60 @@
+@import 'shared/ui/styles';
+
+.testimonials {
+    margin-top: 63px;
+
+    &__title {
+        font-family: $font-raleway;
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 58.7px;
+        text-align: center;
+    }
+
+    &__cards-container {
+        width: fit-content;
+        display: flex;
+        gap: 60px;
+         position: relative;
+        transition: all 0.5s ease-in-out; 
+    }
+}
+
+.slider-wrapper {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 31px;
+}
+
+.btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 80px;
+
+    margin-top: 4px;
+}
+
+.btn {
+    width: 40px;
+    height: 34px;
+    padding: 0;
+
+    svg {
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 0.3 ease-in;
+        }
+    }
+
+    &:disabled {
+        path {
+            stroke: rgba(168, 173, 250, 1);
+        }
+    }
+}
+
+.btn-next {
+   transform: rotate(180deg);
+}

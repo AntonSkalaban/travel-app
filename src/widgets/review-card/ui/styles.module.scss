@@ -1,0 +1,52 @@
+@import 'shared/ui/styles';
+
+.card {
+    width: 470px;
+    height: 486px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: $color-grey-light; 
+    padding: 34px 25px 27px 25px;  
+    color: $color-grey-font;
+    
+    &__top-row {
+        @include flexBetween;
+    }
+
+    &__text {
+        font-family: $font-raleway;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+
+        margin-top: 70px;
+    }
+}
+
+.quotes {
+     &__open {
+        position: relative;  
+        top: -7px;
+    }
+
+    &__close {
+        position: relative;  
+        top: 7px;
+    }
+}
+
+.author-container {
+    position: absolute;
+    bottom: 27px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.author-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
