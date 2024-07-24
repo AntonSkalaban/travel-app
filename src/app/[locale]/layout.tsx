@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
+import { Footer } from "widgets/footer/ui";
 import { Header } from "widgets/header/ui";
 
 export const metadata = {
@@ -24,6 +25,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

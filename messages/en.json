@@ -1,26 +1,39 @@
-{"home": {
-    "title": "Hotel for every moment rich in emotion",
-    "subtitle": "Every moment feels like the first time in paradise view",
-    "btn": "Take a tour",
-    "quick-booking": {
-        "location": "Location",
-        "person": "Person",
-        "roomType": "Room Type",
-        "btn": "Book now"
-        },
-    "modal": {
-        "title": "Please Confirm",
-        "location": "Location",
-        "person": "Person",
-        "room": "Room",
+{  
+    "subscribeForm": {
+        "placeHolder": "Enter your email",
         "btn": {
-            "submit": "Submit",
-            "fetching": "Fetching"
-        }
+            "default": "Subscribe",
+            "fetching": "Fetching..."
+        }      
     },
-    "facilite": {
-        "title": "Our Facilities",
-        "subtitle": "We offer modern (5 star) hotel facilities for your comfort."
-    }
+    "footer": {
+        "logoText": "The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particulary impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us)",
+        "newsletter": "Newsletter",
+        "newsletterText": "Kindly subscribe to our newsletter to get latest deals on our rooms and vacation discount."
+    },
+    "home": {
+        "title": "Hotel for every moment rich in emotion",
+        "subtitle": "Every moment feels like the first time in paradise view",
+        "btn": "Take a tour",
+        "quick-booking": {
+            "location": "Location",
+            "person": "Person",
+            "roomType": "Room Type",
+            "btn": "Book now"
+            },
+        "modal": {
+            "title": "Please Confirm",
+            "location": "Location",
+            "person": "Person",
+            "room": "Room",
+            "btn": {
+                "submit": "Submit",
+                "fetching": "Fetching"
+            }
+        },
+        "facilite": {
+            "title": "Our Facilities",
+            "subtitle": "We offer modern (5 star) hotel facilities for your comfort."
+        }
     }
 }

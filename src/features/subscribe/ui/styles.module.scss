@@ -1,0 +1,17 @@
+@import 'shared/ui/styles';
+
+.subscribe {
+    position: relative;
+    width: fit-content;
+
+    &__btn {
+        width: 112px;
+        height: 40px;
+
+        @include buttonPrimary(5px);
+        position: absolute;
+        right: 5px;
+        top: calc( 50% - 20px);
+        
+    }
+}

@@ -1,0 +1,66 @@
+@import 'shared/ui/styles';
+
+.footer {
+    width: 100%;
+    background-color: $color-brown;
+    box-sizing: border-box;
+    color: $color-white;
+    font-family: $font-raleway;
+   
+
+    &__container-top {
+        @include flexBetween;
+        align-items: baseline;
+        padding: 81px 0 64px;
+    }
+
+    &__logo {
+        font-family: $font-dancing-script;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+    &__title {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 18px;
+    }
+
+    &__logo-text {
+        width: 277px;
+    }
+
+    &__text {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14px;
+
+        margin-top: 13px;
+    }
+
+    &__container-bottom {
+        border-top: 1px solid rgba(217, 217, 217, 0.5);
+        text-align: center;
+        padding: 50px 0;
+    }
+}
+
+.links {
+    width: fit-content;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+
+        margin-top: 22px;
+    }
+}
+
+.newsletter {
+    &__text {
+        max-width: 234px;
+        margin-bottom: 16px;
+    }
+}

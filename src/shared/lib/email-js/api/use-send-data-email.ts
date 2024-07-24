@@ -1,10 +1,9 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+import { publicKey, serviceID } from "../model";
 
-export const useSendEmail = () => {
+export const useSendDataEmail = () => {
   const [isFetching, setIsFetching] = useState(false);
   const [isError, setIsError] = useState(false);
 

@@ -1,6 +1,6 @@
 import { Locale } from "shared/lib/i18n";
 
-import { EmailErrorMessage, EmailSuccessMessage } from "./contants";
+import { EmailErrorMessage, EmailSuccessMessage } from "./constants";
 
 export const getAlertType = (isFetching: boolean, isError: boolean) => {
   if (isError && !isFetching) return "error";

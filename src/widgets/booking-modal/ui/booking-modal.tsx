@@ -3,7 +3,7 @@ import { Controller, useForm } from "react-hook-form";
 import { useLocale, useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { useSendEmail } from "shared/lib/email-js/api/send-email";
+import { useSendDataEmail } from "shared/lib/email-js/api";
 import { Locale } from "shared/lib/i18n";
 import { useShowAlert } from "shared/ui/alert/model/use-show-alert";
 import { Alert } from "shared/ui/alert/ui";
@@ -34,11 +34,11 @@ export const BookingModal: FC<BookingModalProps> = ({
     mode: "all",
   });
 
-  const { isFetching, isError, sendData } = useSendEmail();
+  const { isFetching, isError, sendData } = useSendDataEmail();
 
   const { isAlertOpen, showAlert } = useShowAlert();
 
-  const alertType = !isFetching && isError ? "success" : "error";
+  const alertType = !isFetching && !isError ? "success" : "error";
 
   const alertMessage = useMemo(
     () => getAlertMessage(alertType, localActive),
@@ -48,7 +48,7 @@ export const BookingModal: FC<BookingModalProps> = ({
   const onSubmit = async (data: FormValues) => {
     await sendData(
       { ...data, location, person, room },
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_DATA_ID,
     );
     showAlert();
   };

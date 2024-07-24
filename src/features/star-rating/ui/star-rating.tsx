@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 
 import Star from "./images/star-full.svg";
 import HalfStar from "./images/star-half.svg";
@@ -9,11 +9,17 @@ export const StarRating: FC<StarRatingProps> = ({ rating }) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
     if (i === Math.floor(rating) && rating % 1 !== 0) {
-      stars.push(<HalfStar />);
+      stars.push({ image: <HalfStar />, id: i });
     } else {
-      stars.push(<Star />);
+      stars.push({ image: <Star />, id: i });
     }
   }
 
-  return <div className={styles.stars}>{stars}</div>;
+  return (
+    <div className={styles.stars}>
+      {stars.map(({ id, image }) => (
+        <Fragment key={id}>{image}</Fragment>
+      ))}
+    </div>
+  );
 };
