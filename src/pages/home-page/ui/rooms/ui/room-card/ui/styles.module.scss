@@ -1,0 +1,39 @@
+@import 'shared/ui/styles';
+
+.card {
+    box-sizing: border-box;
+    width: 385px;
+    height: 384px;
+    border-radius: 10px;
+    background-color: $color-white;
+    padding: 27px 27px 0 27px;
+
+    &__img-container {
+        position: relative;
+    }
+
+    &__text {
+        font-family: $font-raleway;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 19.96px;
+        color: rgba(0, 0, 0, 1);
+        margin-top: 19px;
+    }
+
+    &__btn {
+        width: 107px;
+        height: 34px;
+        position: absolute;
+
+        top: 17px;
+        right: 17px;
+
+        @include buttonPrimary(3px);
+
+        font-family: $font-raleway;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 12.91px;
+    }
+}

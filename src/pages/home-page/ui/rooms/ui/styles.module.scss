@@ -1,0 +1,51 @@
+@import 'shared/ui/styles';
+
+.rooms {
+    width: 100%;
+    height: 650px;
+    background-image: url('./images/hotel.png');
+    position: relative;
+
+    font-family: $font-raleway;
+    color: $color-white;
+    margin-top: 73px;
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 58.7px;
+      
+
+        margin-top: 27px;
+    }
+
+    &__decor {
+        width: 138px;
+        height: 6px;
+        
+        background-color: $color-white;
+        margin-top: 14px;
+    }
+
+    &__subtitle {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 17.61px;
+
+        margin-top: 14px;
+    }
+}
+
+.cards-container {
+    width: 100%;
+    @include flexBetween;
+    margin-top: 71px;
+}
