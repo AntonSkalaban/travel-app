@@ -34,7 +34,20 @@
     src: url('../fonts/Inter/Inter-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'Mulish';
+    font-weight: 600;
+    src: url('../fonts/Mulish/Mulish-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Mulish';
+    font-weight: 800;
+    src: url('../fonts/Mulish/Mulish-ExtraBold.ttf');
+}
+
 $font-poppins: 'Poppins', sans-serif;
 $font-raleway: 'Raleway', sans-serif;
 $font-inter: 'Inter', sans-serif;
+$font-mulish: 'Mulish', sans-serif;
 $font-dancing-script: 'DancingScript', sans-serif;
