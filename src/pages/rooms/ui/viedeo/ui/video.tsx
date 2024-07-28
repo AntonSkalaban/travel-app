@@ -9,21 +9,13 @@ import styles from "./styles.module.scss";
 export const Video: FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const handleClick = (isPlaying: boolean) => {
-    if (isPlaying) {
-      videoRef?.current?.pause();
-    } else {
-      videoRef.current?.play();
-    }
-  };
-
   return (
     <section className={styles["video-section"]}>
-      <VideoControl onClick={handleClick} />
+      <VideoControl videoRef={videoRef} />
 
       <video
-        ref={videoRef}
         className={styles.video}
+        ref={videoRef}
         src={videoSrc}
         controls={false}
         poster={videoPoster}

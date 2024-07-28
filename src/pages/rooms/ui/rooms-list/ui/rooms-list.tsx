@@ -1,0 +1,38 @@
+"use client";
+import { FC, useRef } from "react";
+
+import { createIndexedArray } from "shared/model";
+import { Wrapper } from "shared/ui/wrapper";
+
+import { useInfinityScroll } from "./room-card/model/use-infinity-scroll";
+import { RoomCard } from "./room-card/ui/room-card";
+import { RoomCardSkeleton } from "./room-card-skeleton/room-card-skeleton";
+import styles from "./styles.module.scss";
+
+export const RoomsList: FC = () => {
+  const loaderRef = useRef(null);
+
+  const { loading, data: rooms } = useInfinityScroll(loaderRef?.current);
+
+  return (
+    <Wrapper>
+      <section className={styles["rooms-list"]}>
+        {rooms?.rooms.map(({ id, title, images, price, available }) => (
+          <RoomCard
+            key={id}
+            id={id}
+            title={title}
+            image={images[0]}
+            price={price}
+            available={available}
+          />
+        ))}
+
+        {loading &&
+          createIndexedArray(3).map((el) => <RoomCardSkeleton key={el} />)}
+
+        <div ref={loaderRef} />
+      </section>
+    </Wrapper>
+  );
+};

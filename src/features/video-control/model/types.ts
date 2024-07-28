@@ -1,3 +1,5 @@
+import { MutableRefObject } from "react";
+
 export interface VideoControlProps {
-  onClick: (isPlaying: boolean) => void;
+  videoRef: MutableRefObject<HTMLVideoElement | null>;
 }

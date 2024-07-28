@@ -5,12 +5,17 @@ import Play from "./images/play.svg";
 import { VideoControlProps } from "../model";
 import styles from "./styles.module.scss";
 
-export const VideoControl: FC<VideoControlProps> = ({ onClick }) => {
+export const VideoControl: FC<VideoControlProps> = ({ videoRef }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleClick = () => {
-    onClick(isPlaying);
-    setIsPlaying((prev) => !prev);
+    if (isPlaying) {
+      videoRef.current?.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef.current?.play();
+      setIsPlaying(true);
+    }
   };
 
   return (
