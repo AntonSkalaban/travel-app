@@ -14,6 +14,7 @@ export const RoomsList: FC = () => {
 
   const { loading, data: rooms } = useInfinityScroll(loaderRef?.current);
 
+  const arr = createIndexedArray(3);
   return (
     <Wrapper>
       <section className={styles["rooms-list"]}>
@@ -28,8 +29,7 @@ export const RoomsList: FC = () => {
           />
         ))}
 
-        {loading &&
-          createIndexedArray(3).map((el) => <RoomCardSkeleton key={el} />)}
+        {loading && arr.map((el) => <RoomCardSkeleton key={el} />)}
 
         <div ref={loaderRef} />
       </section>

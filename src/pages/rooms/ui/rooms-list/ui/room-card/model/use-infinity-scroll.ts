@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { useQuery } from "@apollo/client";
 import client from "shared/api/apollo-client";
-import { LIST_ROOMS } from "entities/room/api";
+import { GET_ROOMS } from "entities/room/api";
 import { RoomsResponce } from "entities/room/model";
 
 export const useInfinityScroll = (loader: HTMLDivElement | null) => {
@@ -10,7 +10,7 @@ export const useInfinityScroll = (loader: HTMLDivElement | null) => {
     loading,
     data: rooms,
     fetchMore,
-  } = useQuery<RoomsResponce>(LIST_ROOMS, {
+  } = useQuery<RoomsResponce>(GET_ROOMS, {
     client,
     variables: {
       offset: 0,

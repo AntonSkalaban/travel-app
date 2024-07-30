@@ -1,0 +1,25 @@
+@import 'shared/ui/styles';
+
+.header {
+    width: 100%;
+    height: 299px;
+    position: relative;
+
+    background-image: url('./images/hotel.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+    &__container {
+        height: 100%;
+        @include flexCenter;
+    }
+
+    &__title {
+        font-family: $font-mulish;
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 75.3px;
+        text-align: center;
+        color: $color-white;
+    }
+}

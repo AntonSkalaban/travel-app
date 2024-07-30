@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
-export const LIST_ROOMS = gql`
-  query Query($offset: Int, $limit: Int) {
+export const GET_ROOMS = gql`
+  query GetRooms($offset: Int, $limit: Int) {
     rooms(offset: $offset, limit: $limit) {
       id
       title

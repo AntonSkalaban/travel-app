@@ -1,0 +1,5 @@
+@import 'shared/ui/styles';
+
+.section {
+    @include skeleton(100%, 550px);
+}

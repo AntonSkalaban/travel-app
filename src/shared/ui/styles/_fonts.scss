@@ -1,5 +1,11 @@
 @font-face {
     font-family: 'Poppins';
+    font-weight: 300;
+    src: url('../fonts/Poppins/Poppins-Light.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
     font-weight: 500;
     src: url('../fonts/Poppins/Poppins-medium.ttf') format('ttf');
 }

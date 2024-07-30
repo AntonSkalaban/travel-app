@@ -1,1 +1,2 @@
-export * from "./list-rooms";
+export * from "./get-rooms";
+export * from "./get-room";

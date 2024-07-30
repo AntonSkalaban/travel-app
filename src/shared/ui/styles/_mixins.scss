@@ -35,6 +35,7 @@
     width: $width;
     height: $height;
     background-color: $color-grey-light;
+    position: relative;
 
     &::after {
         position: absolute;

@@ -1,0 +1,46 @@
+@import 'shared/ui/styles';
+
+.container {
+    width: 525px;
+    height: 100%;
+    display: flex;
+    gap: 36px;
+}
+    .big-image-container {
+       box-sizing: border-box;
+        width: 425px;
+        height: 494px;
+        background-color: rgba(249, 241, 231, 1);
+        border-radius: 10px;
+        @include flexCenter;
+        padding: 16px;
+    }
+
+    .big-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .small-images-container {
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .small-image-container {
+        height: 80px;
+        @include flexCenter;
+
+        border-radius: 10px;
+        background-color: rgba(249, 241, 231, 1);
+    }
+
+
+    .small-image {
+        width: 100%;
+        max-width: 95%;
+        height: auto;
+        max-height: 43px;
+    }   
+
