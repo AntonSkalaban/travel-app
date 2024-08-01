@@ -10,23 +10,14 @@ import { Alert } from "shared/ui/alert/ui";
 import { Modal } from "shared/ui/modal/ui/modal";
 import { Input } from "widgets/form/input/ui";
 
-import {
-  BookingModalProps,
-  defaultValues,
-  formShema,
-  FormValues,
-  getAlertMessage,
-} from "../model";
+import { getAlertMessage, getAlertType } from "../model/helpers";
+import { defaultValues, formShema } from "../model/shema";
+import { FormValues, ReservationModalProps } from "../model/types";
 import styles from "./styles.module.scss";
 
-const getAlertType = (isFetching: boolean, isError: boolean) => {
-  return !isFetching && !isError ? "success" : "error";
-};
-
-export const BookingModal: FC<BookingModalProps> = ({
-  person,
-  location,
-  room,
+export const ReservationModal: FC<ReservationModalProps> = ({
+  roomId,
+  roomName,
   onClose,
 }) => {
   const t = useTranslations("home.modal");
@@ -51,7 +42,7 @@ export const BookingModal: FC<BookingModalProps> = ({
 
   const onSubmit = async (data: FormValues) => {
     await sendData(
-      { ...data, location, person, room },
+      { ...data, roomId, roomName },
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_DATA_ID,
     );
     showAlert();
@@ -62,14 +53,6 @@ export const BookingModal: FC<BookingModalProps> = ({
       {isAlertOpen && <Alert type={alertType} message={alertMessage} />}
       <Modal close={onClose}>
         <div className={styles.container}>
-          <h2>{t("title")}</h2>
-          <p>
-            {t("location")}: {location}
-            <br />
-            {t("person")}:{person}
-            <br />
-            {t("room")}: {room}
-          </p>
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <Controller
               name="firstName"

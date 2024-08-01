@@ -40,6 +40,7 @@ const RoomPage: FC<RoomPageProps> = ({ id }) => {
   return (
     <>
       <RoomInfo
+        id={String(id)}
         images={images}
         title={title}
         price={price}
