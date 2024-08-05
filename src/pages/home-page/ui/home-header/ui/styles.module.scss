@@ -1,6 +1,6 @@
 @import 'shared/ui/styles';
 
-.home-header {
+.header {
     width: 100%;
     height: 700px;  
      
@@ -11,6 +11,8 @@
         background-repeat: no-repeat;
         background-size: 626px auto;
         position: relative;
+
+        font-family: $font-raleway;
     }
 
     &__logo {
@@ -25,24 +27,12 @@
     }
 
     &__title {
-        width: 450px;
-        font-family: $font-raleway;
-        font-size: 55px;
-        font-weight: 700;
-        line-height: 64.57px;
-        text-align: left;
-
+        @include mainHeaderTitle;
         margin-top: 26px;
     }
 
-    &__text {
-        width: 261px;
-        font-family: $font-raleway;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 17.61px;
-        text-align: left;
-
+    &__subtitle {
+        @include mainHeaderSubtitle;
         margin-top: 23px;
     }
 
@@ -60,18 +50,20 @@
 
         margin-top: 27px;
 
-        &-elipce {
-            width: 55px;
-            height: 100%;
-            background: rgba(0, 166, 153, 1);
-            @include flexCenter;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
 
         &:hover  &-elipce  {
             scale: 1.05;
             transition: 0.3s ease-in-out;
         }
     }
+
+    &__elipce {
+        width: 55px;
+        height: 100%;
+        background: rgba(0, 166, 153, 1);
+        @include flexCenter;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
 }
+

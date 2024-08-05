@@ -11,16 +11,16 @@ const HomeHeader: FC = () => {
   const t = useTranslations("home");
 
   return (
-    <section className={styles["home-header"]}>
+    <section className={styles["header"]}>
       <Wrapper>
-        <div className={styles["home-header__container"]}>
+        <div className={styles["header__container"]}>
           <div>
-            <p className={styles["home-header__logo"]}>Paradise View</p>
-            <h1 className={styles["home-header__title"]}>{t("title")}</h1>
-            <p className={styles["home-header__text"]}>{t("subtitle")}</p>
+            <p className={styles["header__logo"]}>Paradise View</p>
+            <h1 className={styles["header__title"]}>{t("title")}</h1>
+            <p className={styles["header__subtitle"]}>{t("subtitle")}</p>
 
-            <button className={styles["home-header__btn"]}>
-              <span className={styles["home-header__btn-elipce"]}>
+            <button className={styles["header__btn"]}>
+              <span className={styles["header__btn-elipce"]}>
                 <Play />
               </span>
               {t("btn")}
