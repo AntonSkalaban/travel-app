@@ -7,6 +7,12 @@ export interface Tour {
   flag: string;
 }
 
+export interface TourCountry extends Pick<Tour, "country"> {}
+
+export interface TourCountryResponce {
+  toursCountries: TourCountry[];
+}
+
 export interface TourResponce {
-  tours: Tour[];
+  tours: { __typename: string; tours: Tour[]; totalItems: number };
 }

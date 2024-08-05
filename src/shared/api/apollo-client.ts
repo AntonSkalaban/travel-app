@@ -10,6 +10,14 @@ const cache = new InMemoryCache({
             return [...existing, ...incoming];
           },
         },
+        tours: {
+          keyArgs: ["country"],
+          merge(existing, incoming) {
+            const tours = [...(existing?.tours || []), ...incoming.tours];
+
+            return { ...existing, ...incoming, tours };
+          },
+        },
       },
     },
   },

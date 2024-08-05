@@ -3,8 +3,8 @@ import { FC, useRef } from "react";
 
 import { createIndexedArray } from "shared/model";
 import { Wrapper } from "shared/ui/wrapper";
+import { useRoomsInfinityScroll } from "entities/room/model/use-rooms-infinity-scroll";
 
-import { useInfinityScroll } from "./room-card/model/use-infinity-scroll";
 import { RoomCard } from "./room-card/ui/room-card";
 import { RoomCardSkeleton } from "./room-card-skeleton/room-card-skeleton";
 import styles from "./styles.module.scss";
@@ -12,7 +12,7 @@ import styles from "./styles.module.scss";
 export const RoomsList: FC = () => {
   const loaderRef = useRef(null);
 
-  const { loading, data: rooms } = useInfinityScroll(loaderRef?.current);
+  const { loading, data: rooms } = useRoomsInfinityScroll(loaderRef?.current);
 
   const arr = createIndexedArray(3);
   return (
