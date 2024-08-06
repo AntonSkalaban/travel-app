@@ -15,8 +15,8 @@
 }
 
 @mixin buttonHover {
-        @include transition-default;
-        opacity: 0.8;
+    @include transition-default;
+    opacity: 0.8;
 } 
 
 
@@ -64,18 +64,4 @@
 }
 
 //
-@mixin mainHeaderTitle {
-    width: 450px;
-    font-size: 55px;
-    font-weight: 700;
-    line-height: 64.57px;
-    text-align: left;
-}
 
-@mixin mainHeaderSubtitle {
-    width: 261px;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 17.61px;
-    text-align: left;
-}

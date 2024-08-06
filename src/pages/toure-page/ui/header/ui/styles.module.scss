@@ -1,0 +1,21 @@
+@import 'shared/ui/styles';
+@import 'shared/ui/hotel-header/ui/mixins.scss';
+
+.header {
+    &__title {
+        @include hotelHeaderTitle;
+        margin-top: 18px;
+    }
+
+    &__subtitle {
+        @include hotelHeaderSubtitle;
+        margin-top: 96px;
+    }
+
+    &__btn {
+        width: 165px;
+        height: 55px;
+        @include buttonPrimary(50px);
+        margin-top: 35px;
+    }
+}

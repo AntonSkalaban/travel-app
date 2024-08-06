@@ -1,38 +1,14 @@
 @import 'shared/ui/styles';
+@import 'shared/ui/hotel-header/ui/mixins.scss';
 
 .header {
-    width: 100%;
-    height: 700px;  
-     
-    &__container {
-        height: 100%;
-        background-image: url('./images/hotel.png');
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: 626px auto;
-        position: relative;
-
-        font-family: $font-raleway;
-    }
-
-    &__logo {
-        font-family: $font-dancing-script;
-        font-size: 50px;
-        font-weight: 600;
-        line-height: 60px;
-        text-align: left;
-        color: $color-brown;
-
-        margin-top: 59px;
-    }
-
     &__title {
-        @include mainHeaderTitle;
+        @include hotelHeaderTitle;
         margin-top: 26px;
     }
 
     &__subtitle {
-        @include mainHeaderSubtitle;
+        @include hotelHeaderSubtitle;
         margin-top: 23px;
     }
 
@@ -50,20 +26,17 @@
 
         margin-top: 27px;
 
-
-        &:hover  &-elipce  {
+        &__elipce {
+            width: 55px;
+            height: 100%;
+            background: rgba(0, 166, 153, 1);
+            @include flexCenter;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        &:hover  &__elipce  {
             scale: 1.05;
             transition: 0.3s ease-in-out;
         }
     }
-
-    &__elipce {
-        width: 55px;
-        height: 100%;
-        background: rgba(0, 166, 153, 1);
-        @include flexCenter;
-        border-radius: 50%;
-        margin-right: 8px;
-    }
 }
-
