@@ -3,14 +3,17 @@
 .options-list {
     width: fit-content;
     min-width: 100px;
-    padding: 5px;
     max-height: 200px;
+
     overflow: scroll;
     background-color: $color-white;
 
+    box-sizing: border-box;
+    padding: 5px 0;
+
     &__option {
         width: 100%;
-        padding: 5px 0;
+        padding: 5px;
 
         font-family: $font-poppins;
         font-size: 12px;

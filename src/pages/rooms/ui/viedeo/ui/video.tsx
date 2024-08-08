@@ -6,7 +6,7 @@ import { VideoControl } from "features/video-control/ui";
 import { videoPoster, videoSrc } from "../model/constants";
 import styles from "./styles.module.scss";
 
-export const Video: FC = () => {
+const Video: FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   return (
@@ -23,3 +23,5 @@ export const Video: FC = () => {
     </section>
   );
 };
+
+export default Video;

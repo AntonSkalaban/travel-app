@@ -14,7 +14,7 @@ export enum pagesNamesRuEnam {
 
 export enum pagesPathsEnam {
   Home = "",
-  Room = "room",
+  Room = "rooms",
   Toure = "toure",
   ContacUs = "contact-us",
 }

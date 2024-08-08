@@ -7,7 +7,7 @@ import { ToureCard } from "./toure-card/ui/toure-card";
 import { ToureCardSkeleton } from "./toure-card-skeleton/ui/toure-card-skeleton";
 import styles from "./styles.module.scss";
 
-export const CardsList: FC = () => {
+const CardsList: FC = () => {
   const loaderRef = useRef(null);
 
   const { data, loading, error } = useToursInfinityScroll(loaderRef.current);
@@ -39,3 +39,5 @@ export const CardsList: FC = () => {
     </section>
   );
 };
+
+export default CardsList;

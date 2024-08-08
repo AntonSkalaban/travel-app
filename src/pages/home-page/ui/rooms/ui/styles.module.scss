@@ -20,10 +20,11 @@
 
     &__container {
         width: 100%;
-        display: flex;
+        @include flexCenter;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
+        position: relative;
+        z-index: 4;
     }
 
     &__title {
@@ -33,11 +34,10 @@
       
         margin-top: 27px;
 
-
-    @include breakpoint(s) {
-        font-size: 30px;
-        line-height: 36px;
-    }
+        @include breakpoint(s) {
+            font-size: 30px;
+            line-height: 36px;
+        }
 
 
     }

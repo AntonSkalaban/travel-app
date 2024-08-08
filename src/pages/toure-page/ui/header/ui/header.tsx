@@ -1,17 +1,20 @@
 import { FC } from "react";
+import { useTranslations } from "next-intl";
 
 import { HotelHeader } from "shared/ui/hotel-header/ui/hotel-header";
 
 import styles from "./styles.module.scss";
 
-export const Header: FC = () => {
+const Header: FC = () => {
+  const t = useTranslations("toure.header");
+
   return (
     <HotelHeader>
-      <h2 className={styles.header__title}>Cross-country tour</h2>
-      <p className={styles.header__subtitle}>
-        Every moment feels like the first time in paradise view
-      </p>
-      <button className={styles.header__btn}>Book now</button>
+      <h2 className={styles.header__title}>{t("title")}</h2>
+      <p className={styles.header__subtitle}>{t("subtitle")}</p>
+      <button className={styles.header__btn}>{t("btn")}</button>
     </HotelHeader>
   );
 };
+
+export default Header;

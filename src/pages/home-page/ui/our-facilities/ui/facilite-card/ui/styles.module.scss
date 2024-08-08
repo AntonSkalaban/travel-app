@@ -1,0 +1,55 @@
+@import 'shared/ui/styles';
+
+.card {
+    width: 280px;
+    height: 250px;
+
+    border-radius:$border-radius-default;
+    background-color: $color-grey-light;
+    @include flexCenter;
+    gap: 22px;
+    flex-direction: column;
+
+    @include breakpoint(m) {
+        max-width: 40%;
+        width: 100%;
+        height: 50px;
+        padding: 20px;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+    }
+
+    @include breakpoint(m) {
+        &__svg {
+            width: 60px;
+            scale: 0.7;
+        }
+        
+    }
+
+    @include breakpoint(s) {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px;   
+    }
+
+   
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        color: $color-brown;
+
+        @include breakpoint(m) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include breakpoint(s) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

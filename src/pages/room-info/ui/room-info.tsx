@@ -6,10 +6,10 @@ import client from "shared/api/apollo-client";
 import { GET_ROOM } from "entities/room/api";
 import { RoomResponce } from "entities/room/model";
 
-import { DecorImages } from "./decor-images/ui/decor-images";
-import { DecorImagesSkeleton } from "./decor-images-skeleton/ui/decor-images-skeleton";
-import { RoomInfo } from "./room-info/ui/room-info";
-import { RoomInfoSkeleton } from "./room-info-skeleton/ui/room-info-skeleton";
+import DecorImages from "./decor-images/ui";
+import DecorImagesSkeleton from "./decor-images-skeleton/ui";
+import RoomDetails from "./room-details/ui";
+import RoomInfoSkeleton from "./room-details-skeleton/ui";
 import { RoomPageProps } from "../model";
 
 const RoomPage: FC<RoomPageProps> = ({ id }) => {
@@ -39,7 +39,7 @@ const RoomPage: FC<RoomPageProps> = ({ id }) => {
 
   return (
     <>
-      <RoomInfo
+      <RoomDetails
         id={String(id)}
         images={images}
         title={title}

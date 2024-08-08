@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import { RoomsHeader } from "./rooms-header/ui/rooms-header";
-import { RoomsList } from "./rooms-list/ui/rooms-list";
-import { Video } from "./viedeo/ui/video";
+import RoomsHeader from "./rooms-header/ui";
+import RoomsList from "./rooms-list/ui";
+import Video from "./viedeo/ui";
 
 const RoomsPage: FC = () => {
   return (

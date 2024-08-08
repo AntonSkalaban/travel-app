@@ -13,20 +13,19 @@ const Rooms: FC = () => {
 
   return (
     <section className={styles.rooms}>
-      <Filter>
-        <Wrapper>
-          <div className={styles.rooms__container}>
-            <h2 className={styles.rooms__title}>{t("title")}</h2>
-            <div className={styles.rooms__decor} />
-            <p className={styles.rooms__subtitle}>{t("subtitle")}</p>
-            <div className={styles["cards-container"]}>
-              {rooms.map(({ id, image, title, count }) => (
-                <RoomCard key={id} title={title} image={image} count={count} />
-              ))}
-            </div>
+      <Filter />
+      <Wrapper>
+        <div className={styles.rooms__container}>
+          <h2 className={styles.rooms__title}>{t("title")}</h2>
+          <div className={styles.rooms__decor} />
+          <p className={styles.rooms__subtitle}>{t("subtitle")}</p>
+          <div className={styles["cards-container"]}>
+            {rooms.map(({ id, image, title, count }) => (
+              <RoomCard key={id} title={title} image={image} count={count} />
+            ))}
           </div>
-        </Wrapper>
-      </Filter>
+        </div>
+      </Wrapper>
     </section>
   );
 };

@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Locale } from "shared/lib/i18n";
 import { Wrapper } from "shared/ui/wrapper";
 
+import FaciliteCard from "./facilite-card/ui";
 import { cards } from "../model/constants";
 import styles from "./styles.module.scss";
 
@@ -19,11 +20,11 @@ const OurFacilite: FC = () => {
 
         <div className={styles["cards-container"]}>
           {cards.map(({ title, image }) => (
-            <div className={styles.card} key={title[localActive]}>
-              <div className={styles.card__svg}>{image}</div>
-
-              <p className={styles["card__title"]}>{title[localActive]}</p>
-            </div>
+            <FaciliteCard
+              key={title[localActive]}
+              title={title[localActive]}
+              image={image}
+            />
           ))}
         </div>
       </Wrapper>

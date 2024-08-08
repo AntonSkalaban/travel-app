@@ -23,10 +23,18 @@
         height: 400px;  
     }
 
+    @include breakpoint(s) {
+        height: 300px;  
+    }
+
     &__container {
         @include flexCenter;
         flex-direction: column;
         gap: 48px;
         z-index: 4;
+
+        @include breakpoint(s) {
+            gap: 20px;
+        }
     }
 }

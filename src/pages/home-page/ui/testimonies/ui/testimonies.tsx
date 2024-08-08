@@ -1,5 +1,6 @@
 "use client";
 import { FC } from "react";
+import { useTranslations } from "next-intl";
 
 import { useQuery } from "@apollo/client";
 import client from "shared/api/apollo-client";
@@ -14,8 +15,7 @@ import Arrow from "./images/arrow.svg";
 import styles from "./styles.module.scss";
 
 const Testimonies: FC = () => {
-  const itemsPerSlide = 2;
-
+  const t = useTranslations("home.testimonies");
   const {
     data: reviews,
     loading,
@@ -24,33 +24,28 @@ const Testimonies: FC = () => {
     client,
   });
 
+  const itemsPerSlide = 2;
+  const totalSlides = Math.round(reviews?.reviews?.length || 0);
+
   const { page, isFirstSlide, isLastSlide, toNextSlide, toPrevSlide } =
-    useSlider(Math.round((reviews?.reviews?.length || 0) / itemsPerSlide));
-
-  const handlePrevSlideClick = () => {
-    toPrevSlide();
-  };
-
-  const handleNextSlideClick = () => {
-    toNextSlide();
-  };
+    useSlider(totalSlides / itemsPerSlide);
 
   return (
     <section className={styles.testimonials}>
       <Wrapper>
-        <h2 className={styles.testimonials__title}>Testimonies</h2>
+        <h2 className={styles.testimonials__title}>{t("title")}</h2>
 
         <div className={styles["btns-container"]}>
           <button
             className={`${styles.btn} ${styles["btn-prev"]}`}
-            onClick={handlePrevSlideClick}
+            onClick={toPrevSlide}
             disabled={isFirstSlide || loading}
           >
             <Arrow />
           </button>
           <button
             className={`${styles.btn} ${styles["btn-next"]}`}
-            onClick={handleNextSlideClick}
+            onClick={toNextSlide}
             disabled={isLastSlide || loading}
           >
             <Arrow />

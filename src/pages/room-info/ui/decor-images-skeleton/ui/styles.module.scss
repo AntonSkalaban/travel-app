@@ -10,5 +10,11 @@
 .image-skeleton {
     @include skeleton(381px, 480px);
     border: 10px;
+
+    @include breakpoint(l) {
+        width: 30%;
+        height: auto;
+        flex-direction: column;
+    }
 }
 

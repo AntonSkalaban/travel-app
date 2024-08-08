@@ -1,6 +1,6 @@
 @import 'shared/ui/styles';
 
-.decor-container {
+.decor {
     display: flex;
     gap: 61px;
 
@@ -9,21 +9,21 @@
     @include breakpoint(l) {
        gap: 20px;
         justify-content: space-between;
+        margin-bottom: 100px;
     }
 
-
-
-}
-
-.decor-image {
-    width: 381px;
-    height: 480px;
-    border-radius: 10px;
-
-    @include breakpoint(l) {
-        width: 30%;
-        height: auto;
-        flex-direction: column;
-     }
+    &__image {
+        width: 381px;
+        height: 480px;
+        border-radius: 10px;
+    
+        @include breakpoint(l) {
+            width: 30%;
+            height: auto;
+            flex-direction: column;
+        }
+    
+    }
 
 }
+

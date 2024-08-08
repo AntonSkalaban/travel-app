@@ -107,7 +107,10 @@ export const BookingModal: FC<BookingModalProps> = ({
                 />
               )}
             />
-            <button className={styles.form__btn} disabled={isFetching}>
+            <button
+              className={styles.form__btn}
+              disabled={isFetching || isAlertOpen}
+            >
               {isFetching ? `${t("btn.fetching")}...` : t("btn.submit")}
             </button>
           </form>

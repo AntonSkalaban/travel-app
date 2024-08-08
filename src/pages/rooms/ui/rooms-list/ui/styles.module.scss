@@ -15,12 +15,10 @@
     @include breakpoint(l) {
         width: 830px;
         grid-template-columns: repeat(2, 1fr);
-
     }
 
     @include breakpoint(m) {
-      width: 100%;
-    //     display: grid;
+        width: 100%;
         gap: 20px;
     }
 

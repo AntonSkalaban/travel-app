@@ -19,10 +19,7 @@ export const Nav: FC = () => {
           return (
             <li className={styles.nav__item} key={path}>
               <Link
-                className={
-                  styles.nav__link +
-                  (pathname === path ? " " + styles.nav__link_active : "")
-                }
+                className={`${styles.nav__link} ${pathname === path ? styles.nav__link_active : ""}`}
                 href={"/" + path}
               >
                 {name[localActive]}

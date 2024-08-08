@@ -39,6 +39,54 @@
         "facilite": {
             "title": "Our Facilities",
             "subtitle": "We offer modern (5 star) hotel facilities for your comfort."
+        },
+        "testimonies": {
+            "title": "Testimonies"
+        }
+    },
+    "rooms": {
+        "header": {
+            "title": "Rooms and Suites",
+            "subtitle": " The elegant luxury bedrooms in this gallery showcase custom interior designs & decorating ideas. View pictures and find your perfect luxury bedroom design."
+        },
+        "roomsList": {
+            "available": "Available",
+            "yes": "Yes",
+            "no": "No",
+            "btn": "Book now"
+        }
+    },
+    "room": {
+        "details": {
+            "review": "Customer Review",
+            "btn": "Reservation"
+        }
+
+    },
+    "toure": {
+        "header": {
+            "title": "Cross-country tour",
+            "subtitle": "Every moment feels like the first time in paradise view",
+            "btn": "Book now"
+        },
+        "toureSeatch": {
+            "title": "Tour search",
+            "subtitle": "Choose a tour to any country"
+        }
+    },
+    "contactUs": {
+        "header": {
+            "title": "Contact us",
+            "subtitle": "The elegant luxury bedrooms in this gallery showcase custom interior designs & decorating ideas. View pictures and find your perfect luxury bedroom design."
+        },
+        "form": {
+            "fullName": "Fullname",
+             "email": "Email",
+             "message": "Message",
+             "btn": {
+                "active": "Send Message",
+                "fetching": "Fetching..."
+             }
         }
     }
 }

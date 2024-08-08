@@ -3,9 +3,9 @@ import { FC } from "react";
 
 import { Wrapper } from "shared/ui/wrapper";
 
-import { CardsList } from "./cars-list/ui/cards-list";
-import { Header } from "./header/ui/header";
-import { ToureSearch } from "./toure-search/ui/toure-serach";
+import CardsList from "./cars-list/ui";
+import Header from "./header/ui/header";
+import ToureSearch from "./toure-search/ui";
 
 export const TourePage: FC = () => {
   return (

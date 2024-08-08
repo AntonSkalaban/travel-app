@@ -1,7 +1,9 @@
 import { FC } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { useRouter } from "shared/lib/i18n";
+import { pagesPathsEnam } from "features/nav/model/types";
 
 import { CardIcons } from "./card-icons/card-icons";
 import { RoomCardProps } from "../model";
@@ -15,9 +17,10 @@ export const RoomCard: FC<RoomCardProps> = ({
   available,
 }) => {
   const router = useRouter();
+  const t = useTranslations("rooms.roomsList");
 
   const handleClick = (id: number) => () => {
-    router.push("/room/" + id);
+    router.push(`/${pagesPathsEnam.Room}/` + id);
   };
 
   return (
@@ -33,7 +36,7 @@ export const RoomCard: FC<RoomCardProps> = ({
         <div className={styles.card__row}>
           <h4 className={styles.card__title}>{title}</h4>
           <p className={styles.card__available}>
-            Available: {available ? "Yes" : "No"}
+            {t("available")}: {t(`${available ? "yes" : "no"}`)}
           </p>
         </div>
         <p className={styles.card__price}>₦{price}</p>
@@ -41,7 +44,7 @@ export const RoomCard: FC<RoomCardProps> = ({
       <div className={styles["card__description-bottom"]}>
         <CardIcons />
         <button className={styles.card__btn} onClick={handleClick(id)}>
-          Book now
+          {t("btn")}
         </button>
       </div>
     </article>

@@ -4,7 +4,7 @@ import { createIndexedArray } from "shared/model";
 
 import styles from "./styles.module.scss";
 
-export const DecorImagesSkeleton: FC = () => {
+const DecorImagesSkeleton: FC = () => {
   return (
     <section className={styles["decor-skeleton"]}>
       {createIndexedArray(3).map((el) => (
@@ -13,3 +13,4 @@ export const DecorImagesSkeleton: FC = () => {
     </section>
   );
 };
+export default DecorImagesSkeleton;

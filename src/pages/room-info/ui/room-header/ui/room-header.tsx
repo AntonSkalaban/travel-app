@@ -4,7 +4,7 @@ import { Filter } from "shared/ui/filter/ui";
 
 import styles from "./styles.module.scss";
 
-export const RoomHeader: FC = () => {
+const RoomHeader: FC = () => {
   return (
     <section className={styles.header}>
       <Filter />
@@ -14,3 +14,5 @@ export const RoomHeader: FC = () => {
     </section>
   );
 };
+
+export default RoomHeader;
