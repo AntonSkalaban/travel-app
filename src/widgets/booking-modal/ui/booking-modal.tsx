@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { useSendDataEmail } from "shared/lib/email-js/api";
 import { Locale } from "shared/lib/i18n";
+import { getAlertMessage, getAlertType } from "shared/ui/alert/model";
 import { useShowAlert } from "shared/ui/alert/model/use-show-alert";
 import { Alert } from "shared/ui/alert/ui";
 import { Modal } from "shared/ui/modal/ui/modal";
@@ -15,13 +16,8 @@ import {
   defaultValues,
   formShema,
   FormValues,
-  getAlertMessage,
 } from "../model";
 import styles from "./styles.module.scss";
-
-const getAlertType = (isFetching: boolean, isError: boolean) => {
-  return !isFetching && !isError ? "success" : "error";
-};
 
 export const BookingModal: FC<BookingModalProps> = ({
   person,

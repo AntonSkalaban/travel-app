@@ -1,0 +1,27 @@
+@import 'shared/ui/styles';
+
+@mixin RoomHeaderTitle {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 75.3px;
+    color: $color-white;
+
+    @include breakpoint(m) {
+        font-size: 40px;
+        line-height: 55.3px;
+    }
+}
+
+@mixin RoomHeaderSubtitle {
+    max-width: 560px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25.1px;
+    text-align: center;
+
+    @include breakpoint(m) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

@@ -1,7 +1,10 @@
 @import 'shared/ui/styles';
 
 .input {
-    width: 360px;
+    min-width: 340px;
+    width: 100%;
+    box-sizing: border-box;
+
     height: 50px;
     gap: 0px;
     border-radius: $border-radius-default;

@@ -17,6 +17,10 @@
         line-height: 18px;
         color: $color-grey-dark;
         text-transform: capitalize;
+
+        @include breakpoint(m) {
+            width: 100px;
+        }
     }
 
     &__name {

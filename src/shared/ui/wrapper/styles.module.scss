@@ -1,6 +1,18 @@
+@import 'shared/ui/styles';
+
 .wrapper {
+    box-sizing: border-box;
     width: 100%;
-    max-width: 1273px;
+    max-width: 1300px;
     margin: 0 auto;
     height: 100%;
+    padding: 0 15px;
+
+    @include breakpoint(xl) {
+        max-width: 1160px;
+    }
+
+    @include breakpoint(s) {
+       padding: 0;
+    }
 }

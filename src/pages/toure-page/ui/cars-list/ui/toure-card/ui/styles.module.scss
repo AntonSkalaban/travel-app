@@ -13,6 +13,15 @@
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     padding: 41px 30px 10px 30px;
 
+    @include breakpoint(m) {
+        width: 100%;
+    }
+
+    @include breakpoint(s) {
+        padding: 21px 15px 5px 15px;
+        height: 250px;
+    }
+
     &__currency {
         font-family: $font-poppins;
         font-size: 16px;
@@ -25,6 +34,13 @@
         width: 180px;
         height: 102px;
         margin: 0 auto;
+
+        @include breakpoint(s) {
+            width: 160px;
+            height: 90px;
+        }
+
+        
     }
    
     &__row {

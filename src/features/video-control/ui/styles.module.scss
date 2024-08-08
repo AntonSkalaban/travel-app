@@ -12,6 +12,11 @@
     top: calc(50% - 70px);
     left: calc(50% - 70px);
     z-index: 10;
+
+    @include breakpoint(m) {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .play-icon {

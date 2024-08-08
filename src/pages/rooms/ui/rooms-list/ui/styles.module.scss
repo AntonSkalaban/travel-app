@@ -1,6 +1,32 @@
+@import 'shared/ui/styles';
+
 .rooms-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+   
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     gap: 50px;
     margin: 54px auto 173px auto;
+
+    @include breakpoint(xl) {
+       gap: 30px;
+    }
+
+    @include breakpoint(l) {
+        width: 830px;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    @include breakpoint(m) {
+      width: 100%;
+    //     display: grid;
+        gap: 20px;
+    }
+
+    @include breakpoint(s) {
+        gap: 15px;
+    }  
+
+
 }

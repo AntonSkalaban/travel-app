@@ -3,15 +3,34 @@
 .card {
     width: 390px;
     height: 414px;
+   
     box-sizing: border-box;
 
     border: 1px solid $color-brown-light;
     box-shadow: 0px 4px 30px -5px rgba(0, 0, 0, 0.1);
     color: $color-brown;
 
+    @include breakpoint(xl) {
+        width: 100%;
+    }
+
+    @include breakpoint(m) {
+        height: 430px;
+    }
+
+    @include breakpoint(s) {
+        height: 360px;
+    }
+
+
+
     &__img {
         width: 100%;
         height: 250px;
+
+        @include breakpoint(s) {
+            height: 200px;
+        }
     }
 
     &__description-top {
@@ -21,6 +40,11 @@
 
     &__row {
         @include flexBetween;
+        @include breakpoint(m) {
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+          }
     }
 
     &__title {
@@ -28,6 +52,12 @@
         font-size: 25px;
         font-weight: 600;
         line-height: 31.38px;
+
+        @include breakpoint(s) {
+            font-size: 16px;
+            line-height: 20px;
+         }
+
     }
 
     &__available {
@@ -44,6 +74,11 @@
         line-height: 30px;
 
         margin-top: 11px;
+
+        @include breakpoint(s) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__btn {
@@ -55,5 +90,10 @@
     &__description-bottom {
         padding: 12px 15px 14px 15px;
         @include flexBetween;
+
+
+    @include breakpoint(s) {
+       justify-content: center;
+    }
     }
 }

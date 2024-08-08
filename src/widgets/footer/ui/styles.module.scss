@@ -6,12 +6,34 @@
     box-sizing: border-box;
     color: $color-white;
     font-family: $font-raleway;
+    
    
-
+  
     &__container-top {
         @include flexBetween;
         align-items: baseline;
         padding: 81px 0 64px;
+
+        @include breakpoint(xl) {
+            // width: fit-content;
+            flex-wrap: wrap;
+            gap: 16px;
+
+            padding: 10px 0 10px;
+        //    margin: 0 auto;
+        }
+    
+
+        @include breakpoint(l) {
+            width: fit-content;
+           flex-direction: column;
+            gap: 16px;
+
+            padding: 10px 0 10px;
+           margin: 0 auto;
+        }
+
+    
     }
 
     &__logo {
@@ -28,7 +50,32 @@
     }
 
     &__logo-text {
-        width: 277px;
+        width: 100%;;
+        max-width: 277px;
+       
+
+        @include breakpoint(l) {
+            max-width: 763px;
+          }
+    }
+
+    &__lists-container {
+        gap: 90px;
+        @include flexBetween;
+        align-items: baseline;
+
+
+        @include breakpoint(m) {
+            gap: 20px;
+            margin: 0 auto;
+           
+          }
+
+        @include breakpoint(s) {
+            
+            justify-content: space-between;
+        }
+
     }
 
     &__text {
@@ -48,7 +95,10 @@
 
 .links {
     width: fit-content;
-
+    @include breakpoint(xl) {
+        margin-right: 20px;
+      }
+    
     &__list {
         display: flex;
         flex-direction: column;
@@ -59,8 +109,30 @@
 }
 
 .newsletter {
+    &__text-container {
+
+    }
     &__text {
         max-width: 234px;
         margin-bottom: 16px;
     }
+
+    @include breakpoint(xl) {
+       display: flex;
+       align-items: center;
+       gap: 20px;
+
+       &__text {
+        max-width: 400px;
+        }
+    }
+
+    @include breakpoint(s) {
+        
+        align-items: baseline;
+       flex-direction: column;
+       gap: 10px;
+       margin: 0 auto;
+    }
+
 }

@@ -5,27 +5,27 @@ import { useQuery } from "@apollo/client";
 import client from "shared/api/apollo-client";
 import { useSlider } from "shared/model";
 import { Wrapper } from "shared/ui/wrapper";
-import { LIST_REVIEWS } from "widgets/review-card/api";
 import { ReviewResponce } from "widgets/review-card/model";
 import { ReviewCard } from "widgets/review-card/ui";
 import { ReviewCardSkeleton } from "widgets/review-card/ui/review-card-skeleton";
+import { GET__REVIEWS } from "entities/review/api";
 
 import Arrow from "./images/arrow.svg";
 import styles from "./styles.module.scss";
 
 const Testimonies: FC = () => {
-  const reviewsPerSlide = 2;
+  const itemsPerSlide = 2;
 
   const {
     data: reviews,
     loading,
     error,
-  } = useQuery<ReviewResponce>(LIST_REVIEWS, {
+  } = useQuery<ReviewResponce>(GET__REVIEWS, {
     client,
   });
 
   const { page, isFirstSlide, isLastSlide, toNextSlide, toPrevSlide } =
-    useSlider(Math.round((reviews?.reviews?.length || 0) / reviewsPerSlide));
+    useSlider(Math.round((reviews?.reviews?.length || 0) / itemsPerSlide));
 
   const handlePrevSlideClick = () => {
     toPrevSlide();

@@ -6,8 +6,8 @@ import { useLocale } from "next-intl";
 
 import { Locale } from "shared/lib/i18n";
 
-import FlagEn from "./flag-en.svg";
-import FlagRu from "./flag-ru.svg";
+import FlagEn from "./images/flag-en.svg";
+import FlagRu from "./images/flag-ru.svg";
 import styles from "./styles.module.scss";
 
 export const LangSwitcher: FC = () => {

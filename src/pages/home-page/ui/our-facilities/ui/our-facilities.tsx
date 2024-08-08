@@ -20,7 +20,8 @@ const OurFacilite: FC = () => {
         <div className={styles["cards-container"]}>
           {cards.map(({ title, image }) => (
             <div className={styles.card} key={title[localActive]}>
-              {image}
+              <div className={styles.card__svg}>{image}</div>
+
               <p className={styles["card__title"]}>{title[localActive]}</p>
             </div>
           ))}

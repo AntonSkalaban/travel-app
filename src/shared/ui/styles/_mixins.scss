@@ -19,7 +19,6 @@
     opacity: 0.8;
 } 
 
-
 @mixin buttonPrimary($borderRadius: 0) {       
     background-color: $color-brown;
     border-radius: $borderRadius;
@@ -29,8 +28,6 @@
         @include buttonHover;
     }
 }
-
-
 
 @keyframes shimmer {
     100% {
@@ -63,5 +60,24 @@
     }
 }
 
-//
+@mixin breakpoint($point) {
+    @if ($point == xl) {
+      @media (max-width: $xl) {
+        @content;
+      }
+    } @else if ($point == l) {
+      @media (max-width: $l) {
+        @content;
+      }
+    } @else if ($point == m) {
+      @media (max-width: $m) {
+        @content;
+      }
+    } @else if ($point == s) {
+      @media (max-width: $s) {
+        @content;
+      }
+    }
+}
+
 

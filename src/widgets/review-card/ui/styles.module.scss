@@ -9,7 +9,36 @@
     background-color: $color-grey-light; 
     padding: 34px 25px 27px 25px;  
     color: $color-grey-font;
+
+    &:nth-child(even) {
+        margin-left: 60px;
+    }
+
+    @include breakpoint(l) {
+        padding: 24px 15px 17px 15px; 
+        width: 400px; 
+
+        &:nth-child(even) {
+            margin-left: 40px;
+        }
+    }
+
+    @include breakpoint(m) {
+        height: 420px;
+
+        margin-right: 20px;
+     
+        &:nth-child(even) {
+            margin-left: 0;
+        }
     
+      }
+
+      @include breakpoint(s) {
+       width: 360px;
+    
+      }
+
     &__top-row {
         @include flexBetween;
     }
@@ -21,6 +50,20 @@
         line-height: 18px;
 
         margin-top: 70px;
+
+        @include breakpoint(m) {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+
+      @include breakpoint(s) {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 20px;
+     
+       }
+        
     }
 }
 
@@ -42,6 +85,11 @@
     display: flex;
     align-items: center;
     gap: 15px;
+
+    @include breakpoint(m) {
+        bottom: 20px;
+    }
+    
 
 }
 

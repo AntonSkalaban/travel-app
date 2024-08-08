@@ -1,0 +1,102 @@
+@import 'shared/ui/styles';
+
+.menu {
+    display: none;
+    justify-content: flex-start;
+
+    @include breakpoint(m) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+        &__icon {
+            width: 16px;
+            height: 16px;
+            padding: 4px;
+            cursor: pointer;
+            position: relative;
+            right: 10px;
+            z-index: 400;
+            box-sizing: border-box;
+
+            span {
+                background-color: $color-brown;
+                height: 2px;
+                position: absolute;
+                width: 100%;
+                transition: all 0.3s ease;
+                border-radius: 10px;
+              }
+            
+              & span:first-child {
+                top: 0;
+                transform: rotate(0);
+              }
+            
+              & span:nth-child(2) {
+                top: 6px;
+                opacity: 1;
+              }
+            
+              & span:last-child {
+                top: 12px;
+                transform: rotate(0);
+              }
+          
+              &_active {
+
+                position: fixed;
+                right: 16px;
+                span {
+                    background: $color-white;
+                    
+                  }
+                  & span:first-child {
+                    top:  6px ;
+                    transform: rotate(45deg); 
+                  }
+
+                  & span:nth-child(2) {
+                    top: 6px;
+                    opacity: 0;
+                  }
+
+                  & span:last-child {
+                    top: 6px;
+                    transform: rotate(-45deg);
+                  }
+
+                  & span:first-child,
+              & span:last-child {
+                background-color: red;
+              }
+              
+              }
+        }
+
+        &__content {
+            width: 0;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+          
+            background-color: $color-brown;
+          
+            transform: translateX(100vw);
+          
+            z-index: 399;
+          
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            transition: transform 0.3s ease-in-out;
+
+            &_active {
+                width: fit-content;
+                transform: translateX(0);
+            }
+        }
+}

@@ -12,4 +12,8 @@
         transform: scale(1.1);
         transition: all .3s ease-in-out;
     }
+
+    @include breakpoint(m) {
+       scale: 0.8;
+    }
 }

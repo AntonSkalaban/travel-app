@@ -1,4 +1,5 @@
 @import 'shared/ui/styles';
+@import 'shared/ui/room-header/ui/mixins.scss';
 
 .header {
     width: 100%;
@@ -9,17 +10,20 @@
     background-size: cover;
     background-repeat: no-repeat;
  
+    @include breakpoint(m) {
+        height: 200px;
+    }
+
     &__container {
+        position: relative;
+        z-index: 4;
         height: 100%;
         @include flexCenter;
     }
 
     &__title {
-        font-family: $font-mulish;
-        font-size: 60px;
-        font-weight: 800;
-        line-height: 75.3px;
-        text-align: center;
-        color: $color-white;
+       @include RoomHeaderTitle;
     }
+
+
 }

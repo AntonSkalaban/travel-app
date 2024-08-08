@@ -1,14 +1,50 @@
+@import 'shared/ui/styles';
+
 .dropdown-container {
     position: relative;
     padding-left: 45px;
 
+    @include breakpoint(m) {
+        padding-left: 25px;
+   }
+
+   @include breakpoint(s) {
+    padding-left: 15px;
+}
+    
     &__icon {
         position: absolute;
         top: 0;
         left: 0;
+
+        @include breakpoint(m) {
+            transform: scale(0.9);
+       }
+
+       @include breakpoint(s) {
+        transform: scale(0.8);
+   }
     }
    
     &__title {
         display: flex;
+
+        font-family: $font-poppins;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22.5px;
+
+        @include breakpoint(m) {
+            font-size: 14px;
+            font-weight: 300;
+       }
+       @include breakpoint(s) {
+        font-size: 12px;
+        font-weight: 200;
+   }
     }   
+
+    @include breakpoint(m) {
+         padding-left: 25px;
+    }
 }

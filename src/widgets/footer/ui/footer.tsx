@@ -24,26 +24,30 @@ export const Footer: FC = () => {
               {t("logoText")}
             </p>
           </div>
-          {data.map(({ title, links }) => (
-            <div key={title[localActive]} className={styles.links}>
-              <p className={styles.footer__title}>{title[localActive]}</p>
-              <ul className={styles.footer__list}>
-                {links.map(({ name, link }) => (
-                  <li key={link} className={styles.footer__text}>
-                    <Link href={link}>{name[localActive]}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className={styles["footer__lists-container"]}>
+            {data.map(({ title, links }) => (
+              <div key={title[localActive]} className={styles.links}>
+                <p className={styles.footer__title}>{title[localActive]}</p>
+                <ul className={styles.footer__list}>
+                  {links.map(({ name, link }) => (
+                    <li key={link} className={styles.footer__text}>
+                      <Link href={link}>{name[localActive]}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
           <div className={styles.newsletter}>
-            <p className={styles.footer__title}>{t("newsletter")}</p>
-            <p
-              className={`${styles.footer__text} ${styles["newsletter__text"]}`}
-            >
-              {t("newsletterText")}
-            </p>
+            <div className={styles["newsletter__text-container"]}>
+              <p className={styles.footer__title}>{t("newsletter")}</p>
+              <p
+                className={`${styles.footer__text} ${styles["newsletter__text"]}`}
+              >
+                {t("newsletterText")}
+              </p>
+            </div>
             <Subscribe />
           </div>
         </div>

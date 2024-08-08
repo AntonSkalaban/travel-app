@@ -5,6 +5,7 @@
     &__title {
         @include hotelHeaderTitle;
         margin-top: 26px;
+        
     }
 
     &__subtitle {
@@ -34,9 +35,38 @@
             border-radius: 50%;
             margin-right: 8px;
         }
+
         &:hover  &__elipce  {
             scale: 1.05;
             transition: 0.3s ease-in-out;
         }
+
+        @include breakpoint(l) {
+           background-color: white;
+           border-radius: 50px;
+
+           &:hover {
+            scale: 1.01;
+            transition: 0.3s ease-in-out;
+           }
+
+           &:hover  &__elipce  {
+            scale: 1;
+            transition: none;
+        }
+        }
+
+        @include breakpoint(s) {
+            height: 35px;
+            font-size: 14px;
+     
+            line-height: 20px;
+            padding: 4px;
+
+            &__elipce {
+               display: none;
+            }
+         }
+
     }
 }

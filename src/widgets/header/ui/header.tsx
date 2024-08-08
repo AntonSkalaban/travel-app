@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import { Wrapper } from "shared/ui/wrapper";
+import { BurgerMenu } from "features/burger-menu/ui/burger-menu";
 import { LangSwitcher } from "features/lang-toggle/ui";
 import { Nav } from "features/nav/ui";
 
@@ -13,8 +14,14 @@ export const Header: FC = () => {
       <Wrapper>
         <div className={styles.header__container}>
           <Logo />
-          <Nav />
-          <LangSwitcher />
+          <BurgerMenu>
+            <Nav />
+            <LangSwitcher />
+          </BurgerMenu>
+          <div className={styles.header__menu}>
+            <Nav />
+            <LangSwitcher />
+          </div>
         </div>
       </Wrapper>
     </header>

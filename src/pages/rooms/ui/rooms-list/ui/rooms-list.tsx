@@ -17,7 +17,7 @@ export const RoomsList: FC = () => {
   const arr = createIndexedArray(3);
   return (
     <Wrapper>
-      <section className={styles["rooms-list"]}>
+      <section className={styles["rooms-list"]} id="rooms-list">
         {rooms?.rooms.map(({ id, title, images, price, available }) => (
           <RoomCard
             key={id}
