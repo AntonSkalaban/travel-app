@@ -1,0 +1,40 @@
+@import 'shared/ui/styles';
+
+.header {
+    width: 100%;
+    height: 700px;
+
+    background-image: url('./images/room.png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+
+    font-family: $font-mulish;
+    color: $color-white;
+
+    @include flexCenter;
+
+    @include breakpoint(xl) {
+        height: 500px;  
+    }
+
+    @include breakpoint(m) {
+        height: 400px;  
+    }
+
+    @include breakpoint(s) {
+        height: 300px;  
+    }
+
+    &__container {
+        @include flexCenter;
+        flex-direction: column;
+        gap: 48px;
+        z-index: 4;
+
+        @include breakpoint(s) {
+            gap: 20px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import 'shared/ui/styles';
+
+.dropdown {
+    width: 100%;
+    position: relative;
+
+    &__header {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 7px;
+      
+        font-family: $font-poppins;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        color: $color-grey-dark;
+        text-transform: capitalize;
+
+        @include breakpoint(m) {
+            width: 100px;
+        }
+    }
+
+    &__name {
+        max-width: 80px;
+        overflow:hidden;
+    }
+
+    &__content {
+        width: calc(100% - 45px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        background-color: $color-white;
+    }
+}

@@ -1,0 +1,80 @@
+@import 'shared/ui/styles';
+
+.facilite {
+    margin-top: 64px;
+    font-family: $font-poppins;
+
+
+    @include breakpoint(xl) {
+        margin-top: 160px;
+    }
+
+    @include breakpoint(m) {
+        margin-top: 200px;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+
+        @include breakpoint(l) {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        @include breakpoint(m) {
+            font-size: 26px;
+            line-height: 30px;
+        }
+
+        @include breakpoint(s) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    
+    }
+
+
+
+    &__subtitle{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22.5px;
+        text-align: center;
+        margin-top: 12px;
+
+        @include breakpoint(m) {
+            font-size: 14px;
+        }
+    
+        @include breakpoint(m) {
+            font-size: 12px;
+        }
+    }   
+
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 50px;
+
+    @include breakpoint(xl) {
+        width: 610px;
+        margin: 50px auto 0 auto;
+    }
+
+    @include breakpoint(m) {
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+    }
+
+    @include breakpoint(s) {
+        gap: 10px;
+    }
+}
+

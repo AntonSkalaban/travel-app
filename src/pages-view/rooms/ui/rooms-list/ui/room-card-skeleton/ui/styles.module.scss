@@ -1,0 +1,17 @@
+@import 'shared/ui/styles';
+
+.skeleton {
+    @include skeleton(390px, 414px);
+
+    @include breakpoint(xl) {
+        width: 100%;
+    }
+
+    @include breakpoint(m) {
+        height: 430px;
+    }
+
+    @include breakpoint(s) {
+        height: 360px;
+    }
+}

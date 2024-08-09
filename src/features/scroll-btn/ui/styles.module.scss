@@ -1,0 +1,19 @@
+@import 'shared/ui/styles';
+
+.btn {
+    width: 50px;
+    height: 90px;
+    border-radius: 50px;
+    border: 2px solid $color-white;
+
+    @include flexCenter;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all .3s ease-in-out;
+    }
+
+    @include breakpoint(m) {
+       scale: 0.8;
+    }
+}

@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tестовое задание Modsen Travel Agency
 
-## Getting Started
 
-First, run the development server:
+## Содержание
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Техническое задание](#Техническое-задание)
+- [API](#API)
+- [Используемые технологии](#Используемые-технологии)
+- [Необходимый функционал](#Необходимый-функционал)
+- [Дополнительный функционал](#Дополнительный-функционал)
+- [Описание экранов](#Описание-экранов)
+- [Полезные ссылки](#Полезные-ссылки)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Техническое задание
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Необходимо реализовать React приложение "Modsen Travel Agency" по предоставленному дизайну из Figma с использование server-side rendering(NextJS) и GraphQL.
 
-## Learn More
+## API
 
-To learn more about Next.js, take a look at the following resources:
+Список API для использования(если представленные API не удовлетворяют каким-либо условиям задания, можно использовать любые другие открытые API об информации о странах):
+- [countries](https://github.com/trevorblades/countries).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Используемые технологии
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **_yarn_** - менеджер пакетов;
+- **_TS_** - инструмент строгой типизации;
+- **_email-js_** - библиотека позволяющая отправлять электронные письма на почту;
+- **_SCSS_** - препроцессор, позволяющий писать код для стилей CSS;
+- ***cypress*** — e2e тестирование для web-приложений;
+- ***react-hook-form*** - библиотека для работы с формами;
+- ***jest*** — unit-тестирование;
+- **_zod_** - библиотека для валидации форм;
+- **_nextJS_** - фреймворк на JavaScript, использующий React для построения server-side render;
+- **_graphQL_** - язык запросов для API-интерфейсов.
 
-## Deploy on Vercel
+## Необходимый функционал:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Приложение должно предоставлять возможность:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- отправки писем на электронную почту;
+- реализацию elastic search;
+- реализацию infinity scroll;
+- просмотр интерактивной карты;
+- кастомного плеера;
+- смены языка.
+
+
+## Дополнительный функционал
+
+- Развернуть приложение на хостинге (heroku, vercel);
+- Настроить CI/CD, используя [GitHub Actions](https://github.com/features/actions);
+- Собрать проект с нуля(с настройками всех конфигов: eslint, prettier, husky, commitlint).
+
+
+### Пример графического представления:
+
+Ссылка на макет: [Макет "Modsen Travel Agency"](<https://пwww.figma.com/file/XunNnW33P0nEY8yq5hHbrm/Hotel-website-%2B-mobile-app-(Community)?type=design&node-id=19-10&mode=design&t=wKeFVSJX4nWQ7F0r-0>).
+
+
+### Также проект предполагает:
+
+- Организацию файловой структуры описанной в [structure](https://github.com/mkrivel/structure), можно использовать [feature-sliced-design](https://feature-sliced.design/);
+- Придерживаться требований по написанию и организации кода react приложения. Ссылка на требования: [Требования к тестовому заданию](https://github.com/annaprystavka/requirements);
+- Обработку ошибок через паттерн _"Error Boundaries"_;
+- Использование TypeScript для типизирования и уменьшения количества потенциальных багов;
+- Использование алиасов для импортирования файлов;
+- Реализация должна быть выполнена без использования UI библиотек;
+- Обязательная валидация всех текстовых полей с использованием _yup_;
+- Оптимизацию дизайна под мобильные устройства (до 390px);
+- Покрытие тестами всего приложения (cypress, jest) от 60% и выше;
+- Создание UI библиотеки компонентов, используя **storybook**;
+- Обязательную анимацию при наведения, нажатии на кнопки, прокрутки карусели и слайдеров, появлении элементов на странице при рендере и скролле;
+- При желании можно использовать Apollo Client для реализации своего сервера(выбрать любую подходящую API);
+- Использование инструментов для повышения accessibility;
+- Творчество в контексте анимации, помимо обязательной выше, приветствуется.
+
+
+## Описание экранов
+
+1. [Главная Home](<https://www.figma.com/file/XunNnW33P0nEY8yq5hHbrm/Hotel-website-%2B-mobile-app-(Community)?type=design&node-id=306-854&mode=design&t=wKeFVSJX4nWQ7F0r-0>).
+В шапке сайта пользователь может переходить на страницы Home, Rooms, About, Contact. Также можно выбрать язык - EN/RU(данные необходимо замокать). В блоке "Paradise View" при нажатии на "Take a tour" пользователь переходит на страницу Tour. Чтобы забукать номер в отеле, пользователю необходимо выбрать свою локацию - это страна(для получения списка стран необходимо использовать API), тип комнаты(roal/standart), количество персон(максимум 7 человек) и диапазон дат, на которые пользователь хочет забукать номер в отеле(для этого нужно использовать библиотеку, которую Вы реализовали во втором тестовом задании или React Datepicker). После нажатия на кнопку "Book Now" создается заявка с подтверждением бронирования, при этом открывается модальное окно, в котором пользователь должен ввести ФИО и свой номер. Для успешной отправки заявки пользователю необходимо ее подтвердить, чтобы с ним связался менеджер отеля.
+В блоке "Testimonies" отображаются отзывы туристов, максимальное количество отзывов - 9(для отображения отзывов необходимо реализовать слайдер).
+ На каждой странице в блоке "Newsletter», который находится в подвале сайта, должна быть реализована форма отправки сообщения на электронную почту выполняющего.
+
+2. [Страница Room](<https://www.figma.com/file/XunNnW33P0nEY8yq5hHbrm/Hotel-website-%2B-mobile-app-(Community)?type=design&node-id=266-27&mode=design&t=wKeFVSJX4nWQ7F0r-0>).
+На странице должно отображаться видео, которое проигрывается при нажатии, для него необходимо реализовать кастомную реализацию плеера(видео можно использовать любое). При просмотре списка комнат необходимо реализовать загрузку контента с помощью infinity scroll.
+На странице отображается список номеров с необходимой информацией и при нажатии на номер пользователь переходит на его описание на следующей [странице](https://www.figma.com/file/XunNnW33P0nEY8yq5hHbrm/Hotel-website-%2B-mobile-app-(Community)?type=design&node-id=928-647&mode=design&t=wKeFVSJX4nWQ7F0r-0). 
+
+
+3. [Страница Toure](<https://www.figma.com/file/XunNnW33P0nEY8yq5hHbrm/Hotel-website-%2B-mobile-app-(Community)?type=design&node-id=920-53&mode=design&t=wKeFVSJX4nWQ7F0r-0>).
+На странице Toure можно выбрать страну и забронировать тур, в поиске необходимо ввести необходимую страну и при нажатии на нее также открывается модальное окно с кратким названием тура, ФИО пользователя и его номер. Для подтверждения заявки пользователю необходимо ее подтвердить, чтобы с ним связался менеджер отеля. Если в поиске страна не найдена необходимо отображать "Not found".
+
+4. [Главная Contact Us](<https://www.figma.com/file/XunNnW33P0nEY8yq5hHbrm/Hotel-website-%2B-mobile-app-(Community)?type=design&node-id=323-1069&mode=design&t=wKeFVSJX4nWQ7F0r-0>).
+На странице пользователь в форме может ввести свое ФИО, телефон и комментарий/сообщение для отеля с пожеланиями или свой вопрос. После отправки формы пользователю должна прийти информации об ее успешной отправке или наоборот об ошибке(сообщение должно отправляться на почту выполняющего). На карте пользователь может увидеть место, где расположен отель, и ближайшую точку магазина и аптеки.
+
+
+
+## Тестирование
+
+Реализовать e2e и unit тестирование c полным покрытием функционала приложения:
+- Модуль бронирования;
+- Модуль карты;
+- Модуль поиска страны;
+- Модули отправки писем;
+- Модуль смены языка.
+
+
+## Полезные ссылки
+
+[React](https://reactjs.org/docs/getting-started.html)
+
+[React hooks](https://reactjs.org/docs/hooks-intro.html)
+
+[NextJS](https://nextjs.org/docs)
+
+[GraphQL](https://graphql.org/)
+
+[Email-js](https://www.emailjs.com/docs/examples/reactjs/)
+
+[Apollo Client](https://www.apollographql.com/docs/react/)
+
+[SCSS](https://sass-lang.com/documentation/)
+
+[Yup](https://www.npmjs.com/package/yup)
+
+[Storybook](https://dev.to/iamrishupatel/how-to-create-a-react-component-library-using-storybook-typescript-scss-and-rollup-4pin)
+
+[next-intl](https://next-intl-docs.vercel.app/)
+
+[React Datepicker](https://reactdatepicker.com/)
+
+[Тестирование Cypress](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)
+
+[Тестирование Jest](https://jestjs.io/ru/docs/getting-started)
+
+
+
+

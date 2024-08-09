@@ -1,0 +1,29 @@
+@import 'shared/ui/styles';
+
+.decor {
+    display: flex;
+    gap: 61px;
+
+    margin-bottom: 268px;
+
+    @include breakpoint(l) {
+       gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    &__image {
+        width: 381px;
+        height: 480px;
+        border-radius: 10px;
+    
+        @include breakpoint(l) {
+            width: 30%;
+            height: auto;
+            flex-direction: column;
+        }
+    
+    }
+
+}
+

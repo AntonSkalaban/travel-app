@@ -1,0 +1,44 @@
+
+
+@mixin hotelHeaderTitle {
+    width: 100%;
+    max-width: 450px;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 64.57px;
+    text-align: left;
+
+
+    @include breakpoint(l) {
+        text-align: center;
+    }
+
+    @include breakpoint(m) {
+        font-size: 40px;
+        line-height: 54px;
+    }
+
+    @include breakpoint(s) {
+        font-size: 30px;
+        line-height: 44px;
+    }
+}
+
+@mixin hotelHeaderSubtitle {
+    width: 261px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.61px;
+    text-align: left;
+
+    @include breakpoint(l) {
+        text-align: center;
+    }
+
+    @include breakpoint(m) {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+  
+}

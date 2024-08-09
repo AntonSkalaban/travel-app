@@ -1,26 +1,69 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
     "esModuleInterop": true,
-    "module": "esnext",
+    "skipLibCheck": true,
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noEmit": true,
     "jsx": "preserve",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"]
+      "assets/*": [
+        "assets/*"
+      ],
+      "public/*": [
+        "public/*"
+      ],
+      "app/*": [
+        "app/*"
+      ],
+      "pages-view/*": [
+        "pages-view/*"
+      ],
+      "shared/*": [
+        "shared/*"
+      ],
+      "widgets/*": [
+        "widgets/*"
+      ],
+      "features/*": [
+        "features/*"
+      ],
+      "entities/*": [
+        "entities/*"
+      ],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "./src",
+    "./dist/types/**/*.ts",
+    "./next-env.d.ts",
+    "src/svg.d.ts",
+    ".next/types/**/*.ts"
+, "src/shared/lib/i18n/i18n.ts", "src/middleware.ts", "src/shared/lib/i18n/navigation.ts"],
+  "exclude": [
+    "./node_modules"
+  ]
 }

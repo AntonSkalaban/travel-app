@@ -1,0 +1,11 @@
+@import 'shared/ui/room-header/ui/mixins.scss';
+
+.header {
+    &__title {
+        @include RoomHeaderTitle;
+    }
+
+    &__subtitle {
+        @include RoomHeaderSubtitle;
+    }
+}
