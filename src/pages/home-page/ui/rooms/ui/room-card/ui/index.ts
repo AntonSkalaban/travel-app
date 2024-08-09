@@ -1,1 +1,1 @@
-export * from "./room-card";
+export { default } from "./room-card";

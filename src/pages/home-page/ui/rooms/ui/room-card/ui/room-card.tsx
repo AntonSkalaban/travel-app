@@ -2,10 +2,10 @@ import { FC } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { RoomCardProps } from "../model";
+import { RoomCardProps } from "../model/types";
 import styles from "./styles.module.scss";
 
-export const RoomCard: FC<RoomCardProps> = ({ title, image, count }) => {
+const RoomCard: FC<RoomCardProps> = ({ title, image, count }) => {
   const t = useTranslations("home.rooms");
 
   return (
@@ -20,3 +20,5 @@ export const RoomCard: FC<RoomCardProps> = ({ title, image, count }) => {
     </article>
   );
 };
+
+export default RoomCard;

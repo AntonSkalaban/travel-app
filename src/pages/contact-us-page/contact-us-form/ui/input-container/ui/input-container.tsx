@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { InputContainerProps } from "../model";
+import { InputContainerProps } from "../model/types";
 import styles from "./styles.module.scss";
 
 export const InputContainer: FC<InputContainerProps> = ({

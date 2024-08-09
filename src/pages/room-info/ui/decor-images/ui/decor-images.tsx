@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import { DecorImagesProps } from "../model";
+import { DecorImagesProps } from "../model/types";
 import styles from "./styles.module.scss";
 
 const DecorImages: FC<DecorImagesProps> = ({ images }) => {

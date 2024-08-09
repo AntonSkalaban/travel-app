@@ -10,7 +10,7 @@ import DecorImages from "./decor-images/ui";
 import DecorImagesSkeleton from "./decor-images-skeleton/ui";
 import RoomDetails from "./room-details/ui";
 import RoomInfoSkeleton from "./room-details-skeleton/ui";
-import { RoomPageProps } from "../model";
+import { RoomPageProps } from "../model/types";
 
 const RoomPage: FC<RoomPageProps> = ({ id }) => {
   const {

@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { FaciliteCardProps } from "../model";
+import { FaciliteCardProps } from "../model/types";
 import styles from "./styles.module.scss";
 
 const FaciliteCard: FC<FaciliteCardProps> = ({ title, image }) => {

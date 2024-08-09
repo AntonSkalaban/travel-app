@@ -1,4 +1,4 @@
-export const getDateString = (date: Date, locale: string = "ru-RU") => {
+export const getDateString = (date: Date, locale: string = "en-US") => {
   const options: Intl.DateTimeFormatOptions = {
     day: "numeric",
     month: "short",

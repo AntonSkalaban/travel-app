@@ -6,7 +6,7 @@ import { useRouter } from "shared/lib/i18n";
 import { pagesPathsEnam } from "features/nav/model/types";
 
 import { CardIcons } from "./card-icons/card-icons";
-import { RoomCardProps } from "../model";
+import { RoomCardProps } from "../model/types";
 import styles from "./styles.module.scss";
 
 export const RoomCard: FC<RoomCardProps> = ({
