@@ -1,3 +1,3 @@
-export * from "./use-elastic-search";
+export * from "../ui/suggestions/model/use-elastic-search";
 export * from "./types";
-export * from "./hightlight-substring";
+export * from "../ui/suggestions/model/hightlight-substring";

@@ -8,13 +8,13 @@ import {
 import styles from "./styles.module.scss";
 
 export const Suggestions: FC<SuggestionProps> = ({ searchValue, onClick }) => {
-  const { data: hints } = useElasticSearch(searchValue);
+  const { data: suggestions } = useElasticSearch(searchValue);
 
   return (
     <div className={styles.suggestions}>
-      {hints?.toursCountries.length ? (
+      {suggestions?.toursCountries.length ? (
         <ul className={styles.suggestions__list}>
-          {hints?.toursCountries?.map(({ country }) => {
+          {suggestions?.toursCountries?.map(({ country }) => {
             const highlightedSubstring = highlightSustrting(
               country,
               searchValue,
