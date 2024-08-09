@@ -1,5 +1,6 @@
+"use client";
 import { FC } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import { HotelHeader } from "shared/ui/hotel-header/ui/hotel-header";

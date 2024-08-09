@@ -3,11 +3,7 @@ import { FC } from "react";
 import { InputContainerProps } from "../model/types";
 import styles from "./styles.module.scss";
 
-export const InputContainer: FC<InputContainerProps> = ({
-  name,
-  children,
-  error,
-}) => {
+const InputContainer: FC<InputContainerProps> = ({ name, children, error }) => {
   return (
     <div className={styles.container}>
       <p className={styles.container__name}>{name}</p>
@@ -16,3 +12,5 @@ export const InputContainer: FC<InputContainerProps> = ({
     </div>
   );
 };
+
+export default InputContainer;

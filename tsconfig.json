@@ -39,8 +39,8 @@
       "app/*": [
         "app/*"
       ],
-      "pages/*": [
-        "pages/*"
+      "pages-view/*": [
+        "pages-view/*"
       ],
       "shared/*": [
         "shared/*"

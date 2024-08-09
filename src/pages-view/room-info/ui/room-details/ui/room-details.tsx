@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { RoomImagesViewer } from "widgets/room-images-viewer/ui/room-images-viewer";
 import { StarRating } from "features/star-rating/ui";
 
-import { RoomDetailsProps } from "../model";
+import { RoomDetailsProps } from "../model/types";
 import { ReservationModal } from "../reservation-modal/ui/reservation-modal";
 import styles from "./styles.module.scss";
 

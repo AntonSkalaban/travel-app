@@ -11,7 +11,7 @@ import { useShowAlert } from "shared/ui/alert/model/use-show-alert";
 import { Alert } from "shared/ui/alert/ui";
 import { Wrapper } from "shared/ui/wrapper";
 
-import { InputContainer } from "./input-container/ui/input-container";
+import InputContainer from "./input-container/ui/input-container";
 import { defaultValues, formShema } from "../model/shema";
 import { FormValues } from "../model/types";
 import styles from "./styles.module.scss";

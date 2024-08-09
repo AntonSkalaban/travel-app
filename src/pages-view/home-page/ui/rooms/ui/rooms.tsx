@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Filter } from "shared/ui/filter/ui";
 import { Wrapper } from "shared/ui/wrapper";
 
-import { RoomCard } from "./room-card/ui/room-card";
+import RoomCard from "./room-card/ui";
 import { rooms } from "../model/constants";
 import styles from "./styles.module.scss";
 
