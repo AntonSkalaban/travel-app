@@ -12,8 +12,8 @@ export const Suggestions: FC<SuggestionProps> = ({ searchValue, onClick }) => {
 
   return (
     <div className={styles.suggestions}>
-      {suggestions?.toursCountries.length ? (
-        <ul className={styles.suggestions__list}>
+      {suggestions?.toursCountries?.length ? (
+        <ul className={styles.suggestions__list} data-testid="suggestions-list">
           {suggestions?.toursCountries?.map(({ country }) => {
             const highlightedSubstring = highlightSustrting(
               country,

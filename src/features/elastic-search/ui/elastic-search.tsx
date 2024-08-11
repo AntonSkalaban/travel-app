@@ -54,12 +54,14 @@ export const ElasticSearch: FC<ElasticSearchProps> = ({ initialValue }) => {
           value={searchValue}
           onChange={handleChange}
           onKeyDown={hanldeKeyDown}
+          data-testid="search-input"
         />
 
         {searchValue && (
           <button
             className={styles["search-bar__close-btn"]}
             onClick={handleClearClick}
+            data-testid="clear-btn"
           >
             <Close />
           </button>
