@@ -2,33 +2,25 @@ describe("CategorySection e2e", () => {
   it("Should have slider", () => {
     cy.visit("/");
 
-    const prevBtn =  cy.get("[data-testid='btn-prev-slide']");
-   
-    prevBtn.should("exist").should("be.disabled");
+    cy.get("[data-testid='btn-prev-slide']")
+      .should("exist")
+      .should("be.disabled");
 
-    const nextBtn = cy.get("[data-testid='btn-next-slide']");
+    cy.get("[data-testid='btn-next-slide']")
+      .should("exist")
+      .should("not.be.disabled");
 
-    nextBtn.should("exist").should("not.be.disabled");
-
-    nextBtn.click();
-    nextBtn.should("be.disabled");
+    cy.get("[data-testid='btn-next-slide']").click();
+    cy.get("[data-testid='btn-next-slide']").should("be.disabled");
   });
 
   it("Should have quick-booking-modla", () => {
     cy.visit("/");
-    
-    const bookingModal = cy.get("[data-testid='booking-modal']");
 
-    bookingModal.should("not.exist");
+    cy.get("[data-testid='booking-modal']").should("not.exist");
 
-    const quickBookingBtn = cy.get("[data-testid='quick-booking-btn']");
-  
-    quickBookingBtn.click();
+    cy.get("[data-testid='quick-booking-btn']").click();
 
-    bookingModal.should("exist");
+    cy.get("[data-testid='booking-modal']").should("exist");
   });
 });
-
-
-
-
