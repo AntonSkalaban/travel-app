@@ -11,11 +11,11 @@ import Location from "./images/Location.svg";
 import Person from "./images/Person.svg";
 import Room from "./images/Room.svg";
 import {
+  DropdownContainer,
   personOptions,
   roomOptions,
-} from "../../dropdown-container/model/constants";
-import { DropdownContainer } from "../../dropdown-container/ui/dropdown-container";
-import { QuickBookingProps } from "../model/types";
+} from "../../dropdown-container";
+import { QuickBookingProps } from "../model";
 import styles from "./styles.module.scss";
 
 export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
@@ -94,7 +94,11 @@ export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
           />
         </div>
 
-        <button className={styles["quick-booking__btn"]} type="submit">
+        <button
+          className={styles["quick-booking__btn"]}
+          type="submit"
+          data-testid="quick-booking-btn"
+        >
           {t("btn")}
         </button>
       </form>

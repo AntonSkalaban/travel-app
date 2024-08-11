@@ -5,11 +5,10 @@ import { useTranslations } from "next-intl";
 import { useQuery } from "@apollo/client";
 import client from "shared/api/apollo-client";
 import { createIndexedArray, useSlider } from "shared/model";
-import { Wrapper } from "shared/ui/components/wrapper/ui";
-import { ReviewResponce } from "widgets/review-card/model";
-import { ReviewCard } from "widgets/review-card/ui";
-import { ReviewCardSkeleton } from "widgets/review-card/ui/review-card-skeleton";
-import { GET__REVIEWS } from "entities/review/api";
+import { Wrapper } from "shared/ui";
+import { ReviewCard, ReviewResponce } from "widgets/review-card";
+import { ReviewCardSkeleton } from "widgets/review-card/";
+import { GET__REVIEWS } from "entities/review";
 
 import Arrow from "./images/arrow.svg";
 import styles from "./styles.module.scss";
@@ -25,10 +24,12 @@ export const Testimonies: FC = () => {
   });
 
   const itemsPerSlide = 2;
-  const totalSlides = Math.round(reviews?.reviews?.length || 0);
+  const totalSlides = Math.round(
+    (reviews?.reviews?.length || 0) / itemsPerSlide,
+  );
 
   const { page, isFirstSlide, isLastSlide, toNextSlide, toPrevSlide } =
-    useSlider(totalSlides / itemsPerSlide);
+    useSlider(totalSlides);
 
   const reviewsSkeleton = createIndexedArray(itemsPerSlide);
 
@@ -42,6 +43,7 @@ export const Testimonies: FC = () => {
             className={`${styles.btn} ${styles["btn-prev"]}`}
             onClick={toPrevSlide}
             disabled={isFirstSlide || loading}
+            data-testid="btn-prev-slide"
           >
             <Arrow />
           </button>
@@ -49,6 +51,7 @@ export const Testimonies: FC = () => {
             className={`${styles.btn} ${styles["btn-next"]}`}
             onClick={toNextSlide}
             disabled={isLastSlide || loading}
+            data-testid="btn-next-slide"
           >
             <Arrow />
           </button>
