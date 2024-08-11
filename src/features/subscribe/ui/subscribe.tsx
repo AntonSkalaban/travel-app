@@ -53,7 +53,11 @@ export const Subscribe: FC = () => {
     <>
       {" "}
       {isAlertOpen && <Alert type={alertType} message={alertMessage} />}
-      <form className={styles.subscribe} onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className={styles.subscribe}
+        onSubmit={handleSubmit(onSubmit)}
+        data-testid="subscribe-form"
+      >
         <Input
           placeholder={`${t("placeHolder")}`}
           {...register("email")}

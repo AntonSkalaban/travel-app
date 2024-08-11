@@ -19,8 +19,16 @@ export const VideoControl: FC<VideoControlProps> = ({ videoRef }) => {
   };
 
   return (
-    <button className={styles.btn} onClick={handleClick}>
-      {isPlaying ? <Pause /> : <Play className={styles["play-icon"]} />}
+    <button
+      className={styles.btn}
+      onClick={handleClick}
+      data-testid="video-btn"
+    >
+      {isPlaying ? (
+        <Pause data-testid="pause-image" />
+      ) : (
+        <Play className={styles["play-icon"]} data-testid="play-image" />
+      )}
     </button>
   );
 };
