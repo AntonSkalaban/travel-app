@@ -1,4 +1,4 @@
-"use client";
+"use clienta";
 import { useState } from "react";
 
 export const useShowAlert = () => {
