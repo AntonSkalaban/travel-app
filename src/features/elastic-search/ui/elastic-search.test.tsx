@@ -1,11 +1,3 @@
-// import { useRouter } from "next/router";
-// import { act, fireEvent, render, screen } from "@testing-library/react";
-// import { useClickOutside } from "shared/model";
-// import { ElasticSearch } from "../../../shared/model/hooks/use-click-outside";
-// import { ElasticSearch } from "./suggestions/model/use-elastic-search";
-// import { ElasticSearch } from "./elastic-search";
-// import { Search } from "./images/Close.svg";
-// import { Close } from "./images";
 import { fireEvent, render } from "@testing-library/react";
 
 import { ElasticSearch } from "./elastic-search";

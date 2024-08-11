@@ -22,8 +22,16 @@ export const LangSwitcher: FC = () => {
   };
 
   return (
-    <button className={styles.button} onClick={handleLangClick}>
-      {localActive === "en" ? <FlagEn /> : <FlagRu />}
+    <button
+      className={styles.button}
+      onClick={handleLangClick}
+      data-testid="toggle-btn"
+    >
+      {localActive === "en" ? (
+        <FlagEn data-testid="flag-en" />
+      ) : (
+        <FlagRu data-testid="flag-ru" />
+      )}
     </button>
   );
 };
