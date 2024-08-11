@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { useTranslations } from "next-intl";
 
-import { HotelHeader } from "shared/ui/hotel-header/ui/hotel-header";
+import { HotelHeader } from "shared/ui";
 
 import styles from "./styles.module.scss";
 
-const Header: FC = () => {
+export const Header: FC = () => {
   const t = useTranslations("toure.header");
 
   return (
@@ -16,5 +16,3 @@ const Header: FC = () => {
     </HotelHeader>
   );
 };
-
-export default Header;

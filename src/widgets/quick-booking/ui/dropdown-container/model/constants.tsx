@@ -1,4 +1,4 @@
-import { Option } from "features/dropdown/ui/options/model";
+import { Option } from "features/dropdown";
 
 export const personOptions: Option[] = [
   { name: "01", value: 1 },

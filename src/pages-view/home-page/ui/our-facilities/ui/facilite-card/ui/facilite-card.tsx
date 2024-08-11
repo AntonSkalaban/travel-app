@@ -1,9 +1,9 @@
 import { FC } from "react";
 
-import { FaciliteCardProps } from "../model/types";
+import { FaciliteCardProps } from "../model";
 import styles from "./styles.module.scss";
 
-const FaciliteCard: FC<FaciliteCardProps> = ({ title, image }) => {
+export const FaciliteCard: FC<FaciliteCardProps> = ({ title, image }) => {
   return (
     <div className={styles.card}>
       <div className={styles.card__svg}>{image}</div>
@@ -11,5 +11,3 @@ const FaciliteCard: FC<FaciliteCardProps> = ({ title, image }) => {
     </div>
   );
 };
-
-export default FaciliteCard;

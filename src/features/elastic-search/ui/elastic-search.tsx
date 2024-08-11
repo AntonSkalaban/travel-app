@@ -6,8 +6,8 @@ import { useClickOutside } from "shared/model";
 
 import Close from "./images/Close.svg";
 import Search from "./images/Search.svg";
-import { Suggestions } from "./suggestions/ui/suggestions";
 import { ElasticSearchProps } from "../model";
+import { Suggestions } from "./suggestions";
 import styles from "./styles.module.scss";
 
 export const ElasticSearch: FC<ElasticSearchProps> = ({ initialValue }) => {

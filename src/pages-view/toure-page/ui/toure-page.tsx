@@ -1,11 +1,11 @@
 "use client";
 import { FC } from "react";
 
-import { Wrapper } from "shared/ui/wrapper";
+import { Wrapper } from "shared/ui";
 
-import CardsList from "./cars-list/ui";
-import Header from "./header/ui/header";
-import ToureSearch from "./toure-search/ui";
+import { CardsList } from "./cars-list";
+import { Header } from "./header";
+import { ToureSearch } from "./toure-search";
 
 export const TourePage: FC = () => {
   return (

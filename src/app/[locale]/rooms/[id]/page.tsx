@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import RoomHeader from "pages-view/room-info/ui/room-header/ui";
-import RoomPage from "pages-view/room-info/ui/room-info";
-import { Wrapper } from "shared/ui/wrapper";
+import { RoomPage } from "pages-view/room-page";
+import { RoomHeader } from "pages-view/room-page/ui/room-header";
+import { Wrapper } from "shared/ui/components/wrapper/ui";
 
 const RoomInfo: FC<{ params: { id: string } }> = ({ params }) => {
   return (

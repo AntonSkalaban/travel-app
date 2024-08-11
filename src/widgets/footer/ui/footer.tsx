@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { useLocale, useTranslations } from "next-intl";
 
-import { Link, Locale } from "shared/lib/i18n";
-import { Wrapper } from "shared/ui/wrapper";
-import { Subscribe } from "features/subscribe/ui";
+import { Link, Locale } from "shared/lib";
+import { Wrapper } from "shared/ui";
+import { Subscribe } from "features/subscribe";
 
-import { data } from "../model/constants";
+import { data } from "../model";
 import styles from "./styles.module.scss";
 
 export const Footer: FC = () => {

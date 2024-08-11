@@ -1,30 +1,9 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { ApolloClient } from "@apollo/client";
 
-const cache = new InMemoryCache({
-  typePolicies: {
-    Query: {
-      fields: {
-        rooms: {
-          keyArgs: false,
-          merge(existing = [], incoming) {
-            return [...existing, ...incoming];
-          },
-        },
-        tours: {
-          keyArgs: ["country"],
-          merge(existing, incoming) {
-            const tours = [...(existing?.tours || []), ...incoming.tours];
-
-            return { ...existing, ...incoming, tours };
-          },
-        },
-      },
-    },
-  },
-});
+import { cache } from "./cash";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/",
+  uri: process.env.NEXT_PUBLIC_API_URL,
   cache,
 });
 

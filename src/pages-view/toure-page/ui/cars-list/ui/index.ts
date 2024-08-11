@@ -1,1 +1,1 @@
-export { default } from "./cards-list";
+export * from "./cards-list";

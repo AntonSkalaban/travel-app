@@ -7,9 +7,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { useSendDataEmail } from "shared/lib/email-js/api";
 import { Locale } from "shared/lib/i18n";
-import { useShowAlert } from "shared/ui/alert/model/use-show-alert";
-import { Alert } from "shared/ui/alert/ui";
-import { Input } from "widgets/form/input/ui";
+import { useShowAlert } from "shared/ui/components/alert/model/use-show-alert";
+import { Alert } from "shared/ui/components/alert/ui";
+import { Input } from "shared/ui/components/input/ui";
 
 import { formShema, FormValues, getAlertMessage } from "../model";
 import styles from "./styles.module.scss";

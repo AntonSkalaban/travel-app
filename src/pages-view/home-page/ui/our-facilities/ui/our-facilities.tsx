@@ -2,13 +2,13 @@ import { FC } from "react";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Locale } from "shared/lib/i18n";
-import { Wrapper } from "shared/ui/wrapper";
+import { Wrapper } from "shared/ui/components/wrapper/ui";
 
-import FaciliteCard from "./facilite-card/ui";
-import { cards } from "../model/constants";
+import { cards } from "../model";
+import { FaciliteCard } from "./facilite-card";
 import styles from "./styles.module.scss";
 
-const OurFacilite: FC = () => {
+export const OurFacilite: FC = () => {
   const localActive = useLocale() as Locale;
   const t = useTranslations("home.facilite");
 
@@ -31,5 +31,3 @@ const OurFacilite: FC = () => {
     </section>
   );
 };
-
-export default OurFacilite;

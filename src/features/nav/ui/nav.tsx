@@ -5,7 +5,7 @@ import { useLocale } from "next-intl";
 
 import { Link, Locale, usePathname } from "shared/lib/i18n";
 
-import { pages } from "../model/constants";
+import { pages } from "../model";
 import styles from "./styles.module.scss";
 
 export const Nav: FC = () => {

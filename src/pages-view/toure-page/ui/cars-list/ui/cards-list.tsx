@@ -1,13 +1,13 @@
 import { FC, useRef } from "react";
 
 import { createIndexedArray } from "shared/model";
-import { useToursInfinityScroll } from "entities/tour/model/use-tours-infinity-scroll";
+import { useToursInfinityScroll } from "entities/tour";
 
-import { ToureCard } from "./toure-card/ui/toure-card";
-import { ToureCardSkeleton } from "./toure-card-skeleton/ui/toure-card-skeleton";
+import { ToureCard } from "./toure-card";
+import { ToureCardSkeleton } from "./toure-card-skeleton";
 import styles from "./styles.module.scss";
 
-const CardsList: FC = () => {
+export const CardsList: FC = () => {
   const loaderRef = useRef(null);
 
   const { data, loading, error } = useToursInfinityScroll(loaderRef.current);
@@ -27,17 +27,9 @@ const CardsList: FC = () => {
         />
       ))}
 
-      {loading && (
-        <>
-          {createIndexedArray(3).map((el) => (
-            <ToureCardSkeleton key={el} />
-          ))}
-        </>
-      )}
-
+      {loading &&
+        createIndexedArray(3).map((el) => <ToureCardSkeleton key={el} />)}
       <div ref={loaderRef} />
     </section>
   );
 };
-
-export default CardsList;

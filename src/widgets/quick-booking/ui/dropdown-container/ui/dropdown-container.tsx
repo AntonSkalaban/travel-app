@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import { Dropdown } from "features/dropdown/ui";
+import { Dropdown } from "features/dropdown";
 
-import { DropdownContainerProps } from "../model/types";
+import { DropdownContainerProps } from "../model";
 import styles from "./styles.module.scss";
 
 export const DropdownContainer: FC<DropdownContainerProps> = ({

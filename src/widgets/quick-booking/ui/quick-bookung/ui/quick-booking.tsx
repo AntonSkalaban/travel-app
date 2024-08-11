@@ -3,10 +3,9 @@
 import { FC, FormEvent, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 
-import { Locale } from "shared/lib/i18n";
-import { BookingModal } from "widgets/booking-modal/ui/booking-modal";
-import { getLocalizedOptions } from "features/dropdown/ui/options/model";
-import { OptionsList } from "features/dropdown/ui/options/options-list/ui";
+import { Locale } from "shared/lib";
+import { BookingModal } from "widgets/booking-modal";
+import { getLocalizedOptions, OptionsList } from "features/dropdown";
 
 import Location from "./images/Location.svg";
 import Person from "./images/Person.svg";

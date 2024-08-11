@@ -2,11 +2,11 @@ import { FC } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 
-import { ElasticSearch } from "features/elastic-search/ui";
+import { ElasticSearch } from "features/elastic-search";
 
 import styles from "./styles.module.scss";
 
-const ToureSearch: FC = () => {
+export const ToureSearch: FC = () => {
   const t = useTranslations("toure.toureSeatch");
   const searchParams = useSearchParams();
 
@@ -20,5 +20,3 @@ const ToureSearch: FC = () => {
     </section>
   );
 };
-
-export default ToureSearch;

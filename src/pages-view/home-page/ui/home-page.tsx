@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-import HomeHeader from "./home-header/ui";
-import OurFacilite from "./our-facilities/ui";
-import Rooms from "./rooms/ui";
-import Testimonies from "./testimonies/ui";
+import { HomeHeader } from "./home-header";
+import { OurFacilite } from "./our-facilities";
+import { Rooms } from "./rooms";
+import { Testimonies } from "./testimonies";
 
-const HomePage: FC = () => {
+export const HomePage: FC = () => {
   return (
     <>
       <HomeHeader />
@@ -15,5 +15,3 @@ const HomePage: FC = () => {
     </>
   );
 };
-
-export default HomePage;
