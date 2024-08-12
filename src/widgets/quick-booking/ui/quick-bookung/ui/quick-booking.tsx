@@ -31,16 +31,6 @@ export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
     [localActive],
   );
 
-  //   const [bookingData, setBookingData] = useState({
-  //     location: locationOptions[0],
-  //     person: personOptions[0],
-  //     room: localizedRoomOptions[0],
-  //     startDate: new Date(),
-  //     endDate: new Date(),
-  //   });
-  // const handleChange = (newData: s) => {
-
-  // }
   const [location, setLocation] = useState(locationOptions[0]);
   const [person, setPerson] = useState(personOptions[0]);
   const [room, setRoom] = useState(localizedRoomOptions[0]);
@@ -58,12 +48,12 @@ export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
     setShowModal(false);
   };
 
-  const handleStartDateChange = (date) => {
-    setStartDate(date);
+  const handleStartDateChange = (date: Date | null) => {
+    setStartDate(date || new Date());
   };
 
-  const handleEndDateChange = (date) => {
-    setEndDate(date);
+  const handleEndDateChange = (date: Date | null) => {
+    setEndDate(date || new Date());
   };
 
   return (

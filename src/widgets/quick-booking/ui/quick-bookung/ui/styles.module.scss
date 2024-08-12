@@ -19,8 +19,6 @@
         margin-top: 0;
     }
 
-
-
     @include breakpoint(m) {
         height: 150px;
         flex-direction: column;
@@ -40,15 +38,19 @@
 
     &__dropdowns-container {
         height: 65px;
-        display: flex;
         align-items: center;
-        gap: 90px;
+        @include flexBetween;
+        gap: 15px;
 
-        flex-wrap: wrap;
+        @include breakpoint(xl) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
 
-        @include breakpoint(l) {
-            gap: 20px;
-            justify-content: space-between;
+        }
+
+        @include breakpoint(m) {
+            grid-template-columns: repeat(3, 1fr);
         }
 
         @include breakpoint(s) {
@@ -67,11 +69,18 @@
         @include breakpoint(m) {
             width: 140px;
             height: 45px;
+            
+           position: absolute;
+           bottom : 0;
+           right: calc(50% - 200px);
         }
 
         @include breakpoint(s) {
             width: 100px;
             height: 35px;
+
+            bottom : 20px;
+            right: calc(50% - 170px);
         }
     }
 }
