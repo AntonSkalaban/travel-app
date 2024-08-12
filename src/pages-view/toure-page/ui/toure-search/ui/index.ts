@@ -1,1 +1,1 @@
-export { default } from "./toure-serach";
+export * from "./toure-serach";

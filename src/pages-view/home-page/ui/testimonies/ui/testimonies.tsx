@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 
 import { useQuery } from "@apollo/client";
 import client from "shared/api/apollo-client";
-import { useSlider } from "shared/model";
-import { Wrapper } from "shared/ui/wrapper";
+import { createIndexedArray, useSlider } from "shared/model";
+import { Wrapper } from "shared/ui/components/wrapper/ui";
 import { ReviewResponce } from "widgets/review-card/model";
 import { ReviewCard } from "widgets/review-card/ui";
 import { ReviewCardSkeleton } from "widgets/review-card/ui/review-card-skeleton";
@@ -14,7 +14,7 @@ import { GET__REVIEWS } from "entities/review/api";
 import Arrow from "./images/arrow.svg";
 import styles from "./styles.module.scss";
 
-const Testimonies: FC = () => {
+export const Testimonies: FC = () => {
   const t = useTranslations("home.testimonies");
   const {
     data: reviews,
@@ -29,6 +29,8 @@ const Testimonies: FC = () => {
 
   const { page, isFirstSlide, isLastSlide, toNextSlide, toPrevSlide } =
     useSlider(totalSlides / itemsPerSlide);
+
+  const reviewsSkeleton = createIndexedArray(itemsPerSlide);
 
   return (
     <section className={styles.testimonials}>
@@ -57,14 +59,9 @@ const Testimonies: FC = () => {
             className={styles["testimonials__cards-container"]}
             style={{ left: `${page * 100}%` }}
           >
-            {loading || error ? (
-              <>
-                <ReviewCardSkeleton />
-                <ReviewCardSkeleton />
-              </>
-            ) : (
-              <>
-                {reviews?.reviews?.map(
+            {loading || error
+              ? reviewsSkeleton.map((el) => <ReviewCardSkeleton key={el} />)
+              : reviews?.reviews?.map(
                   ({ id, date, rating, text, authorImage, authorName }) => (
                     <ReviewCard
                       key={id}
@@ -76,13 +73,9 @@ const Testimonies: FC = () => {
                     />
                   ),
                 )}
-              </>
-            )}
           </div>
         </div>
       </Wrapper>
     </section>
   );
 };
-
-export default Testimonies;

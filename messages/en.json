@@ -19,6 +19,8 @@
             "location": "Location",
             "person": "Person",
             "roomType": "Room Type",
+            "startDate": "Start Date",
+            "endDate": "End Date",
             "btn": "Book now"
             },
         "modal": {

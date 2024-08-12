@@ -9,9 +9,15 @@ export const StarRating: FC<StarRatingProps> = ({ rating, size = 13 }) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
     if (i === Math.floor(rating) && rating % 1 !== 0) {
-      stars.push({ image: <HalfStar width={size} height={size} />, id: i });
+      stars.push({
+        image: <HalfStar width={size} height={size} data-testid="half-start" />,
+        id: i,
+      });
     } else {
-      stars.push({ image: <Star width={size} height={size} />, id: i });
+      stars.push({
+        image: <Star width={size} height={size} data-testid="full-start" />,
+        id: i,
+      });
     }
   }
 

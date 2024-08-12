@@ -1,7 +1,7 @@
 "use client";
 import { FC, useState } from "react";
 
-import { Overlay } from "shared/ui/overlay/ui";
+import { Overlay } from "shared/ui/components/overlay/ui";
 
 import { BurgerMenuProps } from "../model";
 import styles from "./styles.module.scss";

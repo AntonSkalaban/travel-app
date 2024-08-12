@@ -1,1 +1,1 @@
-export { default } from "./home-header";
+export * from "./home-header";

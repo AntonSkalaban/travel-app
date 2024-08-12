@@ -6,8 +6,8 @@ import { useClickOutside } from "shared/model";
 
 import Close from "./images/Close.svg";
 import Search from "./images/Search.svg";
-import { Suggestions } from "./suggestions/ui/suggestions";
 import { ElasticSearchProps } from "../model";
+import { Suggestions } from "./suggestions";
 import styles from "./styles.module.scss";
 
 export const ElasticSearch: FC<ElasticSearchProps> = ({ initialValue }) => {
@@ -54,12 +54,14 @@ export const ElasticSearch: FC<ElasticSearchProps> = ({ initialValue }) => {
           value={searchValue}
           onChange={handleChange}
           onKeyDown={hanldeKeyDown}
+          data-testid="search-input"
         />
 
         {searchValue && (
           <button
             className={styles["search-bar__close-btn"]}
             onClick={handleClearClick}
+            data-testid="clear-btn"
           >
             <Close />
           </button>

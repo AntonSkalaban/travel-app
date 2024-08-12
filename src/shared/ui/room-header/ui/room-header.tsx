@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 
-import { Filter } from "shared/ui/filter/ui";
+import { Filter } from "shared/ui/components/filter/ui";
 
 import styles from "./styles.module.scss";
 

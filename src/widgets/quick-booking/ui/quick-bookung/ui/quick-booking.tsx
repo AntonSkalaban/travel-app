@@ -1,12 +1,13 @@
 "use client";
 
 import { FC, FormEvent, useMemo, useState } from "react";
+import DatePicker from "react-datepicker";
 import { useLocale, useTranslations } from "next-intl";
 
-import { Locale } from "shared/lib/i18n";
-import { BookingModal } from "widgets/booking-modal/ui/booking-modal";
-import { getLocalizedOptions } from "features/dropdown/ui/options/model";
-import { OptionsList } from "features/dropdown/ui/options/options-list/ui";
+import { Locale } from "shared/lib";
+import { getDateString } from "shared/model";
+import { BookingModal } from "widgets/booking-modal";
+import { getLocalizedOptions, OptionsList } from "features/dropdown";
 
 import Location from "./images/Location.svg";
 import Person from "./images/Person.svg";
@@ -18,6 +19,8 @@ import {
 import { DropdownContainer } from "../../dropdown-container/ui/dropdown-container";
 import { QuickBookingProps } from "../model/types";
 import styles from "./styles.module.scss";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
   const localActive = useLocale() as Locale;
@@ -31,6 +34,8 @@ export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
   const [location, setLocation] = useState(locationOptions[0]);
   const [person, setPerson] = useState(personOptions[0]);
   const [room, setRoom] = useState(localizedRoomOptions[0]);
+  const [startDate, setStartDate] = useState<Date | null>(new Date());
+  const [endDate, setEndDate] = useState<Date | null>(new Date());
 
   const [showModal, setShowModal] = useState(false);
 
@@ -41,6 +46,14 @@ export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
 
   const closeModal = () => {
     setShowModal(false);
+  };
+
+  const handleStartDateChange = (date: Date | null) => {
+    setStartDate(date || new Date());
+  };
+
+  const handleEndDateChange = (date: Date | null) => {
+    setEndDate(date || new Date());
   };
 
   return (
@@ -64,6 +77,32 @@ export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
                 options={locationOptions}
                 selectValue={String(location.value)}
                 onSelect={setLocation}
+              />
+            }
+          />
+
+          <DropdownContainer
+            icon={<Person />}
+            title={t("startDate")}
+            selectName={startDate ? getDateString(startDate, localActive) : ""}
+            content={
+              <DatePicker
+                selected={startDate}
+                onSelect={handleStartDateChange}
+                onChange={handleStartDateChange}
+              />
+            }
+          />
+
+          <DropdownContainer
+            icon={<Person />}
+            title={t("endDate")}
+            selectName={endDate ? getDateString(endDate, localActive) : ""}
+            content={
+              <DatePicker
+                selected={endDate}
+                onSelect={handleEndDateChange}
+                onChange={handleEndDateChange}
               />
             }
           />

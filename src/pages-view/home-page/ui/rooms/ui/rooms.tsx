@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { useTranslations } from "next-intl";
 
-import { Filter } from "shared/ui/filter/ui";
-import { Wrapper } from "shared/ui/wrapper";
+import { Filter } from "shared/ui/components/filter/ui";
+import { Wrapper } from "shared/ui/components/wrapper/ui";
 
-import RoomCard from "./room-card/ui";
-import { rooms } from "../model/constants";
+import { rooms } from "../model";
+import { RoomCard } from "./room-card";
 import styles from "./styles.module.scss";
 
-const Rooms: FC = () => {
+export const Rooms: FC = () => {
   const t = useTranslations("home.rooms");
 
   return (
@@ -29,5 +29,3 @@ const Rooms: FC = () => {
     </section>
   );
 };
-
-export default Rooms;

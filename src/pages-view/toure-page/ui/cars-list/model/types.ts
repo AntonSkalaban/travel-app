@@ -1,4 +1,4 @@
-import { Tour } from "entities/tour/model";
+import { Tour } from "entities/tour";
 
 export interface CardsListProps {
   isFetching: boolean;

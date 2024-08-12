@@ -1,4 +1,4 @@
-import { TourePage } from "pages-view/toure-page/ui/toure-page";
+import { TourePage } from "pages-view/toure-page";
 
 export default function Toure() {
   return (

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import { ToureCardProps } from "../model/types";
+import { ToureCardProps } from "../model";
 import styles from "./styles.module.scss";
 
 export const ToureCard: FC<ToureCardProps> = ({

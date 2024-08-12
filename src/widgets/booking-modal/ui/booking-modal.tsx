@@ -3,13 +3,15 @@ import { Controller, useForm } from "react-hook-form";
 import { useLocale, useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { useSendDataEmail } from "shared/lib/email-js/api";
-import { Locale } from "shared/lib/i18n";
-import { getAlertMessage, getAlertType } from "shared/ui/alert/model";
-import { useShowAlert } from "shared/ui/alert/model/use-show-alert";
-import { Alert } from "shared/ui/alert/ui";
-import { Modal } from "shared/ui/modal/ui/modal";
-import { Input } from "widgets/form/input/ui";
+import { Locale, useSendDataEmail } from "shared/lib";
+import {
+  Alert,
+  getAlertMessage,
+  getAlertType,
+  Input,
+  Modal,
+  useShowAlert,
+} from "shared/ui";
 
 import {
   BookingModalProps,

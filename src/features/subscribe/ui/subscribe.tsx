@@ -5,13 +5,16 @@ import { useForm } from "react-hook-form";
 import { useLocale, useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { useSendDataEmail } from "shared/lib/email-js/api";
-import { Locale } from "shared/lib/i18n";
-import { useShowAlert } from "shared/ui/alert/model/use-show-alert";
-import { Alert } from "shared/ui/alert/ui";
-import { Input } from "widgets/form/input/ui";
+import { Locale, useSendDataEmail } from "shared/lib";
+import {
+  Alert,
+  getAlertMessage,
+  getAlertType,
+  Input,
+  useShowAlert,
+} from "shared/ui";
 
-import { formShema, FormValues, getAlertMessage } from "../model";
+import { formShema, FormValues } from "../model";
 import styles from "./styles.module.scss";
 
 export const Subscribe: FC = () => {
@@ -31,7 +34,7 @@ export const Subscribe: FC = () => {
 
   const { isAlertOpen, showAlert } = useShowAlert();
 
-  const alertType = !isFetching && !isError ? "success" : "error";
+  const alertType = getAlertType(isFetching, isError);
 
   const alertMessage = useMemo(
     () => getAlertMessage(alertType, localActive),
@@ -50,7 +53,11 @@ export const Subscribe: FC = () => {
     <>
       {" "}
       {isAlertOpen && <Alert type={alertType} message={alertMessage} />}
-      <form className={styles.subscribe} onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className={styles.subscribe}
+        onSubmit={handleSubmit(onSubmit)}
+        data-testid="subscribe-form"
+      >
         <Input
           placeholder={`${t("placeHolder")}`}
           {...register("email")}

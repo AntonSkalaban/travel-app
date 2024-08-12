@@ -3,9 +3,11 @@
 .dropdown {
     width: 100%;
     position: relative;
+    cursor: pointer;
 
     &__header {
         width: 120px;
+        max-width: fit-content;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -24,7 +26,7 @@
     }
 
     &__name {
-        max-width: 80px;
+        max-width: fit-content;
         overflow:hidden;
     }
 
@@ -33,6 +35,7 @@
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: 5;
 
         background-color: $color-white;
     }
