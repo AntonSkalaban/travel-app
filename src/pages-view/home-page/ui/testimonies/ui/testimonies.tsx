@@ -25,10 +25,12 @@ export const Testimonies: FC = () => {
   });
 
   const itemsPerSlide = 2;
-  const totalSlides = Math.round(reviews?.reviews?.length || 0);
+  const totalSlides = Math.round(
+    (reviews?.reviews?.length || 0) / itemsPerSlide,
+  );
 
   const { page, isFirstSlide, isLastSlide, toNextSlide, toPrevSlide } =
-    useSlider(totalSlides / itemsPerSlide);
+    useSlider(totalSlides);
 
   const reviewsSkeleton = createIndexedArray(itemsPerSlide);
 
