@@ -12,8 +12,8 @@ export const Dropdown: FC<DropdownProps> = ({ selectName, content }) => {
   };
 
   return (
-    <div className={styles.dropdown} onClick={handleClick}>
-      <p className={styles.dropdown__header}>
+    <div className={styles.dropdown}>
+      <p className={styles.dropdown__header} onClick={handleClick}>
         <span className={styles.dropdown__name}>{selectName}</span>{" "}
         <Checkmark />
       </p>
