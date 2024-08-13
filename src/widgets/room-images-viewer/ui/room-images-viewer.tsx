@@ -19,6 +19,7 @@ export const RoomImagesViewer: FC<RoomImagesViewerProps> = ({ images }) => {
             className={styles["small-image-container"]}
             key={img}
             onClick={handleClick(img)}
+            data-testid="big-img-container"
           >
             <Image
               className={styles["small-image"]}
@@ -30,7 +31,10 @@ export const RoomImagesViewer: FC<RoomImagesViewerProps> = ({ images }) => {
           </div>
         ))}
       </div>
-      <div className={styles["big-image-container"]}>
+      <div
+        className={styles["big-image-container"]}
+        data-testid="small-img-container"
+      >
         <Image
           className={styles["big-image"]}
           alt="room-image"

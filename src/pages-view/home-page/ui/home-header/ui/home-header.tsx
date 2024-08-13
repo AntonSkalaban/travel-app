@@ -1,8 +1,8 @@
 "use client";
 import { FC } from "react";
-import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
+import { useRouter } from "shared/lib";
 import { HotelHeader } from "shared/ui";
 import { FetchingQuickBooking } from "widgets/quick-booking/ui/fetching-quick-booking/ui/fetching-quick-booking";
 import { pagesPathsEnam } from "features/nav";
@@ -15,7 +15,7 @@ export const HomeHeader: FC = () => {
 
   const t = useTranslations("home");
 
-  const handleClick = () => () => {
+  const handleClick = () => {
     router.push(`/${pagesPathsEnam.Toure}`);
   };
 
@@ -24,7 +24,11 @@ export const HomeHeader: FC = () => {
       <h1 className={styles["header__title"]}>{t("title")}</h1>
       <p className={styles["header__subtitle"]}>{t("subtitle")}</p>
 
-      <button className={styles["header__btn"]} onClick={handleClick}>
+      <button
+        className={styles["header__btn"]}
+        onClick={handleClick}
+        data-testid="header-btn"
+      >
         <span className={styles["header__btn__elipce"]}>
           <Play />
         </span>

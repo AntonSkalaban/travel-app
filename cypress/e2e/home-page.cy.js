@@ -1,5 +1,13 @@
-describe("CategorySection e2e", () => {
-  it("Should have slider", () => {
+describe("HomePage e2e", () => {
+  it("HomeHeader", () => {
+    cy.visit("/");
+
+    cy.get("[data-testid='header-btn']").click();
+
+    cy.url().should("include", "/toure");
+  });
+
+  it("Testimonies", () => {
     cy.visit("/");
 
     cy.get("[data-testid='btn-prev-slide']")
@@ -14,7 +22,7 @@ describe("CategorySection e2e", () => {
     cy.get("[data-testid='btn-next-slide']").should("be.disabled");
   });
 
-  it("Should have quick-booking-modla", () => {
+  it("quick-booking-modla", () => {
     cy.visit("/");
 
     cy.get("[data-testid='booking-modal']").should("not.exist");

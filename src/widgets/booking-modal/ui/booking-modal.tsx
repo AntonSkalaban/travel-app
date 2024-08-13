@@ -58,8 +58,8 @@ export const BookingModal: FC<BookingModalProps> = ({
   return (
     <>
       {isAlertOpen && <Alert type={alertType} message={alertMessage} />}
-      <Modal close={onClose} data-testid="booking-modal">
-        <div className={styles.container}>
+      <Modal close={onClose}>
+        <div className={styles.container} data-testid="booking-modal">
           <h2>{t("title")}</h2>
           <p>
             {t("location")}: {location}
