@@ -54,7 +54,7 @@ export const ReservationModal: FC<ReservationModalProps> = ({
     <>
       {isAlertOpen && <Alert type={alertType} message={alertMessage} />}
       <Modal close={onClose}>
-        <div className={styles.container}>
+        <div className={styles.container} data-testid="reservation-modal">
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <Controller
               name="firstName"

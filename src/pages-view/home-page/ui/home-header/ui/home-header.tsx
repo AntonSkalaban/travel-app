@@ -24,7 +24,11 @@ export const HomeHeader: FC = () => {
       <h1 className={styles["header__title"]}>{t("title")}</h1>
       <p className={styles["header__subtitle"]}>{t("subtitle")}</p>
 
-      <button className={styles["header__btn"]} onClick={handleClick}>
+      <button
+        className={styles["header__btn"]}
+        onClick={handleClick}
+        data-testid="header-btn"
+      >
         <span className={styles["header__btn__elipce"]}>
           <Play />
         </span>
