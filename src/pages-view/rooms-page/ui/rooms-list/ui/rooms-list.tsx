@@ -19,7 +19,11 @@ export const RoomsList: FC = () => {
   return (
     <Wrapper>
       <ErrorBoundary>
-        <section className={styles["rooms-list"]} id="rooms-list">
+        <section
+          className={styles["rooms-list"]}
+          id="rooms-list"
+          data-testid="rooms-list"
+        >
           {rooms?.rooms.map(({ id, title, images, price, available }) => (
             <RoomCard
               key={id}

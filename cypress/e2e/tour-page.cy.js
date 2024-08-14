@@ -9,10 +9,29 @@ describe("TourePage e2e", () => {
     cy.get('[data-testid="suggestions-list"] li')
       .contains("Alaska")
       .should("be.visible");
+
     cy.get('[data-testid="search-input"]').trigger("keydown", { key: "Enter" });
 
     cy.url().should("include", "?q=alaska");
 
-    cy.get("toure-card").find("h4");
+    cy.get("[data-testid='toure-card']").find("h4").should("contain", "Alaska");
+  });
+
+  it("shuld has infinity scroll", () => {
+    cy.visit("/en/toure");
+
+    cy.get("[data-testid='toure-card']")
+      .should("have.length", 3)
+      .then(() => {
+        cy.scrollTo("bottom");
+
+        // eslint-disable-next-line cypress/no-unnecessary-waiting
+        cy.wait(2000);
+
+        cy.get("[data-testid='toure-card']").should(
+          "have.length.greaterThan",
+          3,
+        );
+      });
   });
 });

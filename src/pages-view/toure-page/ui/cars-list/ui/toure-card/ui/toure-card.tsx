@@ -11,7 +11,7 @@ export const ToureCard: FC<ToureCardProps> = ({
   flag,
 }) => {
   return (
-    <article className={styles.card} data-testis="toure-card">
+    <article className={styles.card} data-testid="toure-card">
       <h5 className={styles.card__currency}>Currency - {currency}</h5>
       <div className={styles["card__img-container"]}>
         <Image src={flag} alt="toure-image" width={180} height={102} />

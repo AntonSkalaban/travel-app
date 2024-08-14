@@ -20,9 +20,9 @@ const nextConfig = {
     });
     return config;
   },
-  compiler: {
-    reactRemoveProperties: true,
-  },
+  // compiler: {
+  //   reactRemoveProperties: true,
+  // },
 };
 
 export default withNextIntl(nextConfig);
