@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { withEmailForm } from "shared/ui";
 
-import { defaultValues, formShema, FormValues } from "../model";
+import { defaultValues, formShema, FormValues, templateId } from "../model";
 import { InputContainer } from "./input-container";
 import styles from "./styles.module.scss";
 
@@ -36,10 +36,7 @@ export const Form: FC<FormProps> = ({
   });
 
   const onSubmit = async (data: FormValues) => {
-    await sendData(
-      { ...data },
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_DATA_ID,
-    );
+    await sendData({ ...data }, templateId);
     showAlert();
   };
 

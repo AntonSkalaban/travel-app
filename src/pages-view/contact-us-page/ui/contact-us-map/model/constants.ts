@@ -4,8 +4,7 @@ export const mapState = {
   zoom: 10,
 };
 
-export const mapStyleUrl =
-  "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json";
+export const mapStyleUrl = process.env.NEXT_PUBLIC_MAP_STYLE_URL;
 
 export const markerCoords = {
   latitude: 53.903,

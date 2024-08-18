@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 
 import { useQuery } from "@apollo/client";
-import client from "shared/api/apollo-client";
+import { client } from "shared/api";
 import { useDebounce } from "shared/model";
-import { GET_TOURS_COUNTRIES } from "entities/tour/api";
-import { TourCountryResponce } from "entities/tour/model";
+import { GET_TOURS_COUNTRIES, TourCountryResponce } from "entities/tour";
 
 export const useElasticSearch = (searchValue: string) => {
   const debouncedValue = useDebounce(searchValue);

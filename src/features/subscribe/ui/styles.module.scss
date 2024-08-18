@@ -4,6 +4,9 @@
     position: relative;
     width: fit-content;
 
+    @include breakpoint(m) {
+     margin: 0 auto;
+    }
     &__btn {
         width: 112px;
         height: 40px;
@@ -12,6 +15,5 @@
         position: absolute;
         right: 5px;
         top: calc( 50% - 20px);
-        
     }
 }

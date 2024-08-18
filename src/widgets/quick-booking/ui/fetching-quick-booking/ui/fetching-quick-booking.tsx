@@ -4,11 +4,11 @@ import { FC } from "react";
 import { useLocale } from "next-intl";
 
 import { useQuery } from "@apollo/client";
-import client from "shared/api/apollo-client";
-import { Locale } from "shared/lib/i18n";
+import { client } from "shared/api";
+import { Locale } from "shared/lib";
 
-import { QuickBookingSkeleton } from "../../quick-booking-skeleton/ui/quick-booking-skeleton";
-import { QuickBooking } from "../../quick-bookung/ui/quick-booking";
+import { QuickBookingSkeleton } from "../../quick-booking-skeleton";
+import { QuickBooking } from "../../quick-bookung";
 import { LIST_COUNTRIES } from "../api";
 import { CountryResponce, getLocationOptions } from "../model";
 

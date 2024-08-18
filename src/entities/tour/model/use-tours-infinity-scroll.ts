@@ -1,10 +1,10 @@
 import { useSearchParams } from "next/navigation";
 
 import { useQuery } from "@apollo/client";
-import client from "shared/api/apollo-client";
+import { client } from "shared/api";
 import { useObserver } from "shared/model";
-import { GET_TOURS } from "entities/tour/api/get-tours";
 
+import { GET_TOURS } from "../api";
 import { TourResponce } from "./types";
 
 export const useToursInfinityScroll = (loader: HTMLDivElement | null) => {

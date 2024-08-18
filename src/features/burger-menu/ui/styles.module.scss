@@ -79,24 +79,32 @@
             width: 0;
             height: 100%;
             position: fixed;
+            box-sizing: border-box;
+
+            top: 0;
+            right: 0;
+            transition: transform 0.3s ease-in-out;
+
             display: flex;
             flex-direction: column;
           
             background-color: $color-brown;
           
             transform: translateX(100%);
-          
             z-index: 9;
           
             padding: 15px;
-            position: fixed;
-            top: 0;
-            right: 0;
-            transition: transform 0.3s ease-in-out;
+            
+
 
             &_active {
-                width: fit-content;
+                width: 60%;
                 transform: translateX(0);
+
+                @include breakpoint(s) {
+                  width: 100%;
+                }
+
             }
         }
 }
