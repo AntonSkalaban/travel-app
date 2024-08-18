@@ -8,7 +8,7 @@ import {
 import styles from "./styles.module.scss";
 
 export const Suggestions: FC<SuggestionProps> = ({ searchValue, onClick }) => {
-  const { data: suggestions } = useElasticSearch(searchValue);
+  const { loading, data: suggestions } = useElasticSearch(searchValue);
 
   return (
     <div className={styles.suggestions}>
@@ -32,7 +32,9 @@ export const Suggestions: FC<SuggestionProps> = ({ searchValue, onClick }) => {
           })}
         </ul>
       ) : (
-        <p className={styles["suggestions__not-found"]}>Not results found</p>
+        !loading && (
+          <p className={styles["suggestions__not-found"]}>Not results found</p>
+        )
       )}
     </div>
   );
