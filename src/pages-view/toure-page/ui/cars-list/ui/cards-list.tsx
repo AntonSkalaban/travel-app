@@ -17,15 +17,7 @@ export const CardsList: FC = () => {
 
   return (
     <section className={styles["cards-list"]}>
-      {data?.tours.tours.map(({ id, country, city, currency, flag }) => (
-        <ToureCard
-          key={id}
-          country={country}
-          city={city}
-          currency={currency}
-          flag={flag}
-        />
-      ))}
+      {data?.tours.tours.map((tour) => <ToureCard key={tour.id} tour={tour} />)}
 
       {loading &&
         createIndexedArray(3).map((el) => <ToureCardSkeleton key={el} />)}

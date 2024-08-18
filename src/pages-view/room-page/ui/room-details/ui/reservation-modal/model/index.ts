@@ -1,3 +1,3 @@
 export * from "./helpers";
-export * from "./shema";
+export * from "../reservation-from/model/shema";
 export * from "./types";

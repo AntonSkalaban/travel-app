@@ -4,12 +4,9 @@ import Image from "next/image";
 import { ToureCardProps } from "../model";
 import styles from "./styles.module.scss";
 
-export const ToureCard: FC<ToureCardProps> = ({
-  country,
-  city,
-  currency,
-  flag,
-}) => {
+export const ToureCard: FC<ToureCardProps> = ({ tour }) => {
+  const { country, city, currency, flag } = tour;
+
   return (
     <article className={styles.card} data-testid="toure-card">
       <h5 className={styles.card__currency}>Currency - {currency}</h5>

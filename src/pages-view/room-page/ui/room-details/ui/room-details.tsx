@@ -33,7 +33,10 @@ export const RoomDetails: FC<RoomDetailsProps> = ({
   return (
     <>
       {showModal && (
-        <ReservationModal roomId={id} roomName={title} onClose={closeModal} />
+        <ReservationModal
+          reservationData={{ id, title }}
+          onClose={closeModal}
+        />
       )}
       <section className={styles.section}>
         <RoomImagesViewer images={images} />
