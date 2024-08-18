@@ -1,20 +1,55 @@
 "use client";
-import { FC, memo } from "react";
+import { FC, memo, useMemo } from "react";
 import Map, { Marker } from "react-map-gl/maplibre";
 
-import { mapState, mapStyleUrl, markerCoords } from "../model";
+import maplibregl from "maplibre-gl";
+
+import {
+  hotelMarker,
+  mapState,
+  mapStyleUrl,
+  pharmacyMarker,
+  shopMarker,
+} from "../model";
 import styled from "./styled.module.scss";
 
 import "maplibre-gl/dist/maplibre-gl.css";
 
 export const ContactUsMap: FC = memo(() => {
+  const hotelPopup = useMemo(() => {
+    return new maplibregl.Popup().setText("Hotel!");
+  }, []);
+
+  const pharmacyPopup = useMemo(() => {
+    return new maplibregl.Popup().setText("Pharmacy!");
+  }, []);
+
+  const shopPopup = useMemo(() => {
+    return new maplibregl.Popup().setText("Shop!");
+  }, []);
+
   return (
     <section className={styled.map}>
       <Map initialViewState={mapState} mapStyle={mapStyleUrl}>
         <Marker
-          longitude={markerCoords.longitude}
-          latitude={markerCoords.latitude}
+          longitude={hotelMarker.longitude}
+          latitude={hotelMarker.latitude}
           color="red"
+          popup={hotelPopup}
+        />
+
+        <Marker
+          longitude={pharmacyMarker.longitude}
+          latitude={pharmacyMarker.latitude}
+          color="green"
+          popup={pharmacyPopup}
+        />
+
+        <Marker
+          longitude={shopMarker.longitude}
+          latitude={shopMarker.latitude}
+          color="blue"
+          popup={shopPopup}
         />
       </Map>
     </section>

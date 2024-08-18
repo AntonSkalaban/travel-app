@@ -42,6 +42,7 @@ export const Form: FC<FormProps> = ({
 
   return (
     <section className={styles.section}>
+      <h2 className={styles.section__title}>{t("title")}</h2>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.form__row}>
           <Controller

@@ -3,6 +3,15 @@
 .section {
   max-width: 1000px;
   margin: 0 auto;
+
+  &__title {
+
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 58.7px;
+    text-align: center;
+    margin-top: 20px;
+  }
 }
 .form {
     width: 100%;
