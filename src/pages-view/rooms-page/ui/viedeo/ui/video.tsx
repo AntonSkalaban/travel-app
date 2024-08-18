@@ -19,6 +19,7 @@ export const Video: FC = () => {
         src={videoSrc}
         controls={false}
         poster={videoPoster}
+        data-testid="video"
       />
     </section>
   );

@@ -10,7 +10,11 @@ export const ScrollButton: FC<ScrollButtonProps> = ({ targetId }) => {
     scroll(targetId);
   };
   return (
-    <button className={styles.btn} onClick={handleClick}>
+    <button
+      className={styles.btn}
+      onClick={handleClick}
+      data-testid="scroll-btn"
+    >
       <Arrow />
     </button>
   );

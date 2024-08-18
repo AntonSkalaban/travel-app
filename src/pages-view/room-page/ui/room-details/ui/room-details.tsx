@@ -54,7 +54,11 @@ export const RoomDetails: FC<RoomDetailsProps> = ({
               }}
             />
           </div>
-          <button className={styles.btn} onClick={handleClick}>
+          <button
+            className={styles.btn}
+            onClick={handleClick}
+            data-testid="reservation-btn"
+          >
             {t("btn")}
           </button>
         </div>
