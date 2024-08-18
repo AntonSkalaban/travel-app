@@ -18,3 +18,7 @@ export enum pagesPathsEnam {
   Toure = "/toure",
   ContacUs = "/contact-us",
 }
+
+export interface NavProps {
+  onClick?: () => void;
+}
