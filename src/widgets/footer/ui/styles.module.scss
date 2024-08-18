@@ -15,12 +15,10 @@
         padding: 81px 0 64px;
 
         @include breakpoint(xl) {
-            // width: fit-content;
             flex-wrap: wrap;
             gap: 16px;
 
             padding: 10px 0 10px;
-        //    margin: 0 auto;
         }
     
 
@@ -33,7 +31,9 @@
            margin: 0 auto;
         }
 
-    
+        @include breakpoint(s) {
+           margin: 5px;
+        }
     }
 
     &__logo {
@@ -72,7 +72,6 @@
           }
 
         @include breakpoint(s) {
-            
             justify-content: space-between;
         }
 
@@ -109,9 +108,6 @@
 }
 
 .newsletter {
-    &__text-container {
-
-    }
     &__text {
         max-width: 234px;
         margin-bottom: 16px;

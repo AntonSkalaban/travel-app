@@ -5,7 +5,7 @@ import HalfStar from "./images/star-half.svg";
 import { StarRatingProps } from "../model/types";
 import styles from "./styles.module.scss";
 
-export const StarRating: FC<StarRatingProps> = ({ rating, size = 13 }) => {
+export const StarRating: FC<StarRatingProps> = ({ rating, size }) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
     if (i === Math.floor(rating) && rating % 1 !== 0) {

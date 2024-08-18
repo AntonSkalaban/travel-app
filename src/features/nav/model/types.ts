@@ -13,8 +13,12 @@ export enum pagesNamesRuEnam {
 }
 
 export enum pagesPathsEnam {
-  Home = "",
-  Room = "rooms",
-  Toure = "toure",
-  ContacUs = "contact-us",
+  Home = "/",
+  Room = "/rooms",
+  Toure = "/toure",
+  ContacUs = "/contact-us",
+}
+
+export interface NavProps {
+  onClick?: () => void;
 }

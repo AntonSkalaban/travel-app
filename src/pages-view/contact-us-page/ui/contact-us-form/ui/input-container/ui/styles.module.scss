@@ -20,7 +20,8 @@
 
     &__error {
         position: absolute;
+        font-size: 12px;
         bottom: -20px;
-        color: red;
+        color: $color-red;
     }
 }

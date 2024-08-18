@@ -4,17 +4,3 @@
     @include flexCenter;
     height: 100%;
 }
-.form {
-    max-width: 360px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-
-    &__btn {
-        width: 100px;
-        height: 45px;
-        
-        @include buttonPrimary($border-radius-default)
-    }
-}

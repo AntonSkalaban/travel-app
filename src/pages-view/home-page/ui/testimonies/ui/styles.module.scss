@@ -43,6 +43,7 @@
     gap: 80px;
 
     margin-top: 4px;
+    margin-right: 65px;
 
     @include breakpoint(m) {
         display: none;

@@ -1,9 +1,10 @@
+"use client";
 import { FC } from "react";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Link, Locale } from "shared/lib";
 import { Wrapper } from "shared/ui";
-import { Subscribe } from "features/subscribe";
+import { SubscribeForm } from "features/subscribe";
 
 import { data } from "../model";
 import styles from "./styles.module.scss";
@@ -48,7 +49,7 @@ export const Footer: FC = () => {
                 {t("newsletterText")}
               </p>
             </div>
-            <Subscribe />
+            <SubscribeForm />
           </div>
         </div>
       </Wrapper>

@@ -11,4 +11,6 @@ export interface ReviewResponce {
   reviews: Review[];
 }
 
-export interface ReviewCardProps extends Omit<Review, "id"> {}
+export interface ReviewCardProps {
+  review: Review;
+}

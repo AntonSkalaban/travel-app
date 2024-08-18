@@ -1,8 +1,7 @@
 import { useQuery } from "@apollo/client";
-import client from "shared/api/apollo-client";
+import { client } from "shared/api";
 import { useObserver } from "shared/model";
-import { GET_ROOMS } from "entities/room/api";
-import { RoomsResponce } from "entities/room/model";
+import { GET_ROOMS, RoomsResponce } from "entities/room";
 
 export const useRoomsInfinityScroll = (loader: HTMLDivElement | null) => {
   const { loading, data, error, fetchMore } = useQuery<RoomsResponce>(

@@ -4,4 +4,6 @@ export * from "./hotel-header";
 export * from "./modal";
 export * from "./overlay";
 export * from "./wrapper";
-export * from "./input";
+export * from "./inputs";
+export * from "./with-email-form";
+export * from "./inputs";

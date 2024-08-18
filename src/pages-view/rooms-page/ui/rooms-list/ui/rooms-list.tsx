@@ -24,16 +24,7 @@ export const RoomsList: FC = () => {
           id="rooms-list"
           data-testid="rooms-list"
         >
-          {rooms?.rooms.map(({ id, title, images, price, available }) => (
-            <RoomCard
-              key={id}
-              id={id}
-              title={title}
-              image={images[0]}
-              price={price}
-              available={available}
-            />
-          ))}
+          {rooms?.rooms.map((room) => <RoomCard key={room.id} room={room} />)}
 
           {loading && skeletonArray.map((el) => <RoomCardSkeleton key={el} />)}
 

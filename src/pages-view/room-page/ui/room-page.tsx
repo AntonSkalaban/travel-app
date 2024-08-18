@@ -2,7 +2,7 @@
 import { FC } from "react";
 
 import { useQuery } from "@apollo/client";
-import client from "shared/api/apollo-client";
+import { client } from "shared/api";
 import { GET_ROOM, RoomResponce } from "entities/room";
 
 import { RoomPageProps } from "../model";

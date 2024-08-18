@@ -11,20 +11,15 @@ import OpenQuotes from "./images/open-quotes.svg";
 import { ReviewCardProps } from "../model";
 import styles from "./styles.module.scss";
 
-export const ReviewCard: FC<ReviewCardProps> = ({
-  date,
-  rating,
-  text,
-  authorImage,
-  authorName,
-}) => {
+export const ReviewCard: FC<ReviewCardProps> = ({ review }) => {
   const localActive = useLocale() as Locale;
+  const { date, rating, text, authorImage, authorName } = review;
 
   return (
     <article className={styles.card}>
       <div className={styles["card__top-row"]}>
         <p>{getDateString(date, localActive)}</p>
-        <StarRating rating={Number(rating)} />
+        <StarRating rating={Number(rating)} size={13} />
       </div>
       <p className={styles.card__text}>
         <OpenQuotes className={styles.quotes__open} />
