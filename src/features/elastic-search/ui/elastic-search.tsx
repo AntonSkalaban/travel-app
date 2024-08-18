@@ -19,7 +19,9 @@ export const ElasticSearch: FC<ElasticSearchProps> = ({ initialValue }) => {
   const searchBarRef = useClickOutside(() => setShowSuggestions(false));
 
   const handleSearch = (value: string) => {
-    return router.push(`${path}${value && `/?q=${value}`}`);
+    return router.push(`${path}${value ? `?q=${value}` : ""}`, {
+      scroll: false,
+    });
   };
 
   const handleClearClick = () => {

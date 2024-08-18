@@ -4,10 +4,19 @@ export const mapState = {
   zoom: 10,
 };
 
-export const mapStyleUrl =
-  "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json";
+export const mapStyleUrl = process.env.NEXT_PUBLIC_MAP_STYLE_URL;
 
-export const markerCoords = {
+export const hotelMarker = {
   latitude: 53.903,
   longitude: 27.562,
+};
+
+export const pharmacyMarker = {
+  latitude: 53.905,
+  longitude: 27.563,
+};
+
+export const shopMarker = {
+  latitude: 53.902,
+  longitude: 27.56,
 };

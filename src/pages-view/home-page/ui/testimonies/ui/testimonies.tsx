@@ -3,7 +3,7 @@ import { FC } from "react";
 import { useTranslations } from "next-intl";
 
 import { useQuery } from "@apollo/client";
-import client from "shared/api/apollo-client";
+import { client } from "shared/api";
 import { createIndexedArray, useSlider } from "shared/model";
 import { Wrapper } from "shared/ui";
 import { ReviewCard, ReviewResponce } from "widgets/review-card";
@@ -64,18 +64,9 @@ export const Testimonies: FC = () => {
           >
             {loading || error
               ? reviewsSkeleton.map((el) => <ReviewCardSkeleton key={el} />)
-              : reviews?.reviews?.map(
-                  ({ id, date, rating, text, authorImage, authorName }) => (
-                    <ReviewCard
-                      key={id}
-                      date={date}
-                      rating={rating}
-                      text={text}
-                      authorImage={authorImage}
-                      authorName={authorName}
-                    />
-                  ),
-                )}
+              : reviews?.reviews?.map((review) => (
+                  <ReviewCard key={review.id} review={review} />
+                ))}
           </div>
         </div>
       </Wrapper>

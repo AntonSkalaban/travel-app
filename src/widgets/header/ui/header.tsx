@@ -15,10 +15,7 @@ export const Header: FC = () => {
         <div className={styles.header__container}>
           <Logo />
 
-          <BurgerMenu>
-            <Nav />
-            <LangSwitcher />
-          </BurgerMenu>
+          <BurgerMenu />
 
           <div className={styles.header__menu}>
             <Nav />

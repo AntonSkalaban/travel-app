@@ -3,9 +3,8 @@
 .nav {
     &__list {
         width: 390px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        
+        @include flexBetween;
 
         @include breakpoint(m) {
             flex-direction: column;

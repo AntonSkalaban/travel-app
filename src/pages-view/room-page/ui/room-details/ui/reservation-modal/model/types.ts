@@ -1,12 +1,5 @@
-export interface FormValues {
-  phone: string;
-  firstName: string;
-  lastName: string;
-}
-
 export interface ReservationModalProps {
-  roomId: string;
-  roomName: string;
+  reservationData: { [key: string]: string };
   onClose: () => void;
 }
 

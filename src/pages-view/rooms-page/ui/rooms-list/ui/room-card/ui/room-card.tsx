@@ -9,15 +9,11 @@ import { RoomCardProps } from "../model";
 import { CardIcons } from "./card-icons";
 import styles from "./styles.module.scss";
 
-export const RoomCard: FC<RoomCardProps> = ({
-  id,
-  title,
-  image,
-  price,
-  available,
-}) => {
+export const RoomCard: FC<RoomCardProps> = ({ room }) => {
   const router = useRouter();
   const t = useTranslations("rooms.roomsList");
+
+  const { id, title, images, price, available } = room;
 
   const handleClick = (id: number) => () => {
     router.push(`/${pagesPathsEnam.Room}/` + id);
@@ -29,7 +25,7 @@ export const RoomCard: FC<RoomCardProps> = ({
         className={styles.card__img}
         width={100}
         height={100}
-        src={image}
+        src={images[0]}
         alt="room-image"
       />
       <div className={styles["card__description-top"]}>
