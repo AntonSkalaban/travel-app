@@ -1,15 +1,16 @@
 import { FC } from "react";
 import { Control, useForm } from "react-hook-form";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { Locale } from "shared/lib";
 import { withEmailForm } from "shared/ui";
 
 import {
   defaultValues,
   FormProps,
-  formShema,
   FormValues,
+  getFormShema,
   templateId,
 } from "../model";
 import { FormInput, FormTextaria } from "./form-inputs";
@@ -22,9 +23,10 @@ export const Form: FC<FormProps> = ({
   isBtnDisabled,
 }) => {
   const t = useTranslations("contactUs.form");
+  const locale = useLocale() as Locale;
 
   const { control, handleSubmit } = useForm<FormValues>({
-    resolver: zodResolver(formShema),
+    resolver: zodResolver(getFormShema(locale)),
     defaultValues,
     mode: "all",
   });

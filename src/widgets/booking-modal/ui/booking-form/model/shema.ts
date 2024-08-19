@@ -1,15 +1,23 @@
 import { z, ZodType } from "zod";
+import { Locale } from "shared/lib";
+import { formErrors } from "shared/model";
 
 import { FormValues } from "./types";
 
-export const formShema: ZodType<FormValues> = z.object({
-  firstName: z.string().min(1, { message: "First Name is required" }),
-  lastName: z.string().min(1, { message: "Last Name is required" }),
-  phone: z
-    .string()
-    .min(1, { message: "Phone number is required" })
-    .length(11, { message: "Must be exactly 11 characters long" }),
-});
+export function getFormShema(locale: Locale): ZodType<FormValues> {
+  return z.object({
+    firstName: z
+      .string()
+      .min(1, { message: formErrors.firstName.require[locale] }),
+    lastName: z
+      .string()
+      .min(1, { message: formErrors.lastName.require[locale] }),
+    phone: z
+      .string()
+      .min(1, { message: formErrors.phone.require[locale] })
+      .length(11, { message: formErrors.phone.length[locale] }),
+  });
+}
 
 export const defaultValues = {
   firstName: "",
