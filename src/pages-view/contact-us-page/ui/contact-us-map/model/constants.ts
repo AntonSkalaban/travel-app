@@ -2,6 +2,10 @@ export const mapState = {
   latitude: 53.9023,
   longitude: 27.5619,
   zoom: 10,
+  terrainControl: true,
+  scaleControl: true,
+  fullscreenControl: "top-left",
+  geolocateControl: false,
 };
 
 export const mapStyleUrl = process.env.NEXT_PUBLIC_MAP_STYLE_URL;
