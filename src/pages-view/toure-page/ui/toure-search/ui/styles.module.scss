@@ -1,24 +1,22 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 .search {
+  font-family: $font-poppins;
 
-    font-family: $font-poppins;
-    
-    font-weight: 500;
+  font-weight: 500;
 
-    margin-top: 64px;
-  
-   
-    &__title {
-        font-size: 40px;
-        line-height: 60px;
-        text-align: center;
-    }
+  margin-top: 64px;
 
-    &__subtitle {
-        font-size: 15px;
-        line-height: 22.5px;
-        text-align: center;
+  &__title {
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+  }
 
-        margin-bottom: 41px;
-    }
+  &__subtitle {
+    font-size: 15px;
+    line-height: 22.5px;
+    text-align: center;
+
+    margin-bottom: 41px;
+  }
 }

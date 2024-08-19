@@ -3,11 +3,11 @@ import { fireEvent, render } from "@testing-library/react";
 import { ElasticSearch } from "./elastic-search";
 
 jest.mock("@apollo/client");
-jest.mock("./images/Search.svg", () => "svg");
-jest.mock("./images/Close.svg", () => "svg");
+jest.mock("./images/search.svg", () => "svg");
+jest.mock("./images/close.svg", () => "svg");
 
 jest.mock("next/navigation", () => ({
-  useRouter: () => ({ push: () => ({}) }),
+  useRouter: () => ({ replace: () => ({}) }),
   usePathname: () => ({}),
 }));
 

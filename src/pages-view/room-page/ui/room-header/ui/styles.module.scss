@@ -1,29 +1,27 @@
-@import 'shared/ui/styles';
-@import 'shared/ui/room-header/ui/mixins.scss';
+@import "shared/ui/styles";
+@import "shared/ui/room-header/ui/mixins.scss";
 
 .header {
-    width: 100%;
-    height: 299px;
+  width: 100%;
+  height: 299px;
+  position: relative;
+
+  background-image: url("./images/hotel.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include breakpoint(m) {
+    height: 200px;
+  }
+
+  &__container {
     position: relative;
+    z-index: 4;
+    height: 100%;
+    @include flexCenter;
+  }
 
-    background-image: url('./images/hotel.png');
-    background-size: cover;
-    background-repeat: no-repeat;
- 
-    @include breakpoint(m) {
-        height: 200px;
-    }
-
-    &__container {
-        position: relative;
-        z-index: 4;
-        height: 100%;
-        @include flexCenter;
-    }
-
-    &__title {
-       @include RoomHeaderTitle;
-    }
-
-
+  &__title {
+    @include RoomHeaderTitle;
+  }
 }

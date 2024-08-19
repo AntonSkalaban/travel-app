@@ -1,20 +1,19 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .decor-skeleton {
-    display: flex;
-    gap: 61px;
-    margin-bottom: 258px;
-    margin-top: 140px;
+  display: flex;
+  gap: 61px;
+  margin-bottom: 258px;
+  margin-top: 140px;
 }
 
 .image-skeleton {
-    @include skeleton(381px, 480px);
-    border: 10px;
+  @include skeleton(381px, 480px);
+  border: 10px;
 
-    @include breakpoint(l) {
-        width: 30%;
-        height: auto;
-        flex-direction: column;
-    }
+  @include breakpoint(l) {
+    width: 30%;
+    height: auto;
+    flex-direction: column;
+  }
 }
-

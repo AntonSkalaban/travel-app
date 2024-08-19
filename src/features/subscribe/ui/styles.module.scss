@@ -1,19 +1,19 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .subscribe {
-    position: relative;
-    width: fit-content;
+  position: relative;
+  width: fit-content;
 
-    @include breakpoint(m) {
-     margin: 0 auto;
-    }
-    &__btn {
-        width: 112px;
-        height: 40px;
+  @include breakpoint(m) {
+    margin: 0 auto;
+  }
+  &__btn {
+    width: 112px;
+    height: 40px;
 
-        @include buttonPrimary(5px);
-        position: absolute;
-        right: 5px;
-        top: calc( 50% - 20px);
-    }
+    @include buttonPrimary(5px);
+    position: absolute;
+    right: 5px;
+    top: calc(50% - 20px);
+  }
 }

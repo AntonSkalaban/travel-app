@@ -1,42 +1,42 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .dropdown {
-    width: 100%;
-    position: relative;
-    cursor: pointer;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
 
-    &__header {
-        width: 120px;
-        max-width: fit-content;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: 7px;
-      
-        font-family: $font-poppins;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 18px;
-        color: $color-grey-dark;
-        text-transform: capitalize;
+  &__header {
+    width: 120px;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 7px;
 
-        @include breakpoint(m) {
-            width: 100px;
-        }
+    font-family: $font-poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-grey-dark;
+    text-transform: capitalize;
+
+    @include breakpoint(m) {
+      width: 100px;
     }
+  }
 
-    &__name {
-        max-width: fit-content;
-        overflow:hidden;
-    }
+  &__name {
+    max-width: fit-content;
+    overflow: hidden;
+  }
 
-    &__content {
-        width: calc(100% - 45px);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 5;
+  &__content {
+    width: calc(100% - 45px);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
 
-        background-color: $color-white;
-    }
+    background-color: $color-white;
+  }
 }

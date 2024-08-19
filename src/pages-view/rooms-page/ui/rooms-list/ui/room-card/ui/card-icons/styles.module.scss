@@ -1,17 +1,15 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .container {
-    display: flex;
-    align-items: center;
-    gap: 27px;
+  display: flex;
+  align-items: center;
+  gap: 27px;
 
-    @include breakpoint(l) {
-        gap: 15px;
-    }   
-    
-    @include breakpoint(s) {
-       display: none;
-    }    
+  @include breakpoint(l) {
+    gap: 15px;
+  }
 
+  @include breakpoint(s) {
+    display: none;
+  }
 }
-

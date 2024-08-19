@@ -1,6 +1,11 @@
 "use client";
 import { FC, memo, useMemo } from "react";
-import Map, { Marker } from "react-map-gl/maplibre";
+import Map, {
+  FullscreenControl,
+  GeolocateControl,
+  Marker,
+  NavigationControl,
+} from "react-map-gl/maplibre";
 
 import maplibregl from "maplibre-gl";
 
@@ -31,6 +36,10 @@ export const ContactUsMap: FC = memo(() => {
   return (
     <section className={styled.map}>
       <Map initialViewState={mapState} mapStyle={mapStyleUrl}>
+        <FullscreenControl />
+        <GeolocateControl />
+        <NavigationControl />
+
         <Marker
           longitude={hotelMarker.longitude}
           latitude={hotelMarker.latitude}
