@@ -1,79 +1,72 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .header {
-    width: 100%;
-    height: 700px;  
-    background-color: $color-grey-light;
+  width: 100%;
+  height: 700px;
+  background-color: $color-grey-light;
 
- 
-    @include breakpoint(xl) {
-        height: 500px;  
-    }
+  @include breakpoint(xl) {
+    height: 500px;
+  }
+
+  @include breakpoint(l) {
+    height: 450px;
+  }
+
+  @include breakpoint(s) {
+    height: 400px;
+  }
+
+  &__container {
+    height: 100%;
+    background-image: url("./images/hotel.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 626px auto;
+    position: relative;
+
+    font-family: $font-raleway;
 
     @include breakpoint(l) {
-        height: 450px;  
+      background-size: 100%;
+      background-position: center;
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      color: $color-white;
+    }
+    @include breakpoint(s) {
+      padding: 0 10px;
+    }
+  }
+
+  &__logo {
+    font-family: $font-dancing-script;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: left;
+    color: $color-brown;
+
+    padding-top: 59px;
+
+    @include breakpoint(xl) {
+      color: $color-white;
+      padding: 0;
+    }
+
+    @include breakpoint(m) {
+      font-size: 44px;
+      line-height: 54px;
     }
 
     @include breakpoint(s) {
-        height: 400px;  
+      font-size: 36px;
+      line-height: 40px;
     }
-
-
-    &__container {
-        height: 100%;
-        background-image: url('./images/hotel.png');
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: 626px auto;
-        position: relative;
-
-        font-family: $font-raleway;
-
-
-        @include breakpoint(l) {
-            background-size: 100%;
-            background-position: center;
-            background-size: cover;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            color: $color-white;
-         
-        }
-        @include breakpoint(s) {
-           padding: 0 10px;
-        }
-    }
-
-    &__logo {
-        font-family: $font-dancing-script;
-        font-size: 50px;
-        font-weight: 600;
-        line-height: 60px;
-        text-align: left;
-        color: $color-brown;
-
-        padding-top: 59px;
-
-        @include breakpoint(xl) {
-            color: $color-white;
-            padding: 0;
-        }
-
-        @include breakpoint(m) {
-            font-size: 44px;
-            line-height: 54px;
-         }
-
-
-        @include breakpoint(s) {
-            font-size: 36px;
-            line-height: 40px;
-         }
-
-    }
-    
+  }
 }

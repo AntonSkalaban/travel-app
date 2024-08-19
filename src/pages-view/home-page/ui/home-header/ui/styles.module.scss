@@ -1,72 +1,70 @@
-@import 'shared/ui/styles';
-@import 'shared/ui';
+@import "shared/ui/styles";
+@import "shared/ui";
 
 .header {
-    &__title {
-        @include hotelHeaderTitle;
-        margin-top: 26px;
-        
+  &__title {
+    @include hotelHeaderTitle;
+    margin-top: 26px;
+  }
+
+  &__subtitle {
+    @include hotelHeaderSubtitle;
+    margin-top: 23px;
+  }
+
+  &__btn {
+    width: fit-content;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: $font-inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+
+    margin-top: 27px;
+
+    &__elipce {
+      width: 55px;
+      height: 100%;
+      background: $color-light-blue;
+      @include flexCenter;
+      border-radius: 50%;
+      margin-right: 8px;
     }
 
-    &__subtitle {
-        @include hotelHeaderSubtitle;
-        margin-top: 23px;
+    &:hover &__elipce {
+      scale: 1.05;
+      transition: 0.3s ease-in-out;
     }
 
-    &__btn {
-        width: fit-content;
-        height: 55px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    @include breakpoint(l) {
+      background-color: $color-white;
+      border-radius: 50px;
 
-        font-family: $font-inter;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 24.2px;
+      &:hover {
+        scale: 1.01;
+        transition: 0.3s ease-in-out;
+      }
 
-        margin-top: 27px;
-
-        &__elipce {
-            width: 55px;
-            height: 100%;
-            background: $color-light-blue;
-            @include flexCenter;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-
-        &:hover  &__elipce  {
-            scale: 1.05;
-            transition: 0.3s ease-in-out;
-        }
-
-        @include breakpoint(l) {
-           background-color: $color-white;
-           border-radius: 50px;
-
-           &:hover {
-            scale: 1.01;
-            transition: 0.3s ease-in-out;
-           }
-
-           &:hover  &__elipce  {
-            scale: 1;
-            transition: none;
-        }
-        }
-
-        @include breakpoint(s) {
-            height: 35px;
-            font-size: 14px;
-     
-            line-height: 20px;
-            padding: 4px;
-
-            &__elipce {
-               display: none;
-            }
-         }
-
+      &:hover &__elipce {
+        scale: 1;
+        transition: none;
+      }
     }
+
+    @include breakpoint(s) {
+      height: 35px;
+      font-size: 14px;
+
+      line-height: 20px;
+      padding: 4px;
+
+      &__elipce {
+        display: none;
+      }
+    }
+  }
 }

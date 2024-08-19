@@ -1,30 +1,28 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .rooms-list {
-    display: grid;
-   
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    gap: 50px;
-    margin: 54px auto 173px auto;
+  display: grid;
 
-    @include breakpoint(xl) {
-       gap: 30px;
-    }
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 50px;
+  margin: 54px auto 173px auto;
 
-    @include breakpoint(l) {
-        width: 830px;
-        grid-template-columns: repeat(2, 1fr);
-    }
+  @include breakpoint(xl) {
+    gap: 30px;
+  }
 
-    @include breakpoint(m) {
-        width: 100%;
-        gap: 20px;
-    }
+  @include breakpoint(l) {
+    width: 830px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    @include breakpoint(s) {
-        gap: 15px;
-    }  
+  @include breakpoint(m) {
+    width: 100%;
+    gap: 20px;
+  }
 
-
+  @include breakpoint(s) {
+    gap: 15px;
+  }
 }

@@ -1,23 +1,23 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .input {
-    min-width: 340px;
-    width: 100%;
-    box-sizing: border-box;
+  min-width: 340px;
+  width: 100%;
+  box-sizing: border-box;
 
-    height: 50px;
-    gap: 0px;
-    border-radius: $border-radius-default;
-    background-color: $color-white;
+  height: 50px;
+  gap: 0px;
+  border-radius: $border-radius-default;
+  background-color: $color-white;
 }
 
 .container {
-    position: relative;
+  position: relative;
 }
 
 .error {
-    position: absolute;
-    top: 55px;
-    color: $color-red;
-    font-size: 12px;
+  position: absolute;
+  top: 55px;
+  color: $color-red;
+  font-size: 12px;
 }

@@ -1,72 +1,72 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .card {
-    box-sizing: border-box;
-    width: 385px;
-    height: 384px;
-    border-radius: 10px;
-    background-color: $color-white;
-    padding: 27px 27px 13px 27px;
+  box-sizing: border-box;
+  width: 385px;
+  height: 384px;
+  border-radius: 10px;
+  background-color: $color-white;
+  padding: 27px 27px 13px 27px;
+
+  @include breakpoint(xl) {
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @include breakpoint(l) {
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @include breakpoint(m) {
+    height: auto;
+  }
+
+  @include breakpoint(s) {
+    padding: 10px;
+  }
+
+  &__img-container {
+    position: relative;
+  }
+
+  &__text {
+    height: 40px;
+    font-family: $font-raleway;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 19.96px;
+    color: $color-black-dark;
+
+    overflow: hidden;
+    margin-top: 19px;
 
     @include breakpoint(xl) {
-        &:last-child {
-            display: none;
-        }
-    }
-
-    @include breakpoint(l) {
-        &:last-child {
-            display: none;
-        }
-    }
-
-    @include breakpoint(m) {
-           height: auto;
+      margin-top: 10px;
     }
 
     @include breakpoint(s) {
-        padding: 10px;
- }
-
-    &__img-container {
-        position: relative;
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 5px;
     }
+  }
 
-    &__text {
-        height: 40px;
-        font-family: $font-raleway;
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 19.96px;
-        color: $color-black-dark;
-        
-        overflow: hidden;
-        margin-top: 19px;
+  &__btn {
+    width: 107px;
+    height: 34px;
+    position: absolute;
 
-        @include breakpoint(xl) {
-            margin-top: 10px;
-        }
+    top: 17px;
+    right: 17px;
 
-        @include breakpoint(s) {
-            font-size: 12px;
-            line-height: 16px;
-            margin-top: 5px;
-        }
-    }
+    @include buttonPrimary(3px);
 
-    &__btn {
-        width: 107px;
-        height: 34px;
-        position: absolute;
-
-        top: 17px;
-        right: 17px;
-
-        @include buttonPrimary(3px);
-
-        font-family: $font-raleway;
-        font-size: 11px;
-        font-weight: 700;
-        line-height: 12.91px;
-    }
+    font-family: $font-raleway;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 12.91px;
+  }
 }

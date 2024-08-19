@@ -1,138 +1,133 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .section {
-    width: 100%;
-    height: 550px;
+  width: 100%;
+  height: 550px;
 
-    display: flex;
-    align-items: end;
-     gap: 133px;
-    
+  display: flex;
+  align-items: end;
+  gap: 133px;
 
-    padding-bottom: 60px;
-    margin-top: 114px;
+  padding-bottom: 60px;
+  margin-top: 114px;
 
-    @include breakpoint(l) {
-        gap: 40px;
-        justify-content: space-between;
-     }
+  @include breakpoint(l) {
+    gap: 40px;
+    justify-content: space-between;
+  }
 
-    @include breakpoint(m) {
-        justify-content: center;
-        height: fit-content;
-        flex-direction: column;
-       
-        box-sizing: border-box;
-        padding: 5px;
-    }
+  @include breakpoint(m) {
+    justify-content: center;
+    height: fit-content;
+    flex-direction: column;
 
+    box-sizing: border-box;
+    padding: 5px;
+  }
 }
 
 .info-container {
-    max-width: 616px;
-    height: 494px;
+  max-width: 616px;
+  height: 494px;
 
-    @include flexBetween;
-    flex-direction: column;
-    padding-bottom: 60px;
-  
-    border-bottom: 1px solid $color-white-border;
-    
-    @include breakpoint(m) {
-        max-width: 100%;
-        width: 100%;
+  @include flexBetween;
+  flex-direction: column;
+  padding-bottom: 60px;
 
-        height: 400px;
+  border-bottom: 1px solid $color-white-border;
+
+  @include breakpoint(m) {
+    max-width: 100%;
+    width: 100%;
+
+    height: 400px;
+  }
+
+  .description {
+    font-family: $font-poppins;
+
+    &__title {
+      font-size: 42px;
+      font-weight: 300;
+      line-height: 63px;
+
+      @include breakpoint(s) {
+        font-size: 24px;
+        line-height: 34px;
+      }
     }
 
-    .description {
-      
-        font-family: $font-poppins;
+    &__price {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+      text-align: left;
+      color: $color-grey-font-light;
 
-        &__title {
-            font-size: 42px;
-            font-weight: 300;
-            line-height: 63px;
-
-            @include breakpoint(s) {
-                font-size: 24px;
-                line-height: 34px;
-            }
-
-        }
-
-        &__price {
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 36px;
-            text-align: left;
-            color: $color-grey-font-light;
-
-            @include breakpoint(s) {
-                font-size: 16px;
-                line-height: 24px;
-            }
-        }
-
-        &__row {
-            display: flex;
-            align-items: center;
-        }
-
-        &__review {
-            border-left: 1px solid $color-grey-font-light;
-
-            font-size: 13px;
-            font-weight: 300;
-            line-height: 19.5px;
-            text-align: left;
-            padding-left: 22px;
-            color: $color-grey-font-light;
-            margin-left: 22px;
-        }
-
-        &__description {
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-
-            font-family: $font-poppins;
-            font-size: 13px;
-            font-weight: 300;
-            line-height: 19.5px;
-            text-align: left;
-
-            margin-top: 13px;
-        }
+      @include breakpoint(s) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
+
+    &__row {
+      display: flex;
+      align-items: center;
+    }
+
+    &__review {
+      border-left: 1px solid $color-grey-font-light;
+
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 19.5px;
+      text-align: left;
+      padding-left: 22px;
+      color: $color-grey-font-light;
+      margin-left: 22px;
+    }
+
+    &__description {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+
+      font-family: $font-poppins;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 19.5px;
+      text-align: left;
+
+      margin-top: 13px;
+    }
+  }
 }
 
 .btn {
-    width: 215px;
-    height: 64px;
-   
-    border-radius: 15px;
-    border: 1px solid $color-orange;
+  width: 215px;
+  height: 64px;
+
+  border-radius: 15px;
+  border: 1px solid $color-orange;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 
-    &__btn {
-        width: 100px;
-        height: 45px;
-        
-        @include buttonPrimary($border-radius-default)
-    }
+  &__btn {
+    width: 100px;
+    height: 45px;
+
+    @include buttonPrimary($border-radius-default);
+  }
 }
-

@@ -1,6 +1,6 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .container {
-    @include flexCenter;
-    height: 100%;
+  @include flexCenter;
+  height: 100%;
 }
