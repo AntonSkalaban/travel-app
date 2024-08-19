@@ -11,6 +11,7 @@
     @include flexBetween;
     align-items: baseline;
     padding: 81px 0 64px;
+    box-sizing: border-box;
 
     @include breakpoint(xl) {
       flex-wrap: wrap;
@@ -20,7 +21,7 @@
     }
 
     @include breakpoint(l) {
-      width: fit-content;
+      max-width: 100%;
       flex-direction: column;
       gap: 16px;
 
@@ -56,6 +57,7 @@
   }
 
   &__lists-container {
+    width: 100%;
     gap: 90px;
     @include flexBetween;
     align-items: baseline;
@@ -76,6 +78,7 @@
     line-height: 14px;
 
     margin-top: 13px;
+    height: fit-content;
   }
 
   &__container-bottom {
@@ -86,9 +89,14 @@
 }
 
 .links {
-  width: fit-content;
+  max-width: 100%;
+
   @include breakpoint(xl) {
     margin-right: 20px;
+  }
+
+  @include breakpoint(m) {
+    margin-right: 0;
   }
 
   &__list {
