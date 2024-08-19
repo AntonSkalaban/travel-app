@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { ElasticSearch } from "./elastic-search";
 
-import "../../../app/global.scss";
+import "/../app/global.scss";
 import "../../../app/reset.scss";
 
 const meta = {

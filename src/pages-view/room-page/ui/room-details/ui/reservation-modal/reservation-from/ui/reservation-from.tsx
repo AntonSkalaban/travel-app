@@ -3,7 +3,7 @@ import { Control, useForm } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { PhoneInput, TextInput } from "shared/ui";
+import { PhoneInput, TextInput, withEmailForm } from "shared/ui";
 
 import {
   defaultValues,
@@ -54,3 +54,5 @@ export const Form: FC<FormProps> = ({
     </form>
   );
 };
+
+export const ReservationFrom = withEmailForm(Form);

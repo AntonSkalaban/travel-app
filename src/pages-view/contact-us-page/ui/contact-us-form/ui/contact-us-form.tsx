@@ -1,25 +1,19 @@
 import { FC } from "react";
-import { Controller, useForm } from "react-hook-form";
+import { Control, useForm } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { withEmailForm } from "shared/ui";
 
-import { defaultValues, formShema, FormValues, templateId } from "../model";
-import { InputContainer } from "./input-container";
+import {
+  defaultValues,
+  FormProps,
+  formShema,
+  FormValues,
+  templateId,
+} from "../model";
+import { FormInput, FormTextaria } from "./form-inputs";
 import styles from "./styles.module.scss";
-
-export interface FormProps {
-  isFetching: boolean;
-  sendData: (
-    data: {
-      [key: string]: string;
-    },
-    templateID: string | undefined,
-  ) => Promise<void>;
-  showAlert: () => void;
-  isBtnDisabled: boolean;
-}
 
 export const Form: FC<FormProps> = ({
   isFetching,
@@ -45,41 +39,24 @@ export const Form: FC<FormProps> = ({
       <h2 className={styles.section__title}>{t("title")}</h2>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.form__row}>
-          <Controller
+          <FormInput
             name="fullName"
-            control={control}
-            render={({ field, formState: { errors } }) => (
-              <InputContainer
-                name={t("fullName")}
-                error={errors.fullName?.message}
-              >
-                <input {...field} type="text" className={styles.form__input} />
-              </InputContainer>
-            )}
+            title={t("fullName")}
+            control={control as unknown as Control<{ [key: string]: string }>}
           />
 
-          <Controller
-            name="email"
-            control={control}
-            render={({ field, formState: { errors } }) => (
-              <InputContainer name={t("email")} error={errors.email?.message}>
-                <input {...field} type="email" className={styles.form__input} />
-              </InputContainer>
-            )}
+          <FormInput
+            name={"email"}
+            title={t("email")}
+            type="email"
+            control={control as unknown as Control<{ [key: string]: string }>}
           />
         </div>
 
-        <Controller
-          name="message"
-          control={control}
-          render={({ field, formState: { errors } }) => (
-            <InputContainer name={t("message")} error={errors.message?.message}>
-              <textarea
-                {...field}
-                className={`${styles.form__input} ${styles.form__textarea}`}
-              />
-            </InputContainer>
-          )}
+        <FormTextaria
+          name={"message"}
+          title={t("message")}
+          control={control as unknown as Control<{ [key: string]: string }>}
         />
 
         <button className={styles.form__btn} disabled={isBtnDisabled}>
