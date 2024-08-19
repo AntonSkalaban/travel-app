@@ -10,7 +10,7 @@
         font-weight: 400;
         line-height: 25.1px;
         text-align: left;
-        color: rgba(0, 0, 0, 0.7);
+        color: $color-black-light;
 
         @include breakpoint(m) {
             font-size: 16px;

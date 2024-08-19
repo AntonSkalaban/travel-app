@@ -26,16 +26,14 @@
         width: 425px;
         height: 494px;
 
-        background-color: rgba(249, 241, 231, 1);
+        background: $color-white-bg;
         border-radius: 10px;
         @include flexCenter;
         padding: 16px;
 
         @include breakpoint(l) {
             max-width: 425px;
-            width: 100%;
-            // height: auto;
-           
+            width: 100%;           
          }
 
          @include breakpoint(m) {
@@ -77,7 +75,7 @@
         @include flexCenter;
 
         border-radius: 10px;
-        background-color: rgba(249, 241, 231, 1);
+        background-color: $color-white-bg;
 
         @include breakpoint(l) {
             flex-direction: row;

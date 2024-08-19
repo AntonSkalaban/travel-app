@@ -7,7 +7,7 @@
     box-sizing: border-box;
 
     border: 1px solid $color-brown-light;
-    box-shadow: 0px 4px 30px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 30px -5px $color-black-medium;
     color: $color-brown;
 
     @include breakpoint(xl) {

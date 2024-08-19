@@ -49,7 +49,7 @@
     box-sizing: border-box;
     width: 353px;
     height: 64px;
-    background: rgba(255, 208, 80, 1);
+    background: $color-yellow;
     
     margin-top: 54px;
 
@@ -76,7 +76,7 @@
 
     height: 65px;
 
-    border: 0.5px solid rgba(28, 28, 28, 1);
+    border: 0.5px solid $color-black-normal;
     margin-top: 10px;
 
     @include breakpoint(m) {
