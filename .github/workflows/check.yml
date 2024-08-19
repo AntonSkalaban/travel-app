@@ -11,3 +11,5 @@ jobs:
         run: yarn install 
       - name: lint
         run: yarn eslint
+      - name: test
+        run: yarn test
