@@ -25,7 +25,6 @@ describe("TourePage e2e", () => {
       .then(() => {
         cy.scrollTo("bottom");
 
-        // eslint-disable-next-line cypress/no-unnecessary-waiting
         cy.wait(2000);
 
         cy.get("[data-testid='toure-card']").should(
