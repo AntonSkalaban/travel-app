@@ -15,6 +15,12 @@
   position: relative;
 }
 
+footer {
+  .error {
+    color: $color-white;
+  }
+}
+
 .error {
   position: absolute;
   top: 55px;

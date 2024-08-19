@@ -29,6 +29,7 @@ export const Subscribe: FC<SubscribeProps> = ({
 
   const { control, handleSubmit } = useForm<FormValues>({
     resolver: zodResolver(formShema),
+    defaultValues: { email: "" },
     mode: "all",
   });
 
