@@ -7,7 +7,7 @@ jest.mock("./images/Search.svg", () => "svg");
 jest.mock("./images/Close.svg", () => "svg");
 
 jest.mock("next/navigation", () => ({
-  useRouter: () => ({ push: () => ({}) }),
+  useRouter: () => ({ replace: () => ({}) }),
   usePathname: () => ({}),
 }));
 
