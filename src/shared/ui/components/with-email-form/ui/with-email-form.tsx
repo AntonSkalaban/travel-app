@@ -2,13 +2,8 @@ import { FC, useMemo } from "react";
 import { useLocale } from "next-intl";
 
 import { Locale, useSendDataEmail } from "shared/lib";
+import { Alert, getAlertMessage, getAlertType, useShowAlert } from "shared/ui";
 
-import {
-  Alert,
-  getAlertMessage,
-  getAlertType,
-  useShowAlert,
-} from "../../alert";
 import { EmailFormProps } from "../model";
 
 export const withEmailForm =

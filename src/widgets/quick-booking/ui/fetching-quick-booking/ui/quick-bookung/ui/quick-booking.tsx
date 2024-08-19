@@ -16,7 +16,7 @@ import {
   DropdownContainer,
   personOptions,
   roomOptions,
-} from "../../dropdown-container";
+} from "../../../../dropdown-container";
 import { QuickBookingProps } from "../model";
 import styles from "./styles.module.scss";
 

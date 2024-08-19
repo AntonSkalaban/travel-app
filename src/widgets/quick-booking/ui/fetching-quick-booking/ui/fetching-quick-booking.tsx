@@ -7,10 +7,10 @@ import { useQuery } from "@apollo/client";
 import { client } from "shared/api";
 import { Locale } from "shared/lib";
 
-import { QuickBookingSkeleton } from "../../quick-booking-skeleton";
-import { QuickBooking } from "../../quick-bookung";
 import { LIST_COUNTRIES } from "../api";
 import { CountryResponce, getLocationOptions } from "../model";
+import { QuickBookingSkeleton } from "./quick-booking-skeleton";
+import { QuickBooking } from "./quick-bookung";
 
 export const FetchingQuickBooking: FC = () => {
   const {
