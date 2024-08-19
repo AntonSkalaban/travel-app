@@ -1,81 +1,79 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .card {
-    width: 280px;
-    height: 280px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 280px;
+  height: 280px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    border-radius: 8px;
+  border-radius: 8px;
 
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-    padding: 41px 30px 10px 30px;
+  box-shadow: 0px 4px 10px 0px $color-black-medium;
+  padding: 41px 30px 10px 30px;
 
-    @include breakpoint(m) {
-        width: 100%;
-    }
+  @include breakpoint(m) {
+    width: 100%;
+  }
+
+  @include breakpoint(s) {
+    padding: 21px 15px 5px 15px;
+    height: 250px;
+  }
+
+  &__currency {
+    font-family: $font-poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.75px;
+    text-align: left;
+  }
+
+  &__img-container {
+    width: 180px;
+    height: 102px;
+    margin: 0 auto;
 
     @include breakpoint(s) {
-        padding: 21px 15px 5px 15px;
-        height: 250px;
+      width: 160px;
+      height: 90px;
     }
+  }
 
-    &__currency {
-        font-family: $font-poppins;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 18.75px;
-        text-align: left;
+  &__row {
+    @include flexBetween;
+  }
+
+  &__country {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+  }
+
+  &__city {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    color: $color-grey-font-dark;
+  }
+
+  &__btn {
+    width: 80px;
+    height: 25px;
+    @include flexCenter;
+    background: $color-blue;
+    border-radius: 13px;
+    padding: 10px 25px 10px 25px;
+
+    font-family: $font-raleway;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.41px;
+    color: $color-white;
+
+    &:hover {
+      @include buttonHover;
     }
-
-    &__img-container{
-        width: 180px;
-        height: 102px;
-        margin: 0 auto;
-
-        @include breakpoint(s) {
-            width: 160px;
-            height: 90px;
-        }
-
-        
-    }
-   
-    &__row {
-        @include flexBetween;
-    }
-
-    &__country {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 28.13px;
-    }
-
-    &__city {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16.41px;
-        color: rgba(79, 79, 79, 1);
-    }
-
-    &__btn {
-        width: 80px;
-        height: 25px;
-        @include flexCenter;
-        background: rgba(47, 128, 237, 1);
-        border-radius: 13px;
-        padding: 10px 25px 10px 25px;
-
-        font-family: $font-raleway;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 16.41px;
-        color: $color-white;
-
-        &:hover {
-            @include buttonHover;
-        }
-    }
+  }
 }

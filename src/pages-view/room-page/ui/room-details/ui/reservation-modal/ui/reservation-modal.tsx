@@ -1,12 +1,10 @@
 import { FC } from "react";
 
-import { Modal, withEmailForm } from "shared/ui";
+import { Modal } from "shared/ui";
 
 import { ReservationModalProps } from "../model";
-import { Form } from "../reservation-from";
+import { ReservationFrom } from "../reservation-from";
 import styles from "./styles.module.scss";
-
-export const ReservationFrom = withEmailForm(Form);
 
 export const ReservationModal: FC<ReservationModalProps> = ({
   reservationData,

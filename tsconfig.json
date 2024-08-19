@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -30,30 +26,14 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "assets/*": [
-        "assets/*"
-      ],
-      "public/*": [
-        "public/*"
-      ],
-      "app/*": [
-        "app/*"
-      ],
-      "pages-view/*": [
-        "pages-view/*"
-      ],
-      "shared/*": [
-        "shared/*"
-      ],
-      "widgets/*": [
-        "widgets/*"
-      ],
-      "features/*": [
-        "features/*"
-      ],
-      "entities/*": [
-        "entities/*"
-      ],
+      "assets/*": ["assets/*"],
+      "public/*": ["public/*"],
+      "app/*": ["app/*"],
+      "pages-view/*": ["pages-view/*"],
+      "shared/*": ["shared/*"],
+      "widgets/*": ["widgets/*"],
+      "features/*": ["features/*"],
+      "entities/*": ["entities/*"]
     }
   },
   "include": [
@@ -61,9 +41,10 @@
     "./dist/types/**/*.ts",
     "./next-env.d.ts",
     "src/svg.d.ts",
-    ".next/types/**/*.ts"
-, "src/shared/lib/i18n/i18n.ts", "src/middleware.ts", "src/shared/lib/i18n/navigation.ts"],
-  "exclude": [
-    "./node_modules"
-  ]
+    ".next/types/**/*.ts",
+    "src/shared/lib/i18n/i18n.ts",
+    "src/middleware.ts",
+    "src/shared/lib/i18n/navigation.ts"
+  ],
+  "exclude": ["./node_modules"]
 }

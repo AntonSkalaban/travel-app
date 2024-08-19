@@ -3,10 +3,10 @@ import { FC, useRef } from "react";
 
 import { VideoControl } from "features/video-control/ui";
 
-import { videoPoster, videoSrc } from "../model";
+import { VideoProps } from "../model";
 import styles from "./styles.module.scss";
 
-export const Video: FC = () => {
+export const Video: FC<VideoProps> = ({ src, poster }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   return (
@@ -16,9 +16,9 @@ export const Video: FC = () => {
       <video
         className={styles.video}
         ref={videoRef}
-        src={videoSrc}
+        src={src}
         controls={false}
-        poster={videoPoster}
+        poster={poster}
         data-testid="video"
       />
     </section>

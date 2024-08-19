@@ -1,36 +1,36 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 @keyframes slide-in {
-    from {
-      top: -100%;
-    }
-    to {
-      top: 50px;
-    }
+  from {
+    top: -100%;
+  }
+  to {
+    top: 50px;
+  }
+}
+
+.alert {
+  max-width: 500px;
+  min-width: 300px;
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  z-index: 11;
+  transform: translate(-50%, -50%);
+
+  animation: slide-in 0.7s ease-in-out forwards;
+
+  padding: 10px;
+
+  font-family: $font-inter;
+  color: $color-white;
+  text-align: center;
+
+  &_success {
+    background-color: $color-green;
   }
 
-  .alert {
-    max-width: 500px;
-    min-width: 300px;
-    position: fixed;
-    top: -100%;
-    left: 50%;
-    z-index: 500;
-    transform: translate(-50%, -50%);
-
-    animation: slide-in .7s ease-in-out forwards;
-
-    padding: 10px;
-
-    font-family: $font-inter;
-    color: $color-white;
-    text-align: center;
-
-    &_success {
-        background-color: green;
-    }
-
-    &_error {
-        background-color: red;
-    }
+  &_error {
+    background-color: $color-red;
+  }
 }

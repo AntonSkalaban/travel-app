@@ -1,6 +1,7 @@
 import { FC } from "react";
 
-import { Wrapper } from "../../wrapper";
+import { Wrapper } from "shared/ui";
+
 import { HotelHeaderProps } from "../model";
 import styles from "./styles.module.scss";
 

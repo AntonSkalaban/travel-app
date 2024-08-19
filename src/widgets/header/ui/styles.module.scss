@@ -1,28 +1,28 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .header {
-    height: 120px;
-   
+  height: 120px;
+
+  @include breakpoint(m) {
+    height: 80px;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 250px;
+    justify-content: space-between;
+
     @include breakpoint(m) {
-        height: 80px;
+      display: none;
     }
-
-    &__container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;   
-    }
-
-    &__menu {
-        width: fit-content;
-        display: flex;
-        align-items: center;
-        gap: 250px;
-        justify-content: space-between;   
-
-        @include breakpoint(m) {
-            display: none;
-        }
-    }
+  }
 }

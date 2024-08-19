@@ -1,18 +1,18 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
-body{
-    font-family: $font-raleway;
+body {
+  font-family: $font-raleway;
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:disabled {
-        opacity: 0.8;
-    }
+  &:disabled {
+    opacity: 0.8;
+  }
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

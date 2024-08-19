@@ -4,8 +4,8 @@ import { usePathname, useRouter } from "next/navigation";
 
 import { useClickOutside } from "shared/model";
 
-import Close from "./images/Close.svg";
-import Search from "./images/Search.svg";
+import Close from "./images/close.svg";
+import Search from "./images/search.svg";
 import { ElasticSearchProps } from "../model";
 import { Suggestions } from "./suggestions";
 import styles from "./styles.module.scss";
@@ -19,7 +19,7 @@ export const ElasticSearch: FC<ElasticSearchProps> = ({ initialValue }) => {
   const searchBarRef = useClickOutside(() => setShowSuggestions(false));
 
   const handleSearch = (value: string) => {
-    return router.push(`${path}${value ? `?q=${value}` : ""}`, {
+    return router.replace(`${path}${value ? `?q=${value}` : ""}`, {
       scroll: false,
     });
   };

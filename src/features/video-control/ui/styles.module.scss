@@ -1,27 +1,27 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .btn {
-    width: 130px;
-    height: 130px;
-    background-color: $color-white;
+  width: 130px;
+  height: 130px;
+  background-color: $color-white;
 
-    border-radius: 50%;
-    border: 27px solid $color-grey-normal;
+  border-radius: 50%;
+  border: 27px solid $color-grey-normal;
 
-    position: absolute;
-    top: calc(50% - 70px);
-    left: calc(50% - 70px);
-    z-index: 10;
+  position: absolute;
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: 10;
 
-    @include breakpoint(m) {
-       transform: scale(0.8);
-    }
+  @include breakpoint(m) {
+    transform: scale(0.8);
+  }
 
-    @include breakpoint(m) {
-        transform: scale(0.6);
-    }
+  @include breakpoint(m) {
+    transform: scale(0.6);
+  }
 }
 
 .play-icon {
-    padding-left: 5px;
+  padding-left: 5px;
 }

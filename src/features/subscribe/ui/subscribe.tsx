@@ -1,11 +1,12 @@
 import { FC } from "react";
 import { Control, useForm } from "react-hook-form";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { Locale } from "shared/lib";
 import { TextInput, withEmailForm } from "shared/ui";
 
-import { formShema, FormValues, templateId } from "../model";
+import { FormValues, getFormShema, templateId } from "../model";
 import styles from "./styles.module.scss";
 
 interface SubscribeProps {
@@ -26,9 +27,11 @@ export const Subscribe: FC<SubscribeProps> = ({
   isBtnDisabled,
 }) => {
   const t = useTranslations("subscribeForm");
+  const locale = useLocale() as Locale;
 
   const { control, handleSubmit } = useForm<FormValues>({
-    resolver: zodResolver(formShema),
+    resolver: zodResolver(getFormShema(locale)),
+    defaultValues: { email: "" },
     mode: "all",
   });
 

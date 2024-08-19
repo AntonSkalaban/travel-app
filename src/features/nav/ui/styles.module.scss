@@ -1,52 +1,50 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .nav {
-    &__list {
-        width: 390px;
-        
-        @include flexBetween;
+  &__list {
+    width: 390px;
 
-        @include breakpoint(m) {
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
+    @include flexBetween;
+
+    @include breakpoint(m) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__link {
+    font-family: $font-poppins;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22.5px;
+    color: $color-black-dark;
+    padding: 10px;
+    border-radius: 15px;
+
+    @include breakpoint(m) {
+      border-radius: 0;
+      padding: 0 10px;
     }
 
-    &__link {
-        font-family: $font-poppins;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 22.5px;
-        color: $color-black-dark;
-        padding: 10px;
-        border-radius: 15px;
+    &_active {
+      font-weight: 700;
+      color: $color-brown;
 
-
-        @include breakpoint(m) {
-            border-radius: 0;
-            padding: 0 10px;
+      @include breakpoint(m) {
+        color: $color-white;
+      }
     }
 
-        &_active {
-            font-weight: 700;
-            color: $color-brown;
-
-            @include breakpoint(m) {
-               color: $color-white;
-            }
-        }
-
-        &:hover {
-            background-color: $color-grey-normal;
-            transition: .3s ease-in-out;
-        }
-
-        @include breakpoint(m) {
-           
-        &:hover {
-            background-color: transparent;
-        }
-        }
+    &:hover {
+      background-color: $color-grey-normal;
+      transition: 0.3s ease-in-out;
     }
+
+    @include breakpoint(m) {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
 }

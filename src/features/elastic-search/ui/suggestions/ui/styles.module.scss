@@ -1,44 +1,41 @@
-@import 'shared/ui/styles';
+@import "shared/ui/styles";
 
 .suggestions {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: $color-white;
-    padding-top: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $color-white;
+  padding-top: 48px;
 
-    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-    z-index: 3;
+  box-shadow: 0px 4px 12px 0px $color-black-medium;
+  border-radius: 8px;
+  z-index: 3;
 
-    font-family: $font-inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.01em;
+  font-family: $font-inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  overflow: hidden;
 
-    &__item {
-        padding: 8px 16px 8px 16px;
-    
-        color: $color-grey-dark;
-    
-        cursor: pointer;
-        &:hover {
-            background-color: $color-grey-normal;
-        }
+  &__item {
+    padding: 8px 16px 8px 16px;
+
+    color: $color-grey-dark;
+
+    cursor: pointer;
+    &:hover {
+      background-color: $color-grey-normal;
     }
-    
-    &__not-found {
-        padding: 8px 16px 8px 16px;
-    }
-    
+  }
+
+  &__not-found {
+    padding: 8px 16px 8px 16px;
+  }
 }
 
-
-
-
 .highlight {
-    color: rgba(0, 0, 0);
+  color: $color-black-normal;
 }
