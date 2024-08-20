@@ -23,9 +23,9 @@
   }
 
   &__currency {
-  @include poppinsFont_16px;
+    @include poppinsFont_16px;
 
-  text-align: left;
+    text-align: left;
   }
 
   &__img-container {
@@ -60,10 +60,7 @@
     border-radius: 13px;
     padding: 10px 25px 10px 25px;
 
-    font-family: $font-raleway;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16.41px;
+    @include ralewayFont_14px;
     color: $color-white;
 
     &:hover {

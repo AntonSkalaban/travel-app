@@ -6,20 +6,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Locale } from "shared/lib";
 import { TextInput, withEmailForm } from "shared/ui";
 
-import { FormValues, getFormShema, templateId } from "../model";
+import { FormValues, getFormShema, SubscribeProps, templateId } from "../model";
 import styles from "./styles.module.scss";
 
-interface SubscribeProps {
-  isFetching: boolean;
-  sendData: (
-    data: {
-      [key: string]: string;
-    },
-    templateID: string | undefined,
-  ) => Promise<void>;
-  showAlert: () => void;
-  isBtnDisabled: boolean;
-}
 export const Subscribe: FC<SubscribeProps> = ({
   isFetching,
   sendData,

@@ -29,7 +29,7 @@
   &__title {
     display: flex;
 
-   @include poppinsFont_15px;
+    @include poppinsFont_15px;
 
     @include breakpoint(m) {
       font-size: 14px;

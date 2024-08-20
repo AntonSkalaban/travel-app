@@ -5,13 +5,10 @@
   background-color: $color-brown;
   box-sizing: border-box;
   color: $color-white;
-  font-family: $font-raleway;
-
 
   &__container-top {
-
-    @include flexCenter;
-    // align-items: baseline;
+    width: 100%;
+    @include flexBetween;
     padding: 81px 0 64px;
     box-sizing: border-box;
 
@@ -44,9 +41,7 @@
   }
 
   &__title {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 18px;
+    @include ralewayFont_15px(700);
   }
 
   &__logo-text {
@@ -60,10 +55,10 @@
 
   &__lists-container {
     max-width: 100%;
-    gap: 90px;
     @include flexBetween;
     align-items: baseline;
 
+    margin: 0 20px;
     @include breakpoint(m) {
       gap: 20px;
       margin: 0 auto;
@@ -75,9 +70,7 @@
   }
 
   &__text {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14px;
+    @include ralewayFont_11px;
 
     margin-top: 13px;
     height: fit-content;
@@ -121,6 +114,8 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    margin: 0 auto;
 
     &__text {
       max-width: 400px;

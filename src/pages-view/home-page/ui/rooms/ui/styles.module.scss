@@ -9,7 +9,6 @@
   background-size: cover;
   position: relative;
 
-  font-family: $font-raleway;
   color: $color-white;
   margin-top: 73px;
 
@@ -27,9 +26,7 @@
   }
 
   &__title {
-    font-size: 50px;
-    font-weight: 500;
-    line-height: 58.7px;
+    @include ralewayFont_50px;
 
     margin-top: 27px;
 
@@ -48,9 +45,7 @@
   }
 
   &__subtitle {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 17.61px;
+    @include ralewayFont_15px;
 
     margin-top: 14px;
   }

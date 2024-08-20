@@ -4,7 +4,7 @@
   position: relative;
   width: fit-content;
 
-  @include breakpoint(m) {
+  @include breakpoint(l) {
     margin: 0 auto;
   }
   &__btn {
