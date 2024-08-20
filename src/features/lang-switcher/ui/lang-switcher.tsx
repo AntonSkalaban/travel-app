@@ -26,6 +26,7 @@ export const LangSwitcher: FC = () => {
       className={styles.button}
       onClick={handleLangClick}
       data-testid="toggle-btn"
+      aria-label={`Switch to ${localActive === "en" ? "Russian" : "English"}`}
     >
       {localActive === "en" ? (
         <FlagEn data-testid="flag-en" />

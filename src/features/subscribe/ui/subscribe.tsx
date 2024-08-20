@@ -40,7 +40,11 @@ export const Subscribe: FC<SubscribeProps> = ({
         name="email"
         control={control as unknown as Control<{ [key: string]: string }>}
       />
-      <button className={styles.subscribe__btn} disabled={isBtnDisabled}>
+      <button
+        className={styles.subscribe__btn}
+        disabled={isBtnDisabled}
+        aria-label="Send form button"
+      >
         {isFetching ? t("btn.fetching") : t("btn.default")}
       </button>
     </form>

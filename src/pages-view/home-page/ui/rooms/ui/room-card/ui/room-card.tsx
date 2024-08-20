@@ -12,7 +12,7 @@ export const RoomCard: FC<RoomCardProps> = ({ title, image, count }) => {
     <article className={styles.card}>
       <div className={styles["card__img-container"]}>
         <Image src={image} alt="room-image" />
-        <button className={styles.card__btn}>
+        <button className={styles.card__btn} aria-label="open room info button">
           {count} {t("btn")}
         </button>
       </div>

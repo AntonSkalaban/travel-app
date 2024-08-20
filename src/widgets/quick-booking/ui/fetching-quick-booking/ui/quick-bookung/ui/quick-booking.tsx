@@ -138,6 +138,7 @@ export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
           className={styles["quick-booking__btn"]}
           type="submit"
           data-testid="quick-booking-btn"
+          aria-label="quickbooking-button"
         >
           {t("btn")}
         </button>

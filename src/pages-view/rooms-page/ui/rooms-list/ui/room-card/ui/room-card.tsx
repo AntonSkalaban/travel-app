@@ -39,7 +39,11 @@ export const RoomCard: FC<RoomCardProps> = ({ room }) => {
       </div>
       <div className={styles["card__description-bottom"]}>
         <CardIcons />
-        <button className={styles.card__btn} onClick={handleClick(id)}>
+        <button
+          className={styles.card__btn}
+          onClick={handleClick(id)}
+          aria-label="roon info button"
+        >
           {t("btn")}
         </button>
       </div>

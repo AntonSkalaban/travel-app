@@ -64,6 +64,7 @@ export const ElasticSearch: FC<ElasticSearchProps> = ({ initialValue }) => {
             className={styles["search-bar__close-btn"]}
             onClick={handleClearClick}
             data-testid="clear-btn"
+            aria-label="Clear input"
           >
             <Close />
           </button>

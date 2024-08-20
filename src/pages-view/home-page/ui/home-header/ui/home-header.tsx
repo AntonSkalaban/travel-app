@@ -28,6 +28,7 @@ export const HomeHeader: FC = () => {
         className={styles["header__btn"]}
         onClick={handleClick}
         data-testid="header-btn"
+        aria-label="to room button"
       >
         <span className={styles["header__btn__elipce"]}>
           <Play />

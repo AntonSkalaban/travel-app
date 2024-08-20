@@ -19,7 +19,9 @@ export const ToureCard: FC<ToureCardProps> = ({ tour }) => {
           <h4 className={styles.card__country}>{country}</h4>
           <p className={styles.card__city}>{city}</p>
         </div>
-        <button className={styles.card__btn}>More</button>
+        <button className={styles.card__btn} aria-label="toure info button">
+          More
+        </button>
       </div>
     </article>
   );

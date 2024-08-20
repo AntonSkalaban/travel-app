@@ -15,7 +15,11 @@ export const Modal: FC<ModalProps> = ({ children, close }) => {
     <>
       <Overlay />
       <div className={styles.modal}>
-        <button className={styles.modal__close} onClick={close}>
+        <button
+          className={styles.modal__close}
+          onClick={close}
+          aria-label="close modal button"
+        >
           X
         </button>
         <div className={styles.modal__content}>{children}</div>

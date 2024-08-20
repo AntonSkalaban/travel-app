@@ -14,6 +14,7 @@ export const ScrollButton: FC<ScrollButtonProps> = ({ targetId }) => {
       className={styles.btn}
       onClick={handleClick}
       data-testid="scroll-btn"
+      aria-label={"scroll-to-targetId"}
     >
       <Arrow />
     </button>

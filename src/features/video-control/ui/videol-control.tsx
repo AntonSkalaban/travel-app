@@ -23,6 +23,7 @@ export const VideoControl: FC<VideoControlProps> = ({ videoRef }) => {
       className={styles.btn}
       onClick={handleClick}
       data-testid="video-btn"
+      aria-label="video controll button"
     >
       {isPlaying ? (
         <Pause data-testid="pause-image" />

@@ -46,7 +46,7 @@
   }
 
   &__title {
-    @include interFont_25px;
+    @include mulishFont_25px;
 
     @include breakpoint(s) {
       font-size: 16px;

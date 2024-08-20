@@ -51,7 +51,11 @@ export const Form: FC<FormProps> = ({
         control={control as unknown as Control<{ [key: string]: string }>}
       />
 
-      <button className={styles.form__btn} disabled={isBtnDisabled}>
+      <button
+        className={styles.form__btn}
+        disabled={isBtnDisabled}
+        aria-label="form button"
+      >
         {isFetching ? `${t("btn.fetching")}...` : t("btn.submit")}
       </button>
     </form>
