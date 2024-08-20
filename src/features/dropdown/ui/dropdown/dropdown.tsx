@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 
-import Checkmark from "./images/Checkmark.svg";
+import Checkmark from "./images/checkmark-icon.svg";
 import { DropdownProps } from "./model";
 import styles from "./styles.module.scss";
 

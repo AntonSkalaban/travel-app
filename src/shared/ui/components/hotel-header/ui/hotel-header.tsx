@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { Wrapper } from "shared/ui";
 
 import { HotelHeaderProps } from "../model";
 import styles from "./styles.module.scss";
 
-export const HotelHeader: FC<HotelHeaderProps> = ({ children }) => {
+export const HotelHeader: FC<HotelHeaderProps> = memo(({ children }) => {
   return (
     <section className={styles["header"]}>
       <Wrapper>
@@ -16,4 +16,4 @@ export const HotelHeader: FC<HotelHeaderProps> = ({ children }) => {
       </Wrapper>
     </section>
   );
-};
+});

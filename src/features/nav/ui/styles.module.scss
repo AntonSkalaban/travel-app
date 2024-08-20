@@ -14,10 +14,8 @@
   }
 
   &__link {
-    font-family: $font-poppins;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 22.5px;
+    @include poppinsFont_15px;
+
     color: $color-black-dark;
     padding: 10px;
     border-radius: 15px;

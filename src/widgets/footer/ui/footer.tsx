@@ -18,7 +18,7 @@ export const Footer: FC = () => {
       <Wrapper>
         <div className={styles["footer__container-top"]}>
           <div className={styles.footer__description}>
-            <h4 className={styles.footer__logo}>Paradise view</h4>
+            <p className={styles.footer__logo}>Paradise view</p>
             <p
               className={`${styles.footer__text} ${styles["footer__logo-text"]}`}
             >

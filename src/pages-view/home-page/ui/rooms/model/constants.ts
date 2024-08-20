@@ -1,4 +1,4 @@
-import Room1 from "../ui/images/room-1.png";
+import Room1 from "../ui/images/room-1.webp";
 
 export const rooms = [
   {

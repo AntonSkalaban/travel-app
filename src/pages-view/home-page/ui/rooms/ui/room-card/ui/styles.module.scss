@@ -34,10 +34,8 @@
 
   &__text {
     height: 40px;
-    font-family: $font-raleway;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 19.96px;
+    @include ralewayFont_17px;
+
     color: $color-black-dark;
 
     overflow: hidden;
@@ -64,9 +62,6 @@
 
     @include buttonPrimary(3px);
 
-    font-family: $font-raleway;
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 12.91px;
+    @include ralewayFont_11px;
   }
 }

@@ -9,15 +9,15 @@ import { getDateString } from "shared/model";
 import { BookingModal } from "widgets/booking-modal";
 import { getLocalizedOptions, OptionsList } from "features/dropdown";
 
-import Location from "./images/Location.svg";
-import Person from "./images/Person.svg";
-import Room from "./images/Room.svg";
+import Location from "./images/location-icon.svg";
+import Person from "./images/person-icon.svg";
+import Room from "./images/room-icon.svg";
+import { QuickBookingProps } from "../model";
 import {
   DropdownContainer,
   personOptions,
   roomOptions,
-} from "../../../../dropdown-container";
-import { QuickBookingProps } from "../model";
+} from "./dropdown-container";
 import styles from "./styles.module.scss";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -138,6 +138,7 @@ export const QuickBooking: FC<QuickBookingProps> = ({ locationOptions }) => {
           className={styles["quick-booking__btn"]}
           type="submit"
           data-testid="quick-booking-btn"
+          aria-label="quickbooking-button"
         >
           {t("btn")}
         </button>

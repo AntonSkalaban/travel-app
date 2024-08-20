@@ -52,10 +52,7 @@
 
     margin-top: 54px;
 
-    font-family: $font-inter;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
+    @include interFont_24px;
 
     @include breakpoint(m) {
       width: 200px;

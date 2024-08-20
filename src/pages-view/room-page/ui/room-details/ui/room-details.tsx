@@ -61,6 +61,7 @@ export const RoomDetails: FC<RoomDetailsProps> = ({
             className={styles.btn}
             onClick={handleClick}
             data-testid="reservation-btn"
+            aria-label="reservation button"
           >
             {t("btn")}
           </button>

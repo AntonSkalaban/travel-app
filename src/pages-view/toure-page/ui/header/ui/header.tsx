@@ -12,7 +12,9 @@ export const Header: FC = () => {
     <HotelHeader>
       <h2 className={styles.header__title}>{t("title")}</h2>
       <p className={styles.header__subtitle}>{t("subtitle")}</p>
-      <button className={styles.header__btn}>{t("btn")}</button>
+      <button className={styles.header__btn} aria-label="button">
+        {t("btn")}
+      </button>
     </HotelHeader>
   );
 };

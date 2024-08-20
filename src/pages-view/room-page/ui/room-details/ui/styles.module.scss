@@ -44,12 +44,8 @@
   }
 
   .description {
-    font-family: $font-poppins;
-
     &__title {
-      font-size: 42px;
-      font-weight: 300;
-      line-height: 63px;
+      @include poppinsFont_42px;
 
       @include breakpoint(s) {
         font-size: 24px;
@@ -58,9 +54,8 @@
     }
 
     &__price {
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 36px;
+      @include poppinsFont_24px;
+
       text-align: left;
       color: $color-grey-font-light;
 
@@ -92,10 +87,7 @@
       height: 200px;
       overflow: hidden;
 
-      font-family: $font-poppins;
-      font-size: 13px;
-      font-weight: 300;
-      line-height: 19.5px;
+      @include poppinsFont_13px;
       text-align: left;
 
       margin-top: 13px;

@@ -43,6 +43,7 @@ export const Testimonies: FC = () => {
             className={`${styles.btn} ${styles["btn-prev"]}`}
             onClick={toPrevSlide}
             disabled={isFirstSlide || loading}
+            aria-label="to prev slide button"
             data-testid="btn-prev-slide"
           >
             <Arrow />
@@ -52,6 +53,7 @@ export const Testimonies: FC = () => {
             onClick={toNextSlide}
             disabled={isLastSlide || loading}
             data-testid="btn-next-slide"
+            aria-label="to prev next button"
           >
             <Arrow />
           </button>

@@ -46,10 +46,7 @@
   }
 
   &__title {
-    font-family: $font-mulish;
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 31.38px;
+    @include mulishFont_25px;
 
     @include breakpoint(s) {
       font-size: 16px;
@@ -58,18 +55,11 @@
   }
 
   &__available {
-    font-family: $font-mulish;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 15.06px;
+    @include mulishFont_12px;
   }
 
   &__price {
-    font-family: $font-poppins;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
-
+    @include poppinsFont_20px;
     margin-top: 11px;
 
     @include breakpoint(s) {

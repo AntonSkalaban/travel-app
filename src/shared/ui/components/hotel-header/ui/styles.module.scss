@@ -19,7 +19,7 @@
 
   &__container {
     height: 100%;
-    background-image: url("./images/hotel.png");
+    background-image: url("./images/hotel.webp");
     background-position: right;
     background-repeat: no-repeat;
     background-size: 626px auto;
@@ -45,10 +45,7 @@
   }
 
   &__logo {
-    font-family: $font-dancing-script;
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 60px;
+    @include dancingScriptFont_50px;
     text-align: left;
     color: $color-brown;
 
