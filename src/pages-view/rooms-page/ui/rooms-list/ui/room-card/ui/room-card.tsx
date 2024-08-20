@@ -20,7 +20,7 @@ export const RoomCard: FC<RoomCardProps> = ({ room }) => {
   };
 
   return (
-    <article className={styles.card}>
+    <article className={styles.card} data-testid="room-card">
       <Image
         className={styles.card__img}
         width={100}
@@ -40,6 +40,7 @@ export const RoomCard: FC<RoomCardProps> = ({ room }) => {
       <div className={styles["card__description-bottom"]}>
         <CardIcons />
         <button
+          data-testid="room-info-btn"
           className={styles.card__btn}
           onClick={handleClick(id)}
           aria-label="roon info button"

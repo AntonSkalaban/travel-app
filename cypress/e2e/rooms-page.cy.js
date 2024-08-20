@@ -19,4 +19,11 @@ describe("Rooms page", () => {
     cy.get('[data-testid="video-btn"]').click();
     cy.get('[data-testid="video"]').should("have.prop", "paused", true);
   });
+
+  it("RoomCard ", () => {
+    cy.visit("/en/rooms");
+    cy.get('[data-testid="room-card"]').should("exist");
+    cy.get('[data-testid="room-info-btn"]').first().click();
+    cy.url().should("include", "/rooms/1");
+  });
 });

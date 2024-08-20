@@ -16,7 +16,11 @@ export const TextInput: FC<TextInputProps> = ({ name, control, ...props }) => {
   return (
     <div className={styles.container}>
       <input className={styles.input} {...field} {...props} />
-      {error?.message && <p className={styles.error}>{error.message}</p>}
+      {error?.message && (
+        <p className={styles.error} data-testid="error-msg">
+          {error.message}
+        </p>
+      )}
     </div>
   );
 };
