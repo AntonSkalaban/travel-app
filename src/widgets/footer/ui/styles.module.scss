@@ -7,9 +7,11 @@
   color: $color-white;
   font-family: $font-raleway;
 
+
   &__container-top {
-    @include flexBetween;
-    align-items: baseline;
+
+    @include flexCenter;
+    // align-items: baseline;
     padding: 81px 0 64px;
     box-sizing: border-box;
 
@@ -57,7 +59,7 @@
   }
 
   &__lists-container {
-    width: 100%;
+    max-width: 100%;
     gap: 90px;
     @include flexBetween;
     align-items: baseline;
@@ -90,6 +92,7 @@
 
 .links {
   max-width: 100%;
+  margin-right: 20px;
 
   @include breakpoint(xl) {
     margin-right: 20px;
