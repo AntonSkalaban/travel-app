@@ -45,10 +45,7 @@
   }
 
   &__logo {
-    font-family: $font-dancing-script;
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 60px;
+    @include dancingScriptFont_50px;
     text-align: left;
     color: $color-brown;
 
