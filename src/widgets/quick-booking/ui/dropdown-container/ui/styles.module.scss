@@ -29,10 +29,7 @@
   &__title {
     display: flex;
 
-    font-family: $font-poppins;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 22.5px;
+   @include poppinsFont_15px;
 
     @include breakpoint(m) {
       font-size: 14px;

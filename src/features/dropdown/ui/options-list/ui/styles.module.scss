@@ -15,10 +15,8 @@
     width: 100%;
     padding: 5px;
 
-    font-family: $font-poppins;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
+    @include poppinsFont_12px;
+
     color: $color-grey-dark;
     text-transform: capitalize;
     cursor: pointer;

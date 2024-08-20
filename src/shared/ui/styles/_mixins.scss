@@ -1,3 +1,75 @@
+@mixin poppinsFont_42px {
+  font-family: $font-poppins;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 63px;
+}
+
+@mixin poppinsFont_40px {
+  font-family: $font-poppins;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+@mixin poppinsFont_24px {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+@mixin poppinsFont_24px {
+  ont-family: $font-poppins;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.13px;
+}
+
+@mixin poppinsFont_20px {
+  ont-family: $font-poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+@mixin poppinsFont_16px {
+  font-family: $font-poppins;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.75px;
+}
+
+@mixin poppinsFont_15px {
+  font-family: $font-poppins;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22.5px;
+}
+
+@mixin poppinsFont_14px {
+  font-family: $font-poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+}
+
+
+@mixin poppinsFont_13px {
+  font-family: $font-poppins;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19.5px;
+}
+
+@mixin poppinsFont_12px {
+  font-family: $font-poppins;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+
+
 @mixin flexCenter {
   display: flex;
   align-items: center;
