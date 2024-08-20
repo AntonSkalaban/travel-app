@@ -7,7 +7,7 @@ import { HotelHeader } from "shared/ui";
 import { FetchingQuickBooking } from "widgets/quick-booking/ui/fetching-quick-booking/ui/fetching-quick-booking";
 import { pagesPathsEnam } from "features/nav";
 
-import Play from "./images/Play.svg";
+import Play from "./images/play-icon.svg";
 import styles from "./styles.module.scss";
 
 export const HomeHeader: FC = () => {
