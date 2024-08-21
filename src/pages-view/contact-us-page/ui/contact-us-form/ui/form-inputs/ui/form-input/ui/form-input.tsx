@@ -23,7 +23,9 @@ export const FormInput: FC<FormInputProps> = ({
       <p className={styles.container__name}>{title}</p>
       <input className={styles.input} {...field} {...props} />
       {error?.message && (
-        <p className={styles.container__error}>{error.message}</p>
+        <p className={styles.container__error} data-testid="form-error">
+          {error.message}
+        </p>
       )}
     </div>
   );
