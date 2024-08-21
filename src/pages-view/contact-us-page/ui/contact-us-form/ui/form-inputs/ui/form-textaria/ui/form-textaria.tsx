@@ -27,7 +27,9 @@ export const FormTextaria: FC<FormTextariaProps> = ({
         {...props}
       />
       {error?.message && (
-        <p className={styles.container__error}>{error.message}</p>
+        <p className={styles.container__error} data-testid="form-error">
+          {error.message}
+        </p>
       )}
     </div>
   );

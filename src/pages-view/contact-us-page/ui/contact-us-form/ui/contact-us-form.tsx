@@ -39,12 +39,17 @@ export const Form: FC<FormProps> = ({
   return (
     <section className={styles.section}>
       <h2 className={styles.section__title}>{t("title")}</h2>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit(onSubmit)}
+        data-testid="contact-us-form"
+      >
         <div className={styles.form__row}>
           <FormInput
             name="fullName"
             title={t("fullName")}
             control={control as unknown as Control<{ [key: string]: string }>}
+            data-testid="fullName-input"
           />
 
           <FormInput
@@ -52,6 +57,7 @@ export const Form: FC<FormProps> = ({
             title={t("email")}
             type="email"
             control={control as unknown as Control<{ [key: string]: string }>}
+            data-testid="email-input"
           />
         </div>
 
@@ -59,12 +65,14 @@ export const Form: FC<FormProps> = ({
           name={"message"}
           title={t("message")}
           control={control as unknown as Control<{ [key: string]: string }>}
+          data-testid="message-input"
         />
 
         <button
           className={styles.form__btn}
           disabled={isBtnDisabled}
           aria-label="send form button"
+          data-testid="contact-us-btn"
         >
           {t(`btn.${isFetching ? "fetching" : "active"}`)}
         </button>

@@ -17,7 +17,7 @@ export const Header: FC = () => {
 
           <BurgerMenu />
 
-          <div className={styles.header__menu}>
+          <div className={styles.header__menu} data-testid="nav-container">
             <Nav />
             <LangSwitcher />
           </div>
